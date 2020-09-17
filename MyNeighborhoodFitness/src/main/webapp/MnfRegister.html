@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	
+	
+	<title>MNF Register Member</title>
+</head>
+<body style="background-image: linear-gradient(to bottom right, navy,blue,cyan)">
+	<header>
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="./index.html">My Neighborhood Fitness</a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li><a href="./index.html">Home</a></li>
+					<li><a href="./MnfAboutUs.html">About Us</a></li>
+					<li><a href="./MnfBootcamp.html">Boot Camp</a></li>
+					<li><a href="./MnfContactUsPage.html">Contact Us</a></li>
+					<li><a href="./MnfDonatePage.html">Donate</a></li>
+					<li><a href="./MnfSponsorsPage.html">Sponsors</a></li>
+				</ul>
+				
+				<ul class="nav navbar-nav navbar-right">
+					<li class="active"><a href="./MnfRegister.html"><span class="glyphicon glyphicon-user"></span> Register</a></li>
+				</ul>
+
+			</div>
+		</nav>
+	</header>
+	<main>
+		<h1 style="color: black; text-shadow: 2px 2px 6px red">Register to become a Member!</h1>
+		<br>
+		<form action="/MyNeighborhoodFitness/mnf/register" method="post" class="form-signin" style="display:block; margin: 0% 25% 0% 25%; border: 2px solid grey; background-image: linear-gradient(to right, red, orange, yellow);">
+			<h1 class="h3 mb-3 font-weight-normal" style="text-shadow: 2px 2px 2px white">MNF Member Registration</h1>
+			
+			<input type="text" name="firstname" id="firstName" class="form-control" placeholder="First Name" required>
+			<input type="text" name="lastname" id="lastName" class="form-control" placeholder="Last Name" required>
+			<input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus> 		
+			<input type="password" name="pass" id="inputPassword" class="form-control" placeholder="Password" required>
+			<input type="password" name="confirm" id="confirmPassword" class="form-control" placeholder="Confirm Password" required>
+			
+			
+
+			<button class="btn btn-sm btn-primary btn-block" type="submit" style="width: 150px; margin:auto;">Register!</button>
+			<br>
+		</form>
+		<br>
+	</main>
+	<footer></footer>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	
+</body>
+</html>
+
+
