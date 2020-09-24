@@ -1,1 +1,10 @@
 <p>exercise works!</p>
+<div *ngFor="let exercise of exercises">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">{{exercise.name}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">ID: {{exercise.id}} Category: {{exercise.category}}</h6>
+      <p class="card-text">{{exercise.description}}</p>
+    </div>
+  </div>
+</div>
