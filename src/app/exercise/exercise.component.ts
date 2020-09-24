@@ -8,6 +8,7 @@ import { IExercise } from './exercise';
 })
 export class ExerciseComponent implements OnInit {
 
+  _listFilter: string;
   exercises: IExercise[] = [
     {
       id: 1,
@@ -22,7 +23,21 @@ export class ExerciseComponent implements OnInit {
       category: 1
     }
   ];
+  filteredExercises: IExercise[] = this.exercises;
   constructor() { }
+
+  get listFilter(): string {
+    return this._listFilter;
+  }
+
+  set listFilter(value: string) {
+    this._listFilter = value;
+    this.filteredExercises = this._listFilter ? this.performFilter(this._listFilter.toLowerCase()) : this.exercises;
+  }
+
+  performFilter(filterBy: string): IExercise[] {
+    return this.exercises.filter((exercise: IExercise) => exercise.name.toLowerCase().includes(filterBy));
+  }
 
   ngOnInit(): void {
   }

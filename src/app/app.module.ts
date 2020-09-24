@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { ExerciseComponent } from './exercise/exercise.component';
 import { Error404Component } from './error404/error404.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

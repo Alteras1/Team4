@@ -1,5 +1,11 @@
 <p>exercise works!</p>
-<div *ngFor="let exercise of exercises">
+<form>
+  <div class="form-group">
+    <input type="text" [(ngModel)]='listFilter' name="name" />
+  </div>
+</form>
+
+<div *ngFor='let exercise of filteredExercises'>
   <div class="card">
     <div class="card-body">
       <h5 class="card-title">{{exercise.name}}</h5>
