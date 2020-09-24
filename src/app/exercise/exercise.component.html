@@ -2,6 +2,11 @@
 <form>
   <div class="form-group">
     <input type="text" [(ngModel)]='listFilter' name="name" />
+    Filter By
+    <select [(ngModel)]='filterOption' name="option">
+      <option value="name">Name</option>
+      <option value="id">ID</option>
+    </select>
   </div>
 </form>
 

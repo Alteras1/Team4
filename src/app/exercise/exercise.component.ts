@@ -9,6 +9,7 @@ import { IExercise } from './exercise';
 export class ExerciseComponent implements OnInit {
 
   _listFilter: string;
+  _filterOption: string;
   exercises: IExercise[] = [
     {
       id: 1,
@@ -32,11 +33,20 @@ export class ExerciseComponent implements OnInit {
 
   set listFilter(value: string) {
     this._listFilter = value;
-    this.filteredExercises = this._listFilter ? this.performFilter(this._listFilter.toLowerCase()) : this.exercises;
+    this.filteredExercises = this._listFilter ? this.performFilter(this._listFilter.toLowerCase(), this._filterOption.toLowerCase()) : this.exercises;
   }
 
-  performFilter(filterBy: string): IExercise[] {
-    return this.exercises.filter((exercise: IExercise) => exercise.name.toLowerCase().includes(filterBy));
+  get filterOption(): string {
+    return this._filterOption;
+  }
+
+  set filterOption(value: string) {
+    this._filterOption = value;
+    this.filteredExercises = this._listFilter ? this.performFilter(this._listFilter.toLowerCase(), this._filterOption.toLowerCase()) : this.exercises;
+  }
+
+  performFilter(filterBy: string, option: string): IExercise[] {
+    return this.exercises.filter((exercise: IExercise) => exercise[option].toString().toLowerCase().includes(filterBy));
   }
 
   ngOnInit(): void {
