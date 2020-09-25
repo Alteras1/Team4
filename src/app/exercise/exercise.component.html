@@ -1,0 +1,21 @@
+<p>exercise works!</p>
+<form>
+  <div class="form-group">
+    <input type="text" [(ngModel)]='listFilter' name="name" />
+    Filter By
+    <select [(ngModel)]='filterOption' name="option">
+      <option value="name">Name</option>
+      <option value="id">ID</option>
+    </select>
+  </div>
+</form>
+
+<div *ngFor='let exercise of filteredExercises'>
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">{{exercise.name}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">ID: {{exercise.id}} Category: {{exercise.category}}</h6>
+      <p class="card-text">{{exercise.description}}</p>
+    </div>
+  </div>
+</div>
