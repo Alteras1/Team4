@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { IExercise } from './exercise';
+import { ExerciseService } from '../exercise.service';
+import { IExercise, IWgerde } from './exercise';
 
 @Component({
   selector: 'app-exercise',
@@ -8,24 +9,15 @@ import { IExercise } from './exercise';
 })
 export class ExerciseComponent implements OnInit {
 
+  // tslint:disable-next-line: variable-name
   _listFilter: string;
+  // tslint:disable-next-line: variable-name
   _filterOption: string;
-  exercises: IExercise[] = [
-    {
-      id: 1,
-      name: 'test',
-      description: 'testing description',
-      category: 1
-    },
-    {
-      id: 2,
-      name: 'second',
-      description: 'hello',
-      category: 1
-    }
-  ];
+  exercises: IExercise[] = [];
   filteredExercises: IExercise[] = this.exercises;
-  constructor() { }
+  constructor(private exerciseService: ExerciseService) {
+    this.filteredExercises = this.exercises;
+  }
 
   get listFilter(): string {
     return this._listFilter;
@@ -33,6 +25,7 @@ export class ExerciseComponent implements OnInit {
 
   set listFilter(value: string) {
     this._listFilter = value;
+    // tslint:disable-next-line: max-line-length
     this.filteredExercises = this._listFilter ? this.performFilter(this._listFilter.toLowerCase(), this._filterOption.toLowerCase()) : this.exercises;
   }
 
@@ -42,6 +35,7 @@ export class ExerciseComponent implements OnInit {
 
   set filterOption(value: string) {
     this._filterOption = value;
+    // tslint:disable-next-line: max-line-length
     this.filteredExercises = this._listFilter ? this.performFilter(this._listFilter.toLowerCase(), this._filterOption.toLowerCase()) : this.exercises;
   }
 
@@ -50,6 +44,14 @@ export class ExerciseComponent implements OnInit {
   }
 
   ngOnInit(): void {
-  }
+    this.exerciseService.getExercises().subscribe({
+      next: (data) => {
+        this.exercises = data.results;
+        this.filteredExercises = data.results;
+        console.log(this.exercises);
+      }
 
+    });
+
+  }
 }
