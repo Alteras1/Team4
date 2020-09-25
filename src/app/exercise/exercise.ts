@@ -3,4 +3,8 @@ export interface IExercise {
   name: string;
   description: string;
   category: number;
+  muscles: number[];
+  muscles_secondary: number[];
+  equipment: number[];
+  results: string;
 }
