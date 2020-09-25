@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ExerciseService } from '../exercise.service';
-import { IExercise } from './exercise';
+import { IExercise, IWgerde } from './exercise';
 
 @Component({
   selector: 'app-exercise',

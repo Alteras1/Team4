@@ -1,3 +1,5 @@
+import { Url } from 'url';
+
 export interface IExercise {
   id: number;
   name: string;
@@ -6,5 +8,11 @@ export interface IExercise {
   muscles: number[];
   muscles_secondary: number[];
   equipment: number[];
-  results: string;
+}
+
+export interface IWgerde {
+  count: number;
+  next: Url;
+  previous: Url;
+  results: IExercise[];
 }
