@@ -10,9 +10,4 @@ export interface IExercise {
   equipment: number[];
 }
 
-export interface IWgerde {
-  count: number;
-  next: Url;
-  previous: Url;
-  results: IExercise[];
-}
+

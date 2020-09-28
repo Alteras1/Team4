@@ -10,6 +10,7 @@ import { Error404Component } from './error404/error404.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
 import { MonthComponent } from './calendar/month/month.component';
+import { TestServiceComponent } from './test-service/test-service.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { MonthComponent } from './calendar/month/month.component';
     Error404Component,
     NavbarComponent,
     MonthComponent,
+    TestServiceComponent,
   ],
   imports: [
     BrowserModule,

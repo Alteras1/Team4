@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ExerciseService } from '../exercise.service';
-import { IExercise, IWgerde } from './exercise';
+import { IExercise } from '../Interfaces/IExercise';
 
 @Component({
   selector: 'app-exercise',
@@ -46,7 +46,7 @@ export class ExerciseComponent implements OnInit {
   ngOnInit(): void {
     this.exerciseService.getExercises().subscribe({
       next: (data) => {
-        this.exercises = data.results;
+        this.exercises = data.results as any as IExercise[];
         this.filteredExercises = data.results;
         console.log(this.exercises);
       }
