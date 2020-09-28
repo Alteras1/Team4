@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { SetsComponent } from './sets/sets.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { ProfileComponent } from './profile/profile.component';
+import { ContactsComponent } from './contacts/contacts.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ProfileComponent } from './profile/profile.component';
     NavbarComponent,
     SetsComponent,
     CalendarComponent,
-    ProfileComponent
+    ProfileComponent,
+    ContactsComponent
   ],
   imports: [
     BrowserModule,

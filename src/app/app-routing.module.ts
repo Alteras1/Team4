@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { SetsComponent } from './sets/sets.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { ProfileComponent } from './profile/profile.component';
+import { ContactsComponent } from './contacts/contacts.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path: 'sets', component: SetsComponent},
   {path: 'profile', component: ProfileComponent},
   {path: 'calendar', component: CalendarComponent},
+  {path: 'contacts', component: ContactsComponent},
   {path: '**', component: Error404Component},
 ];
 
