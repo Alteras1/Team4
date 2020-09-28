@@ -23,7 +23,7 @@ import { MonthComponent } from './calendar/month/month.component';
     NavbarComponent,
     SetsComponent,
     ProfileComponent,
-    ContactsComponent
+    ContactsComponent,
     MonthComponent,
   ],
   imports: [
