@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { MonthComponent } from './calendar/month/month.component';
 import { Error404Component } from './error404/error404.component';
 import { ExerciseComponent } from './exercise/exercise.component';
 import { HomeComponent } from './home/home.component';
@@ -14,8 +15,8 @@ const routes: Routes = [
   {path: 'exercise', component: ExerciseComponent},
   {path: 'sets', component: SetsComponent},
   {path: 'profile', component: ProfileComponent},
-  {path: 'calendar', component: CalendarComponent},
   {path: 'contacts', component: ContactsComponent},
+  {path: 'calendar', component: MonthComponent},
   {path: '**', component: Error404Component},
 ];
 

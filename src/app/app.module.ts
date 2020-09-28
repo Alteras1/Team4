@@ -10,9 +10,9 @@ import { Error404Component } from './error404/error404.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
 import { SetsComponent } from './sets/sets.component';
-import { CalendarComponent } from './calendar/calendar.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ContactsComponent } from './contacts/contacts.component';
+import { MonthComponent } from './calendar/month/month.component';
 
 @NgModule({
   declarations: [
@@ -22,9 +22,9 @@ import { ContactsComponent } from './contacts/contacts.component';
     Error404Component,
     NavbarComponent,
     SetsComponent,
-    CalendarComponent,
     ProfileComponent,
     ContactsComponent
+    MonthComponent,
   ],
   imports: [
     BrowserModule,
