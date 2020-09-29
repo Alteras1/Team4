@@ -9,6 +9,9 @@ import { ExerciseComponent } from './exercise/exercise.component';
 import { Error404Component } from './error404/error404.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
+import { SetsComponent } from './sets/sets.component';
+import { ProfileComponent } from './profile/profile.component';
+import { ContactsComponent } from './contacts/contacts.component';
 import { MonthComponent } from './calendar/month/month.component';
 
 @NgModule({
@@ -18,6 +21,9 @@ import { MonthComponent } from './calendar/month/month.component';
     ExerciseComponent,
     Error404Component,
     NavbarComponent,
+    SetsComponent,
+    ProfileComponent,
+    ContactsComponent,
     MonthComponent,
   ],
   imports: [
