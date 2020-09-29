@@ -1,16 +1,33 @@
 {
-  "teams": [
+  "sets": [
     {
       "id": 1,
-      "name": "FC Barcelona",
-      "coach": "Ernesto Valverde",
-      "description": "The best football team in the world!"
-    },
+      "user": 1,
+      "name": "test",
+      "exercises": [
+        {
+          "id": 67,
+          "amount": 5
+        },
+        {
+          "id": 68,
+          "amount": 3
+        }
+      ]
+    }
+  ],
+  "calendar": [
     {
-      "id": 2,
-      "name": "Real Madrid",
-      "coach": "Zinedine Zidane",
-      "description": "The worst football team in the world!"
+      "user": 1,
+      "sets": [
+        {
+          "id": 1,
+          "days": [
+            "mon",
+            "wed"
+          ]
+        }
+      ]
     }
   ]
 }
