@@ -1,8 +1,44 @@
 <p>test-service works</p>
+
+<label for="category">Choose a category:</label>
+<select  [(ngModel)]="filterCategory" id="category" name="category" size="1" #ctrl="ngModel"  required >
+  <option value="10">Shoulders</option>
+  <option value="8">Arms</option>
+  <option value="12">Back</option>
+  <option value="14">Calves</option>
+  <option value="11">Chest</option>
+  <option value="9">Legs</option>
+</select>
+
+<label for="muscle">Choose a muscle:</label>
+<select  [(ngModel)]="filterMuscle" id="category" name="muscles" size="1" #ctrl="ngModel" required >
+  <option value="2">Anterior deltoid</option>
+  <option value="1">Biceps brachii</option>
+  <option value="11">Biceps femoris</option>
+  <option value="13">Brachialis>
+  <option value="7">Gastrocnemius</option>
+  <option value="8">Gluteus maximus</option>
+  <option value="12">Latissimus dorsi</option>
+  <option value="14">Obliquus externus abdominis</option>
+  <option value="4">Pectoralis major</option>
+  <option value="10">Quadriceps femoris>
+  <option value="6">Rectus abdominis</option>
+  <option value="3">Serratus anterior</option>
+  <option value="15">Soleus</option>
+  <option value="9">Trapezius</option>
+  <option value="5">Triceps brachii</option>
+
+
+
+</select>
+<p>Category selected: {{ filterCategory }}</p>
+<p>Muscle selected: {{ filterMuscle }}</p>
 <div class="card-group">
 <div *ngFor="let item of exercises">
-   <div class="card" style="width: 15rem;">
+   <div class="card" style="width: 18rem;">
+   
     <img class="card-img-top" src="{{item.image}}" alt="Card image cap">
+   
     <div class="card-body">
       <h5 class="card-title">exercise : {{item.exercise}}</h5>
       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>

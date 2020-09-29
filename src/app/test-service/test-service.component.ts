@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { ExerciseImageService } from '../services/exercise-image.service';
 
 
@@ -7,9 +7,10 @@ import { ExerciseImageService } from '../services/exercise-image.service';
   templateUrl: './test-service.component.html',
   styleUrls: ['./test-service.component.css']
 })
-export class TestServiceComponent implements OnInit {
-  exercises: any[];
-  musclefilter = 7;
+export class TestServiceComponent implements OnInit{
+  filterCategory = 10;
+  filterMuscle = 1;
+   exercises: any[] = [];
   constructor(
     private exerciseImage: ExerciseImageService,
   ) { }
