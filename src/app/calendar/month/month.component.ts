@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CalendarService } from 'src/app/calendar.service';
-import { ICalendar } from './calendar';
+import { ICalendar } from '../../Interfaces/ICalendar';
 
 @Component({
   selector: 'app-month',

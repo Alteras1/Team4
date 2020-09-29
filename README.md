@@ -7,6 +7,12 @@ Steven
 Jonah
 Daniel
 
+# Instructions for Running JSON-Server
+Once you have the branch on your local machine, locate the folder `api`. `db.json` is where the JSON is.
+
+You should first run `npm install` to ensure all modules are installed. Then in your terminal, run `npm run api` to start the JSON server. Then open another terminal, either by clicking on the `+` or the split view on the top right of the terminal window, and run angular from there. Now angular will be able to call JSON-Server.
+
+I (Steven) have scripted it so that JSON-Server can be proxied to the same port as Angular, so any HttpClient call can simply use `/api/endpoint` instead of the full URL.
 
 # ROCP2 Project
 
