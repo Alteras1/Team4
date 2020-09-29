@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { IExercise } from '../Interfaces/IExercise';
-import { ExerciseCategoryService } from '../services/exercise-category.service';
-import { ExerciseInfoService } from '../services/exercise-info.service';
-import { MuscleService } from '../services/muscle.service';
+import { ExerciseImageService } from '../services/exercise-image.service';
+
 
 @Component({
   selector: 'app-test-service',
@@ -10,22 +8,16 @@ import { MuscleService } from '../services/muscle.service';
   styleUrls: ['./test-service.component.css']
 })
 export class TestServiceComponent implements OnInit {
-  muscles: IMuscle[];
-  categories: IExerciseCategory[];
-  exercisesinfo: IExerciseInfo[];
-  equipaments: IEquipment[];
-
+  exercises: any[];
+  musclefilter = 7;
   constructor(
-    private muscleService: MuscleService,
-    private exerciseInfoService: ExerciseInfoService,
-    private exerciseCategory: ExerciseCategoryService,
-    private exerciseinfo: ExerciseInfoService,
+    private exerciseImage: ExerciseImageService,
   ) { }
   ngOnInit(): void {
-    this.muscleService.getMuscles().subscribe({
+    this.exerciseImage.getExerciseImage().subscribe({
       next: (data) => {
-        this.muscles = data.results as any as IMuscle[];
-        console.log(this.muscles);
+        this.exercises = data.results as any[] ;
+        console.log(this.exerciseImage);
       }
 
     });

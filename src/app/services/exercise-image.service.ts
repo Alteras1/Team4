@@ -8,7 +8,7 @@ import { IWgerde } from '../Interfaces/IWgerde';
   providedIn: 'root'
 })
 export class ExerciseImageService {
-  productURL = 'https://wger.de/api/v2/exerciseimage?language=2&license_author=wger.de&limit=66';
+  productURL = 'https://wger.de/api/v2/exerciseimage?language=2&license_author=&limit=66';
   constructor(private http: HttpClient) { }
   getExerciseImage(): Observable<IWgerde> {
     return this.http.get<IWgerde>(this.productURL);
