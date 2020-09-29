@@ -13,6 +13,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { MonthComponent } from './calendar/month/month.component';
 import { TestServiceComponent } from './test-service/test-service.component';
+import { ExerciseCompleteService } from './common/exercise.service';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,7 @@ import { TestServiceComponent } from './test-service/test-service.component';
     HttpClientModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [ExerciseCompleteService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
