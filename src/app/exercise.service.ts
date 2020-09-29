@@ -1,7 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { IWgerde } from 'src/app/exercise/exercise';
+import { IWgerde } from './Interfaces/IWgerde';
+
+
 
 @Injectable({
   providedIn: 'root',
