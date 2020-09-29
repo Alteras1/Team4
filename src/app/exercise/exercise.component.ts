@@ -12,9 +12,10 @@ export class ExerciseComponent implements OnInit {
   // tslint:disable-next-line: variable-name
   _listFilter: string;
   // tslint:disable-next-line: variable-name
-  _filterOption: string;
+  _filterOption: string = "Name";
   exercises: IExercise[] = [];
   filteredExercises: IExercise[] = this.exercises;
+  searchOptions: string[] = ["Name", "ID"];
   constructor(private exerciseService: ExerciseService) {
     this.filteredExercises = this.exercises;
   }

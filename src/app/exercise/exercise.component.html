@@ -4,8 +4,7 @@
     <input type="text" [(ngModel)]='listFilter' name="name" />
     Filter By
     <select [(ngModel)]='filterOption' name="option">
-      <option value="name">Name</option>
-      <option value="id">ID</option>
+      <option *ngFor="let search of searchOptions">{{search}}</option>
     </select>
   </div>
 </form>
@@ -15,7 +14,7 @@
     <div class="card-body">
       <h5 class="card-title">{{exercise.name}}</h5>
       <h6 class="card-subtitle mb-2 text-muted">ID: {{exercise.id}} Category: {{exercise.category}}</h6>
-      <p class="card-text">{{exercise.description}}</p>
+      <p class=“card-text” innerHTML={{exercise.description}}></p>
     </div>
   </div>
 </div>
