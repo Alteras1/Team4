@@ -18,7 +18,7 @@ const routes: Routes = [
   {path: 'sets', component: SetsComponent},
   {path: 'profile', component: ProfileComponent},
   {path: 'contacts', component: ContactsComponent},
-  {path: 'calendar', component: MonthComponent},
+  {path: 'calendar', component: CalendarComponent},
   {path: '**', component: Error404Component},
 ];
 

@@ -1,5 +1,5 @@
 import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
-import { ExerciseService } from '../exercise.service';
+import { ExerciseService } from '../services/exercise.service';
 import { ExerciseImageService } from '../services/exercise-image.service';
 
 
