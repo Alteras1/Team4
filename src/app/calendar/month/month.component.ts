@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CalendarService } from 'src/app/calendar.service';
+import { CalendarService } from 'src/app/services/calendar.service';
 import { ICalendar } from '../../Interfaces/ICalendar';
 
 @Component({
