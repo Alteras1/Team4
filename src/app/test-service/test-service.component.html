@@ -1,7 +1,10 @@
-<p>test-service works</p>
 
-<label for="category">Choose a category:</label>
+
+<div class="alert alert-primary" role="alert">
+
+ <label for="category">FILTER BY: category </label>
 <select  [(ngModel)]="filterCategory" id="category" name="category" size="1" #ctrl="ngModel"  required >
+   <option value="0">All</option>
   <option value="10">Shoulders</option>
   <option value="8">Arms</option>
   <option value="12">Back</option>
@@ -10,41 +13,74 @@
   <option value="9">Legs</option>
 </select>
 
-<label for="muscle">Choose a muscle:</label>
-<select  [(ngModel)]="filterMuscle" id="category" name="muscles" size="1" #ctrl="ngModel" required >
+<label for="muscle">muscle:</label>
+<select  [(ngModel)]="filterMuscle" id="muscle" name="muscle" size="1" #ctrl="ngModel"  required >
+  <option value="0">All</option>
   <option value="2">Anterior deltoid</option>
   <option value="1">Biceps brachii</option>
   <option value="11">Biceps femoris</option>
-  <option value="13">Brachialis>
+  <option value="13">Brachialis</option>
   <option value="7">Gastrocnemius</option>
   <option value="8">Gluteus maximus</option>
-  <option value="12">Latissimus dorsi</option>
-  <option value="14">Obliquus externus abdominis</option>
+  <option value="12">Latissimus dors</option>
+  <option value="14">bliquus externus abdomini>
   <option value="4">Pectoralis major</option>
-  <option value="10">Quadriceps femoris>
+  <option value="10">Quadriceps femoris</option>
   <option value="6">Rectus abdominis</option>
   <option value="3">Serratus anterior</option>
   <option value="15">Soleus</option>
-  <option value="9">Trapezius</option>
+  <option value="9">Trapezius</option> abdomini>
   <option value="5">Triceps brachii</option>
+  </select>
 
+  <label for="equipment">equipment:</label>
+  <select  [(ngModel)]="filterEquipment" id="equipment" name="equipment" size="1" #ctrl="ngModel"  required >
+    <option value="0">All</option>
+    <option value="1">Barbell</option>
+    <option value="8">Bench</option>
+    <option value="3">Dumbbells</option>
+    <option value="4">Gym mat</option>
+    <option value="7">Incline bench</option>
+    <option value="9">Gluteus maximus</option>
+    <option value="10">Kettlebell</option>
+    <option value="7">none (bodyweight exercise)>
+    <option value="6">Pull-up bar</option>
+    <option value="5">Swiss Ball</option>
+    <option value="6">Rectus abdominis</option>
+    <option value="2">SZ-Bar</option>
+    </select>
 
+<label for="name">exercise:</label>  
+<select  [(ngModel)]="filterExerciseName" id="name" name="name" size="1" #ctrl="ngModel" required >
+  <option value="0">All</option>
+  <option *ngFor="let item of exercises" value="{{item.name}}">{{item.name}}</option>
+  </select>
+  
+<br><br>
 
-</select>
-<p>Category selected: {{ filterCategory }}</p>
-<p>Muscle selected: {{ filterMuscle }}</p>
-<div class="card-group">
+<div class="card-deck">
 <div *ngFor="let item of exercises">
-   <div class="card" style="width: 18rem;">
-   
-    <img class="card-img-top" src="{{item.image}}" alt="Card image cap">
-   
-    <div class="card-body">
-      <h5 class="card-title">exercise : {{item.exercise}}</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  <div *ngIf='filterCategory=="0"?true:item.category==filterCategory'>
+    <div *ngIf='filterMuscle=="0"?true:item.muscles[0]==filterMuscle'>
+      <div *ngIf='filterEquipment=="0"?true:item.equipment[0]==filterEquipment'>
+        <div *ngIf='filterExerciseName=="0"?true:item.name==filterExerciseName'>
+    <div   class="card" style="width: 18rem;">
+   <img class="card-img-top" src="{{item.image}}" alt="Card image cap">
+    <div class="card-body"> 
+      <h5 class="card-title">{{item.name}}</h5>
+      <p class="card-text">Category: {{item.category}}</p>
+      <p class="card-text">Exercise no: {{item.id}}</p>
+      <div *ngFor="let item of item.muscles">
+        <p class="card-text">Muscle no: {{item}}</p>
+      </div>
+      <p class="card-text" style="background-color:whitesmoke;" >{{item.description}}</p>
       <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
     </div>
   </div>
 </div>
-<div>
+</div>
+</div>
+</div>
+
 
