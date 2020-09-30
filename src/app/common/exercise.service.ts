@@ -10,7 +10,6 @@ import { ExerciseImageService } from '../services/exercise-image.service';
 export class ExerciseCompleteService {
   exercises: IExerciseComplete[];
   exerciseImages: IExerciseImage[];
-  ready = false;
   constructor(private exerciseService: ExerciseService, private exerciseImageservice: ExerciseImageService) {
     this.exerciseService.getExercises().subscribe({
       next: (data) => {
@@ -27,7 +26,7 @@ export class ExerciseCompleteService {
                 //this.exercises[exercise].image = result[0].image;
               }
             }
-            this.ready = true;
+            console.log(this.exercises)
           }
         })
 
