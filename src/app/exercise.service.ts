@@ -9,7 +9,7 @@ import { IWgerde } from './Interfaces/IWgerde';
   providedIn: 'root',
 })
 export class ExerciseService {
-  productURL = 'https://wger.de/api/v2/exercise?language=2&license_author=wger.de&limit=66';
+  productURL = '/api/exercise';
   constructor(private http: HttpClient) {}
   getExercises(): Observable<IWgerde> {
     return this.http.get<IWgerde>(this.productURL);
