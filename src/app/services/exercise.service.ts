@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { IExercise } from '../Interfaces/IExercise';
 import { IWgerde } from '../Interfaces/IWgerde';
 
 
@@ -11,7 +12,7 @@ import { IWgerde } from '../Interfaces/IWgerde';
 export class ExerciseService {
   productURL = '/api/exercise';
   constructor(private http: HttpClient) {}
-  getExercises(): Observable<IWgerde> {
-    return this.http.get<IWgerde>(this.productURL);
+  getExercises(): Observable<IExercise> {
+    return this.http.get<IExercise>(this.productURL);
   }
 }
