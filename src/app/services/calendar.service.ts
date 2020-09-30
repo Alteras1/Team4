@@ -12,4 +12,7 @@ export class CalendarService {
   getCalendar(): Observable<ICalendar[]> {
     return this.http.get<ICalendar[]>(this.calendarURL);
   }
+  getCalendarByUser(userID: number): Observable<ICalendar[]> {
+    return this.http.get<ICalendar[]>(this.calendarURL + '?user=' + userID);
+  }
 }
