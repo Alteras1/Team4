@@ -1,4 +1,4 @@
-interface IExerciseImage{
+export interface IExerciseImage{
   id: number;
   status: number;
   image: string;
