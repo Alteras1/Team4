@@ -1,0 +1,33 @@
+{
+  "sets": [
+    {
+      "id": 1,
+      "user": 1,
+      "name": "test",
+      "exercises": [
+        {
+          "id": 67,
+          "amount": 5
+        },
+        {
+          "id": 68,
+          "amount": 3
+        }
+      ]
+    }
+  ],
+  "calendar": [
+    {
+      "user": 1,
+      "sets": [
+        {
+          "id": 1,
+          "days": [
+            "mon",
+            "wed"
+          ]
+        }
+      ]
+    }
+  ]
+}

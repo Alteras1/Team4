@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ExerciseService } from '../exercise.service';
-import { IExercise, IWgerde } from './exercise';
+import { IExercise } from '../Interfaces/IExercise';
 
 @Component({
   selector: 'app-exercise',
@@ -12,9 +12,10 @@ export class ExerciseComponent implements OnInit {
   // tslint:disable-next-line: variable-name
   _listFilter: string;
   // tslint:disable-next-line: variable-name
-  _filterOption: string;
+  _filterOption: string = "Name";
   exercises: IExercise[] = [];
   filteredExercises: IExercise[] = this.exercises;
+  searchOptions: string[] = ["Name", "ID"];
   constructor(private exerciseService: ExerciseService) {
     this.filteredExercises = this.exercises;
   }
@@ -46,7 +47,7 @@ export class ExerciseComponent implements OnInit {
   ngOnInit(): void {
     this.exerciseService.getExercises().subscribe({
       next: (data) => {
-        this.exercises = data.results;
+        this.exercises = data.results as any as IExercise[];
         this.filteredExercises = data.results;
         console.log(this.exercises);
       }
