@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ExerciseCompleteService } from '../common/exercise.service';
-import { ExerciseService } from '../exercise.service';
+import { ExerciseService } from '../services/exercise.service';
 import { IExercise } from '../Interfaces/IExercise';
 
 @Component({
@@ -17,7 +16,7 @@ export class ExerciseComponent implements OnInit {
   exercises: IExercise[] = [];
   filteredExercises: IExercise[] = this.exercises;
   searchOptions: string[] = ["Name", "ID"];
-  constructor(private exerciseService: ExerciseService, private exerciseComplete: ExerciseCompleteService) {
+  constructor(private exerciseService: ExerciseService) {
     this.filteredExercises = this.exercises;
   }
 
@@ -54,6 +53,5 @@ export class ExerciseComponent implements OnInit {
       }
 
     });
-    console.log(this.exerciseComplete.getExerciseComplete());
   }
 }
