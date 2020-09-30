@@ -18,6 +18,20 @@
   ],
   "calendar": [
     {
+      "user": 1,
+      "sets": [
+        {
+          "id": 1,
+          "days": [
+            "mon",
+            "wed"
+          ]
+        }
+      ]
+    }
+  ],
+  "exercise": [
+    {
       "id": 97,
       "license_author": "wger.de",
       "status": "2",
