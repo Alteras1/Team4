@@ -1,4 +1,5 @@
 import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { ExerciseService } from '../exercise.service';
 import { ExerciseImageService } from '../services/exercise-image.service';
 
 
@@ -8,17 +9,19 @@ import { ExerciseImageService } from '../services/exercise-image.service';
   styleUrls: ['./test-service.component.css']
 })
 export class TestServiceComponent implements OnInit{
-  filterCategory = 10;
-  filterMuscle = 1;
+  filterCategory = '0';
+  filterMuscle = '0';
+  filterExerciseId = '0';
+  filterExerciseName = '0';
+  filterEquipment = '0';
    exercises: any[] = [];
   constructor(
-    private exerciseImage: ExerciseImageService,
+    private exercise: ExerciseService,
   ) { }
   ngOnInit(): void {
-    this.exerciseImage.getExerciseImage().subscribe({
+    this.exercise.getExercises().subscribe({
       next: (data) => {
         this.exercises = data.results as any[] ;
-        console.log(this.exerciseImage);
       }
 
     });
