@@ -1,6 +1,6 @@
 import { Url } from 'url';
 
-export interface IExercise {
+export interface IExerciseComplete {
   id: number;
   name: string;
   description: string;
@@ -8,11 +8,5 @@ export interface IExercise {
   muscles: number[];
   muscles_secondary: number[];
   equipment: number[];
-}
-
-export interface IWgerde {
-  count: number;
-  next: Url;
-  previous: Url;
-  results: IExercise[];
+  image: String;
 }
