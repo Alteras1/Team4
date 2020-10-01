@@ -13,6 +13,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { MonthComponent } from './calendar/month/month.component';
 import { TestServiceComponent } from './test-service/test-service.component';
+import { AsyncPipe } from '@angular/common';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +34,7 @@ import { TestServiceComponent } from './test-service/test-service.component';
     HttpClientModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [AsyncPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
