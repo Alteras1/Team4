@@ -15,7 +15,7 @@ export class CalendarComponent implements OnInit {
   day = this._currentDate.getDay();
   year = this._currentDate.getFullYear();
   week = {
-    sunday: ["test"],
+    sunday: [],
     monday: [],
     tuesday: [],
     wednesday: [],
