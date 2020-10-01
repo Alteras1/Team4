@@ -8,6 +8,7 @@ export interface IExercise {
   muscles: number[];
   muscles_secondary: number[];
   equipment: number[];
+  image: string;
 }
 
 

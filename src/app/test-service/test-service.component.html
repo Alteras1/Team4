@@ -50,12 +50,12 @@
     <option value="2">SZ-Bar</option>
     </select>
 
-<label for="name">exercise:</label>  
+<label for="name">exercise:</label>
 <select  [(ngModel)]="filterExerciseName" id="name" name="name" size="1" #ctrl="ngModel" required >
   <option value="0">All</option>
   <option *ngFor="let item of exercises" value="{{item.name}}">{{item.name}}</option>
   </select>
-  
+
 <br><br>
 
 <div class="card-deck">
@@ -66,14 +66,14 @@
         <div *ngIf='filterExerciseName=="0"?true:item.name==filterExerciseName'>
     <div   class="card" style="width: 18rem;">
    <img class="card-img-top" src="{{item.image}}" alt="Card image cap">
-    <div class="card-body"> 
+    <div class="card-body">
       <h5 class="card-title">{{item.name}}</h5>
       <p class="card-text">Category: {{item.category}}</p>
       <p class="card-text">Exercise no: {{item.id}}</p>
       <div *ngFor="let item of item.muscles">
         <p class="card-text">Muscle no: {{item}}</p>
       </div>
-      <p class="card-text" style="background-color:whitesmoke;" >{{item.description}}</p>
+      <p class="card-text" style="background-color:whitesmoke;" innerHTML={{item.description}}></p>
       <a href="#" class="btn btn-primary">Go somewhere</a>
     </div>
     </div>
