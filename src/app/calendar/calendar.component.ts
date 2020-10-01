@@ -37,6 +37,9 @@ export class CalendarComponent implements OnInit {
         this._userCalendar = data as ICalendar[];
         for(let calendar of this._userCalendar) {
           for (let set of calendar.sets) {
+            if (set.days.includes("sun")) {
+              this.week.sunday.push(set.id);
+            }
             if (set.days.includes("mon")) {
               this.week.monday.push(set.id);
             }
@@ -54,9 +57,6 @@ export class CalendarComponent implements OnInit {
             }
             if (set.days.includes("sat")) {
               this.week.saturday.push(set.id);
-            }
-            if (set.days.includes("sun")) {
-              this.week.sunday.push(set.id);
             }
           }
         }
