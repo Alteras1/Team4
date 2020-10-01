@@ -29,5 +29,1391 @@
         }
       ]
     }
+  ],
+  "exercise": [
+    {
+      "id": 97,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "<p>The movement is very similar to benchpressing with a barbell, however, the weight is brought down to the chest at a lower point.</p>\n<p>Hold two dumbbells and lay down on a bench. Hold the weights next to the chest, at the height of your nipples and press them up till the arms are stretched. Let the weight slowly and controlled down.</p>",
+      "name": "Benchpress Dumbbells",
+      "name_original": "Benchpress dumbbells",
+      "creation_date": null,
+      "uuid": "0ec76f5d-1311-4d6d-bf79-00fa17c3061a",
+      "license": 1,
+      "category": 11,
+      "language": 2,
+      "muscles": [
+        4
+      ],
+      "muscles_secondary": [
+        2,
+        5
+      ],
+      "equipment": [
+        8,
+        3
+      ],
+      "image": "https://wger.de/media/exercise-images/15/Bench-press-1.png"
+    },
+    {
+      "id": 88,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "<p>Lay down on a bench, the bar is directly over your eyes, the knees form a slight angle and the feet are firmly on the ground. Hold the bar with a narrow grip (around 20cm.). Lead the weight slowly down till the arms are parallel to the floor (elbow: right angle), press then the bar up. When bringing the bar down, don't let it down on your nipples as with the regular bench pressing, but somewhat lower.</p>",
+      "name": "Bench Press Narrow Grip",
+      "name_original": "Bench press narrow grip",
+      "creation_date": null,
+      "uuid": "03d821e7-e1ac-4026-903b-d406381cbf76",
+      "license": 1,
+      "category": 8,
+      "language": 2,
+      "muscles": [
+        5
+      ],
+      "muscles_secondary": [
+        2,
+        4
+      ],
+      "equipment": [
+        1,
+        8
+      ],
+      "image": "https://wger.de/media/exercise-images/70/Reverse-grip-bent-over-rows-1.png"
+    },
+    {
+      "id": 109,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "<p>Grab the barbell with a wide grip (slightly more than shoulder wide) and lean forward. Your upper body is not quite parallel to the floor, but forms a slight angle. The chest's out during the whole exercise.</p>\n<p>Pull now the barbell with a fast movement towards your belly button, not further up. Go slowly down to the initial position. Don't swing with your body and keep your arms next to your body.</p>",
+      "name": "Bent Over Rowing",
+      "name_original": "Bent over rowing",
+      "creation_date": null,
+      "uuid": "f82c579e-c069-4dc7-8e36-a3266dfd8e4a",
+      "license": 1,
+      "category": 12,
+      "language": 2,
+      "muscles": [
+        12
+      ],
+      "muscles_secondary": [
+        2,
+        1
+      ],
+      "equipment": [
+        1
+      ],
+      "image": "https://wger.de/media/exercise-images/30/Butterfly-machine-2.png"
+    },
+    {
+      "id": 110,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "<p>The same as <em>regular</em> rowing, but holding a reversed grip (your palms pointing forwards):</p>\n<p>Grab the barbell with a wide grIp (slightly more than shoulder wide) and lean forward. Your upper body is not quite parallel to the floor, but forms a slight angle. The chest's out during the whole exercise.</p>\n<p>Pull now the barbell with a fast movement towards your belly button, not further up. Go slowly down to the initial position. Don't swing with your body and keep your arms next to your body.</p>",
+      "name": "Bent Over Rowing Reverse",
+      "name_original": "Bent over rowing reverse",
+      "creation_date": null,
+      "uuid": "77688310-f2cf-4d37-a854-dca906387be7",
+      "license": 1,
+      "category": 12,
+      "language": 2,
+      "muscles": [
+        12
+      ],
+      "muscles_secondary": [
+        2,
+        1
+      ],
+      "equipment": [
+        1
+      ],
+      "image": "https://wger.de/media/exercise-images/30/Butterfly-machine-1.png"
+    },
+    {
+      "id": 74,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "<p>Hold the Barbell shoulder-wide, the back is straight, the shoulders slightly back, the arms are streched. Bend the arms, bringing the weight up, with a fast movement. Without pausing, let down the bar with a slow and controlled movement.</p>\n<p>Don't allow your body to swing during the exercise, all work is done by the biceps, which are the only mucles that should move (pay attention to the elbows).</p>",
+      "name": "Biceps Curls With Barbell",
+      "name_original": "Biceps curls with barbell",
+      "creation_date": null,
+      "uuid": "c56078d2-ae85-4524-a467-d1e143b6df1a",
+      "license": 1,
+      "category": 8,
+      "language": 2,
+      "muscles": [
+        1
+      ],
+      "muscles_secondary": [
+        13
+      ],
+      "equipment": [
+        1
+      ],
+      "image": "https://wger.de/media/exercise-images/36/Chin-ups-1.png"
+    },
+    {
+      "id": 81,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "<p>Hold two barbells, the arms are streched, the hands are on your side, the palms face inwards. Bend the arms and bring the weight with a fast movement up. At the same time, rotate your arms by 90 degrees at the very beginning of the movement. At the highest point, rotate a little the weights further outwards. Without a pause, bring them down, slowly.</p>\n<p>Don't allow your body to swing during the exercise, all work is done by the biceps, which are the only mucles that should move (pay attention to the elbows).</p>",
+      "name": "Biceps Curls With Dumbbell",
+      "name_original": "Biceps curls with dumbbell",
+      "creation_date": null,
+      "uuid": "48a59aa8-4568-409c-8afe-f8cb99c558ea",
+      "license": 1,
+      "category": 8,
+      "language": 2,
+      "muscles": [
+        1
+      ],
+      "muscles_secondary": [
+        13
+      ],
+      "equipment": [
+        3
+      ]
+    },
+    {
+      "id": 80,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "<p>Hold the SZ-bar shoulder-wide, the back is straight, the shoulders slightly back, the arms are streched. Bend the arms, bringing the weight up, with a fast movement. Without pausing, let down the bar with a slow and controlled movement.</p>\n<p>Don't allow your body to swing during the exercise, all work is done by the biceps, which are the only mucles that should move (pay attention to the elbows).</p>",
+      "name": "Biceps Curls With SZ-bar",
+      "name_original": "Biceps curls with SZ-bar",
+      "creation_date": null,
+      "uuid": "38919515-ce04-4383-9c3f-5846edd0e844",
+      "license": 1,
+      "category": 8,
+      "language": 2,
+      "muscles": [
+        1
+      ],
+      "muscles_secondary": [
+        13
+      ],
+      "equipment": [
+        2
+      ],
+      "image": "https://wger.de/media/exercise-images/59/Barbell-rear-delt-row-1.png"
+    },
+    {
+      "id": 129,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "<p>Stand around 30 - 40cm away from the cable, the feet are firmly on the floor. Take the bar and lift the weight with a fast movements. Lower the weight as with the dumbbell curls slowly and controlled.</p>",
+      "name": "Biceps Curl With Cable",
+      "name_original": "Biceps curl with cable",
+      "creation_date": null,
+      "uuid": "8c6c1544-cbf8-403c-ae12-b27b392702f8",
+      "license": 1,
+      "category": 8,
+      "language": 2,
+      "muscles": [
+        1
+      ],
+      "muscles_secondary": [],
+      "equipment": [],
+      "image": "https://wger.de/media/exercise-images/41/Incline-bench-press-1.png"
+    },
+    {
+      "id": 98,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "<p>Sit on the butterfly machine, the feet have a good contact with the floor, the upper arms are parallel to the floor. Press your arms together till the handles are practically together (but aren't!). Go slowly back. The weights should stay all the time in the air.</p>",
+      "name": "Butterfly",
+      "name_original": "Butterfly",
+      "creation_date": null,
+      "uuid": "3c3857f8-d224-4d5a-8cc1-f4e7982d3475",
+      "license": 1,
+      "category": 11,
+      "language": 2,
+      "muscles": [
+        4
+      ],
+      "muscles_secondary": [
+        2
+      ],
+      "equipment": [],
+      "image": "https://wger.de/media/exercise-images/15/Bench-press-2.png"
+    },
+    {
+      "id": 99,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "<p>The movement is the same as with a regular butterfly, only that the grip is narrow:</p>\n<p>Sit on the butterfly machine, the feet have a good contact with the floor, the upper arms are parallel to the floor. Press your arms together till the handles are practically together (but aren't!). Go slowly back. The weights should stay all the time in the air.</p>",
+      "name": "Butterfly Narrow Grip",
+      "name_original": "Butterfly narrow grip",
+      "creation_date": null,
+      "uuid": "08637e04-d995-4c07-b021-a20f26b6fd97",
+      "license": 1,
+      "category": 11,
+      "language": 2,
+      "muscles": [
+        4
+      ],
+      "muscles_secondary": [],
+      "equipment": [],
+      "image": "https://wger.de/media/exercise-images/77/One-arm-bench-press-1.png"
+    },
+    {
+      "id": 124,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "",
+      "name": "Butterfly Reverse",
+      "name_original": "Butterfly reverse",
+      "creation_date": null,
+      "uuid": "8715a96e-c8a2-458a-b023-4ea7d82fdab8",
+      "license": 1,
+      "category": 13,
+      "language": 2,
+      "muscles": [
+        2
+      ],
+      "muscles_secondary": [],
+      "equipment": [],
+      "image": "https://wger.de/media/exercise-images/113/Walking-lunges-4.png"
+    },
+    {
+      "id": 104,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "<p>Place yourself on the machine with your back firmly against the backrest, the feet are on the platform for calf raises. Check that the feet are half free and that you can completely stretch the calf muscles down.</p>\n<p>With straight knees pull up your weight as much as you can. Go with a fluid movement down till the calves are completely stretched. Repeat.</p>",
+      "name": "Calf Raises on Hackenschmitt Machine",
+      "name_original": "Calf raises on Hackenschmitt machine",
+      "creation_date": null,
+      "uuid": "e7677699-5e4f-49e6-a645-e8915a203c4d",
+      "license": 1,
+      "category": 14,
+      "language": 2,
+      "muscles": [
+        7
+      ],
+      "muscles_secondary": [
+        15
+      ],
+      "equipment": [],
+      "image": "https://wger.de/media/exercise-images/73/Dumbbell-decline-flys-2.png"
+    },
+    {
+      "id": 91,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "<p>Lay down on your back a soft surface, the feet are on the floor. Ask a partner or use some other help (barbell, etc.) to keep them fixed, your hands are behind your head. From this position move your upper body up till your head or elbows touch your knees. Do this movement by rolling up your back.</p>",
+      "name": "Crunches",
+      "name_original": "Crunches",
+      "creation_date": null,
+      "uuid": "d325dd5c-6833-41c7-8eea-6b95c4871133",
+      "license": 1,
+      "category": 10,
+      "language": 2,
+      "muscles": [
+        6
+      ],
+      "muscles_secondary": [
+        3
+      ],
+      "equipment": [
+        8,
+        4
+      ],
+      "image": "https://wger.de/media/exercise-images/110/Reverse-grip-bent-over-rows-1.png"
+    },
+    {
+      "id": 94,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "<p>The procedure is very similar as for regular crunches, only with the additional weight of the machine. Sit on the machine, put both feet firmly on the ground. Grab the to the weights, cables, etc. and do a rolling motion forwards (the spine should ideally lose touch vertebra by vertebra). Slowly return to the starting position. </p>",
+      "name": "Crunches on Machine",
+      "name_original": "Crunches on machine",
+      "creation_date": null,
+      "uuid": "6709577b-95ec-4053-a822-d5fe1f753966",
+      "license": 1,
+      "category": 10,
+      "language": 2,
+      "muscles": [
+        6
+      ],
+      "muscles_secondary": [],
+      "equipment": [],
+      "image": "https://wger.de/media/exercise-images/193/Preacher-curl-3-2.png"
+    },
+    {
+      "id": 92,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "<p>Take the cable on your hands and hold it next to your temples. Knee down and hold your upper body straight and bend forward. Go down with a fast movement, rolling your back in (your ellbows point to your knees). Once down, go slowly back to the initial position.</p>",
+      "name": "Crunches With Cable",
+      "name_original": "Crunches with cable",
+      "creation_date": null,
+      "uuid": "8d6c13c6-256d-4137-b1c6-b0e817697639",
+      "license": 1,
+      "category": 10,
+      "language": 2,
+      "muscles": [
+        6
+      ],
+      "muscles_secondary": [],
+      "equipment": [],
+      "image": "https://wger.de/media/exercise-images/110/Reverse-grip-bent-over-rows-2.png"
+    },
+    {
+      "id": 105,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "<p>Stand firmly, with your feet slightly more than shoulder wide apart. Stand directly behind the bar where it should barely touch your shin, your feet pointing a bit out. Bend down with a straight back, the knees also pointing somewhat out. Grab the bar with a shoulder wide grip, one underhand, one reverse grip.</p>\n<p>Pull the weight up. At the highest point make a slight hollow back and pull the bar back. Hold 1 or 2 seconds that position. Go down, making sure the back is not bent. Once down you can either go back again as soon as the weights touch the floor, or make a pause, depending on the weight.</p>",
+      "name": "Deadlifts",
+      "name_original": "Deadlifts",
+      "creation_date": null,
+      "uuid": "22cca8fc-cfaf-4941-b0f7-faf9f2937c52",
+      "license": 1,
+      "category": 12,
+      "language": 2,
+      "muscles": [
+        12,
+        10
+      ],
+      "muscles_secondary": [
+        8
+      ],
+      "equipment": [
+        1
+      ],
+      "image": "https://wger.de/media/exercise-images/16/Incline-press-1.png"
+    },
+    {
+      "id": 100,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "<p>Lay down on a decline bench, the bar should be directly above your eyes, the knees are somewhat angled and the feet are firmly on the floor. Concentrate, breath deeply and grab the bar more than shoulder wide. Bring it slowly down till it briefly touches your chest at the height of your nipples. Push the bar up.</p>",
+      "name": "Decline Bench Press Barbell",
+      "name_original": "Decline bench press barbell",
+      "creation_date": null,
+      "uuid": "b72ae8d4-ede6-4480-8fc5-7b80e369f7ed",
+      "license": 1,
+      "category": 11,
+      "language": 2,
+      "muscles": [
+        4
+      ],
+      "muscles_secondary": [],
+      "equipment": [
+        1
+      ],
+      "image": "https://wger.de/media/exercise-images/77/One-arm-bench-press-2.png"
+    },
+    {
+      "id": 101,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "<p>Take two dumbbells and sit on a decline bench, the feet are firmly on the floor, the head is resting the bench. Hold the weights next to the chest, at the height of your nipples and press them up till the arms are stretched. Let the weight slowly and controlled down.</p>",
+      "name": "Decline Bench Press Dumbbell",
+      "name_original": "Decline bench press dumbbell",
+      "creation_date": null,
+      "uuid": "80d318b3-4b8a-41aa-9c6c-0a2a921fe1e6",
+      "license": 1,
+      "category": 11,
+      "language": 2,
+      "muscles": [
+        4
+      ],
+      "muscles_secondary": [],
+      "equipment": [
+        3
+      ],
+      "image": "https://wger.de/media/exercise-images/18/Dumbbell-flys-1.png"
+    },
+    {
+      "id": 82,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "<p>Hold onto the bars at a narrow place (if they are not parallel) and press yourself up, but don't stretch the arms completely, so the muscles stay during the whole exercise under tension. Now bend the arms and go down as much as you can, keeping the elbows always pointing back, At this point, you can make a short pause before repeating the movement.</p>",
+      "name": "Dips",
+      "name_original": "Dips",
+      "creation_date": null,
+      "uuid": "22879094-ced4-4bd1-81f2-76fdfeb867e6",
+      "license": 1,
+      "category": 8,
+      "language": 2,
+      "muscles": [
+        5
+      ],
+      "muscles_secondary": [
+        4,
+        6
+      ],
+      "equipment": [],
+      "image": "https://wger.de/media/exercise-images/59/Barbell-rear-delt-row-2.png"
+    },
+    {
+      "id": 83,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "<p>Put two benches so far appart, that you can hold onto one with your hands and are just able to reach the other with your feet. The legs stay during the exercise completely stretched. With your elbows facing back, bend them as much as you can. Push yourself up, but don't stretch out the arms.</p>",
+      "name": "Dips Between Two Benches",
+      "name_original": "Dips between two benches",
+      "creation_date": null,
+      "uuid": "aa4fcd9b-baee-41cf-b4c5-8462bc43a8be",
+      "license": 1,
+      "category": 8,
+      "language": 2,
+      "muscles": [
+        5
+      ],
+      "muscles_secondary": [],
+      "equipment": [
+        8
+      ]
+    },
+    {
+      "id": 112,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "<p>.</p>",
+      "name": "Dumbbell Lunges Standing",
+      "name_original": "Dumbbell lunges standing",
+      "creation_date": null,
+      "uuid": "587c0052-f2bc-48ca-8af9-415175308901",
+      "license": 1,
+      "category": 9,
+      "language": 2,
+      "muscles": [
+        10
+      ],
+      "muscles_secondary": [
+        8
+      ],
+      "equipment": [
+        3
+      ],
+      "image": "https://wger.de/media/exercise-images/98/Butterfly-machine-1.png"
+    },
+    {
+      "id": 113,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "<p>Take two dumbbells in your hands, stand straight, feet about shoulder wide. Take one long step so that the front knee is approximately forming a right angle. The back leg is streched, the knee is low but doesn't touch the ground. \"Complete\" the step by standing up and repeat the movement with the other leg.</p>",
+      "name": "Dumbbell Lunges Walking",
+      "name_original": "Dumbbell lunges walking",
+      "creation_date": null,
+      "uuid": "ffd4ce7e-e14f-49d4-9dc9-dc1362631382",
+      "license": 1,
+      "category": 9,
+      "language": 2,
+      "muscles": [
+        10
+      ],
+      "muscles_secondary": [
+        8
+      ],
+      "equipment": [
+        3
+      ],
+      "image": "https://wger.de/media/exercise-images/97/Dumbbell-bench-press-1.png"
+    },
+    {
+      "id": 87,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "",
+      "name": "Dumbbells on Scott Machine",
+      "name_original": "Dumbbells on scott machine",
+      "creation_date": null,
+      "uuid": "d147a6c2-ce64-424b-baf3-4ca841a51512",
+      "license": 1,
+      "category": 8,
+      "language": 2,
+      "muscles": [
+        1
+      ],
+      "muscles_secondary": [],
+      "equipment": []
+    },
+    {
+      "id": 122,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "",
+      "name": "Fly With Cable",
+      "name_original": "Fly with cable",
+      "creation_date": null,
+      "uuid": "9e672a47-ad9e-4ae1-8fbe-011646da1c37",
+      "license": 1,
+      "category": 11,
+      "language": 2,
+      "muscles": [
+        4
+      ],
+      "muscles_secondary": [],
+      "equipment": [],
+      "image": "https://wger.de/media/exercise-images/113/Walking-lunges-2.png"
+    },
+    {
+      "id": 145,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "<p>Take two dumbbells and lay on a bench, make sure the feet are firmly on the ground and your back is not arched, but has good contact with the bench. The arms are stretched in front of you, about shoulder wide. Bend now the arms a bit and let them down with a half-circle movement to the side. Without changing the angle of the elbow bring them in a fluid movement back up.</p>",
+      "name": "Fly With Dumbbells",
+      "name_original": "Fly with dumbbells",
+      "creation_date": "2013-05-05",
+      "uuid": "754391c6-39d5-4bb6-a311-68a520f6fd3a",
+      "license": 1,
+      "category": 11,
+      "language": 2,
+      "muscles": [
+        4
+      ],
+      "muscles_secondary": [],
+      "equipment": [
+        3
+      ],
+      "image": "https://wger.de/media/exercise-images/161/Dead-lifts-2.png"
+    },
+    {
+      "id": 146,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "<p>The exercise is the same as with a regular bench:</p>\n<p>Take two dumbbells and lay on a bench, make sure the feet are firmly on the ground and your back is not arched, but has good contact with the bench. The arms are stretched in front of you, about shoulder wide. Bend now the arms a bit and let them down with a half-circle movement to the side. Without changing the angle of the elbow bring them in a fluid movement back up.</p>",
+      "name": "Fly With Dumbbells, Decline Bench",
+      "name_original": "Fly with dumbbells, decline bench",
+      "creation_date": "2013-05-05",
+      "uuid": "acf1f2df-46c4-49a3-8e6c-2979ea4204b1",
+      "license": 1,
+      "category": 11,
+      "language": 2,
+      "muscles": [
+        4
+      ],
+      "muscles_secondary": [],
+      "equipment": [
+        3
+      ],
+      "image": "https://wger.de/media/exercise-images/161/Dead-lifts-1.png"
+    },
+    {
+      "id": 85,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "<p>Hold the dumbbells and lay down on a flat bench in such a way that around 1/4 of your head is over the edge. Stretch your arms with the weights and bend them so that the dumbbells are lowered (make sure they don't touch each other). Just before they touch your forehead, push them up.</p>\n<p>Pay attention to your elbows and arms: only the triceps are doing the work, the rest of the arms should not move.</p>",
+      "name": "French Press (skullcrusher) Dumbbells",
+      "name_original": "French press (skullcrusher) dumbbells",
+      "creation_date": null,
+      "uuid": "ee00d53e-4482-44aa-b780-bbc570061841",
+      "license": 1,
+      "category": 8,
+      "language": 2,
+      "muscles": [
+        5
+      ],
+      "muscles_secondary": [],
+      "equipment": [
+        8,
+        3
+      ]
+    },
+    {
+      "id": 84,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "<p>Hold the SZ-bar and lay down on a flat bench in such a way that around 1/4 of your head is over the edge. Stretch your arms with the bar and bend them so that the bar is lowered. Just before it touches your forehead, push it up.</p>\n<p>Pay attention to your elbows and arms: only the triceps are doing the work, the rest of the arms should not move.</p>",
+      "name": "French Press (skullcrusher) SZ-bar",
+      "name_original": "French press (skullcrusher) SZ-bar",
+      "creation_date": null,
+      "uuid": "ee4a350b-c681-407f-a414-6ec243809ec7",
+      "license": 1,
+      "category": 8,
+      "language": 2,
+      "muscles": [
+        5
+      ],
+      "muscles_secondary": [],
+      "equipment": [
+        8,
+        2
+      ],
+      "image": "https://wger.de/media/exercise-images/109/Barbell-rear-delt-row-1.png"
+    },
+    {
+      "id": 116,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "",
+      "name": "Good Mornings",
+      "name_original": "Good mornings",
+      "creation_date": null,
+      "uuid": "6e862700-3d63-486c-99ae-744c68d2f753",
+      "license": 1,
+      "category": 9,
+      "language": 2,
+      "muscles": [
+        11
+      ],
+      "muscles_secondary": [],
+      "equipment": [],
+      "image": "https://wger.de/media/exercise-images/100/Decline-bench-press-2.png"
+    },
+    {
+      "id": 86,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "<p>Hold two dumbbells and sit on a bench with a straight back, the shoulders are slightly rolled backwards. Your pals point to your body. Bend the arms and bring the weight up with a fast movement. Don't rotate your hands, as with the curls. Without any pause bring the dumbbell down with a slow, controlled movement.</p>\n<p>Don't swing your body during the exercise, the biceps should do all the work here. The elbows are at your side and don't move.</p>",
+      "name": "Hammercurls",
+      "name_original": "Hammercurls",
+      "creation_date": null,
+      "uuid": "6dcc9adb-939c-4581-9e44-d0d73753997b",
+      "license": 1,
+      "category": 8,
+      "language": 2,
+      "muscles": [
+        1
+      ],
+      "muscles_secondary": [],
+      "equipment": [
+        3
+      ]
+    },
+    {
+      "id": 138,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "<p>Take a cable in your hands (palms parallel, point to each other), the body is straight. Bend the arms and bring the weight up with a fast movement. Without any pause bring it back down with a slow, controlled movement, but don't stretch completely your arms.</p>\n<p>Don't swing your body during the exercise, the biceps should do all the work here. The elbows are at your side and don't move.</p>",
+      "name": "Hammercurls on Cable",
+      "name_original": "Hammercurls on cable",
+      "creation_date": "2013-05-05",
+      "uuid": "5baf40e5-ea3c-4f8d-b60a-d294ee2de55b",
+      "license": 1,
+      "category": 8,
+      "language": 2,
+      "muscles": [
+        1
+      ],
+      "muscles_secondary": [
+        13
+      ],
+      "equipment": [],
+      "image": "https://wger.de/media/exercise-images/34/Leg-raises-1.png"
+    },
+    {
+      "id": 128,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "<p>Lay on the hyperextension pad with the belly button just at the leading edge, the upper body can hang freely. Tense your whole back's muscles and bring your upper body up till it is horizontal, but not more. Go slowly down and don't relax your muscles.</p>",
+      "name": "Hyperextensions",
+      "name_original": "Hyperextensions",
+      "creation_date": null,
+      "uuid": "f57a0c60-7d37-4eb3-a94e-1a90292e8c02",
+      "license": 1,
+      "category": 12,
+      "language": 2,
+      "muscles": [
+        9
+      ],
+      "muscles_secondary": [],
+      "equipment": [],
+      "image": "https://wger.de/media/exercise-images/71/Cable-crossover-1.png"
+    },
+    {
+      "id": 148,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "<p>.</p>",
+      "name": "Lateral Raises",
+      "name_original": "Lateral raises",
+      "creation_date": "2013-05-05",
+      "uuid": "5345766a-c092-457a-aa21-8ee6ffa855d4",
+      "license": 1,
+      "category": 13,
+      "language": 2,
+      "muscles": [
+        2
+      ],
+      "muscles_secondary": [],
+      "equipment": [
+        3
+      ],
+      "image": "https://wger.de/media/exercise-images/176/Cross-body-crunch-2.png"
+    },
+    {
+      "id": 149,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "<p>.</p>",
+      "name": "Lateral Raises on Cable, One Armed",
+      "name_original": "Lateral raises on cable, one armed",
+      "creation_date": "2013-05-05",
+      "uuid": "79a3a34c-262f-4cae-b827-b5a85b11b860",
+      "license": 1,
+      "category": 13,
+      "language": 2,
+      "muscles": [
+        2
+      ],
+      "muscles_secondary": [],
+      "equipment": [],
+      "image": "https://wger.de/media/exercise-images/191/Front-squat-1-857x1024.png"
+    },
+    {
+      "id": 154,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "<p>Lay on a bench and put your calves behind the leg holder (better if they are hold on around the lower calves). Hold a grip on the bars to make sure the body is firmly in place. Bend your legs bringing the weight up, go slowly back. During the exercise the body should not move, all work is done by the legs.</p>",
+      "name": "Leg Curls (laying)",
+      "name_original": "Leg curls (laying)",
+      "creation_date": "2013-05-08",
+      "uuid": "cd4fac32-48fb-4237-a263-a44c5108790a",
+      "license": 1,
+      "category": 9,
+      "language": 2,
+      "muscles": [
+        11
+      ],
+      "muscles_secondary": [],
+      "equipment": [],
+      "image": "https://wger.de/media/exercise-images/7/Wide-stance-squat-1.gif"
+    },
+    {
+      "id": 117,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "",
+      "name": "Leg Curls (sitting)",
+      "name_original": "Leg curls (sitting)",
+      "creation_date": null,
+      "uuid": "61950a59-be4e-43cc-abc1-cb52abd15354",
+      "license": 1,
+      "category": 9,
+      "language": 2,
+      "muscles": [
+        11
+      ],
+      "muscles_secondary": [],
+      "equipment": [],
+      "image": "https://wger.de/media/exercise-images/163/Incline-bench-press-1.png"
+    },
+    {
+      "id": 118,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "",
+      "name": "Leg Curls (standing)",
+      "name_original": "Leg curls (standing)",
+      "creation_date": null,
+      "uuid": "89c98117-dd53-4334-bfa6-72a96525629a",
+      "license": 1,
+      "category": 9,
+      "language": 2,
+      "muscles": [
+        11
+      ],
+      "muscles_secondary": [],
+      "equipment": [],
+      "image": "https://wger.de/media/exercise-images/163/Incline-bench-press-2.png"
+    },
+    {
+      "id": 115,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "<p>The exercise is very similar to the wide leg press:</p>\n<p>Sit on the machine and put your feet on the platform so far apart  that you could just put another foot in between them. The feet are parallel and point up.</p>\n<p>Lower the weight so much, that the knees form a right angle. Push immediately the platform up again, without any pause. When in the lower position, the knees point a bit outwards and the movement should be always fluid.</p>",
+      "name": "Leg Presses (narrow)",
+      "name_original": "Leg presses (narrow)",
+      "creation_date": null,
+      "uuid": "560e1a20-33e1-45db-ba5b-63f8c51af76d",
+      "license": 1,
+      "category": 9,
+      "language": 2,
+      "muscles": [
+        10
+      ],
+      "muscles_secondary": [
+        8
+      ],
+      "equipment": [],
+      "image": "https://wger.de/media/exercise-images/100/Decline-bench-press-1.png"
+    },
+    {
+      "id": 114,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "<p>Sit on the machine and put your feet on the platform, a bit more than shoulder wide. The feet are turned outwards by a few degrees.</p>\n<p>Lower the weight so much, that the knees form a right angle. Push immediately the platform up again, without any pause. When in the lower position, the knees point a bit outwards and the movement should be always fluid.</p>",
+      "name": "Leg Presses (wide)",
+      "name_original": "Leg presses (wide)",
+      "creation_date": null,
+      "uuid": "3caed096-c65e-434d-9792-33db636743e7",
+      "license": 1,
+      "category": 9,
+      "language": 2,
+      "muscles": [
+        10
+      ],
+      "muscles_secondary": [
+        8
+      ],
+      "equipment": [],
+      "image": "https://wger.de/media/exercise-images/97/Dumbbell-bench-press-2.png"
+    },
+    {
+      "id": 130,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "",
+      "name": "Leg Press on Hackenschmidt Machine",
+      "name_original": "Leg press on hackenschmidt machine",
+      "creation_date": null,
+      "uuid": "2966e4a2-4306-4cb5-a2dc-8951cd192555",
+      "license": 1,
+      "category": 9,
+      "language": 2,
+      "muscles": [
+        10
+      ],
+      "muscles_secondary": [],
+      "equipment": [],
+      "image": "https://wger.de/media/exercise-images/41/Incline-bench-press-2.png"
+    },
+    {
+      "id": 125,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "<p>Lay down on a bench and hold onto the recliner with your hands to keep you stable. Hold your legs straight and lift them till they make an angle of about 45°. Make a short pause of 1 sec. and go slowly down to the initial position. To increase the intensity you can make a longer pause of 7 sec. every 5th time.</p>",
+      "name": "Leg Raises, Lying",
+      "name_original": "Leg raises, lying",
+      "creation_date": null,
+      "uuid": "7c3cc0ce-e335-4f5c-aa32-1576a908a539",
+      "license": 1,
+      "category": 10,
+      "language": 2,
+      "muscles": [
+        6
+      ],
+      "muscles_secondary": [
+        3
+      ],
+      "equipment": [
+        4
+      ],
+      "image": "https://wger.de/media/exercise-images/130/Narrow-stance-hack-squats-1-1024x721.png"
+    },
+    {
+      "id": 126,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "<p>Put your forearms on the pads on the leg raise machine, the body is hanging freely. Lift now your legs with a fast movement as high as you can, make a short pause of 1sec at the top, and bring them down again. Make sure that during the exercise your body does not swing, only the legs should move.</p>",
+      "name": "Leg Raises, Standing",
+      "name_original": "Leg raises, standing",
+      "creation_date": null,
+      "uuid": "3d8273d2-1fbe-4a8f-99a6-d2b5e204cb41",
+      "license": 1,
+      "category": 10,
+      "language": 2,
+      "muscles": [
+        6
+      ],
+      "muscles_secondary": [
+        3
+      ],
+      "equipment": [],
+      "image": "https://wger.de/media/exercise-images/130/Narrow-stance-hack-squats-2-1024x721.png"
+    },
+    {
+      "id": 143,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "<p>Sit down, put your feet on the supporting points and grab the bar with a wide grip. Pull the weight with a rapid movement towards your belly button, not upper. Keep your arms and elbows during the movement close to your body. Your shoulders are pulled together. Let the weight slowly down till your arms are completely stretched.</p>",
+      "name": "Long-Pulley (low Row)",
+      "name_original": "Long-Pulley (low row)",
+      "creation_date": "2013-05-05",
+      "uuid": "b192c4eb-31c6-458e-b566-d3f38b5aa30c",
+      "license": 1,
+      "category": 12,
+      "language": 2,
+      "muscles": [
+        12
+      ],
+      "muscles_secondary": [
+        1,
+        13
+      ],
+      "equipment": [],
+      "image": "https://wger.de/media/exercise-images/143/Cable-seated-rows-2.png"
+    },
+    {
+      "id": 144,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "<p>The exercise is the same as the regular long pulley, but with a narrow grip:</p>\n<p>Sit down, put your feet on the supporting points and grab the bar with a wide grip. Pull the weight with a rapid movement towards your belly button, not upper. Keep your arms and elbows during the movement close to your body. Your shoulders are pulled together. Let the weight slowly down till your arms are completely stretched.</p>",
+      "name": "Long-Pulley, Narrow",
+      "name_original": "Long-Pulley, narrow",
+      "creation_date": "2013-05-05",
+      "uuid": "bcabc8cf-c005-4630-8853-ef4922e7fd91",
+      "license": 1,
+      "category": 12,
+      "language": 2,
+      "muscles": [
+        12
+      ],
+      "muscles_secondary": [
+        1,
+        13
+      ],
+      "equipment": [],
+      "image": "https://wger.de/media/exercise-images/143/Cable-seated-rows-1.png"
+    },
+    {
+      "id": 141,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "",
+      "name": "MGM Machine",
+      "name_original": "MGM machine",
+      "creation_date": "2013-05-05",
+      "uuid": "a81d18a0-6280-44f8-ab5a-166d016e858e",
+      "license": 1,
+      "category": 12,
+      "language": 2,
+      "muscles": [
+        12
+      ],
+      "muscles_secondary": [],
+      "equipment": [],
+      "image": "https://wger.de/media/exercise-images/37/Cable-seated-rows-2.png"
+    },
+    {
+      "id": 93,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "<p>Sit yourself on the decline bench and fix your legs. Cross your arms over the chest and bring with a rolling movement your upper body up, go now without a pause and with a slow movement down again. Don't let your head move during the exercise.</p>",
+      "name": "Negative Crunches",
+      "name_original": "Negative crunches",
+      "creation_date": null,
+      "uuid": "4bd55b0a-559a-4458-aabd-e66619b63610",
+      "license": 1,
+      "category": 10,
+      "language": 2,
+      "muscles": [
+        6
+      ],
+      "muscles_secondary": [],
+      "equipment": [],
+      "image": "https://wger.de/media/exercise-images/193/Preacher-curl-3-1.png"
+    },
+    {
+      "id": 107,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "<p>Grab the pull up bar with a wide grip, the body is hanging freely. Keep your chest out and pull yourself up till your chin reaches the bar or it touches your neck, if you want to pull behind you. Go with a slow and controlled movement down, always keeping the chest out.</p>",
+      "name": "Pull-ups",
+      "name_original": "Pull-ups",
+      "creation_date": null,
+      "uuid": "7ce6b090-5099-4cd0-83ae-1a02725c868b",
+      "license": 1,
+      "category": 12,
+      "language": 2,
+      "muscles": [
+        12
+      ],
+      "muscles_secondary": [
+        2,
+        1,
+        9
+      ],
+      "equipment": [
+        6
+      ],
+      "image": "https://wger.de/media/exercise-images/61/Close-grip-bench-press-1.png"
+    },
+    {
+      "id": 140,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "",
+      "name": "Pull Ups on Machine",
+      "name_original": "Pull ups on machine",
+      "creation_date": "2013-05-05",
+      "uuid": "d46adbda-7c60-42a0-b1fd-9ec111b35956",
+      "license": 1,
+      "category": 12,
+      "language": 2,
+      "muscles": [
+        12
+      ],
+      "muscles_secondary": [
+        2,
+        1,
+        9
+      ],
+      "equipment": [],
+      "image": "https://wger.de/media/exercise-images/125/Leg-raises-1.png"
+    },
+    {
+      "id": 142,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "",
+      "name": "Rowing, Lying on Bench",
+      "name_original": "Rowing, lying on bench",
+      "creation_date": "2013-05-05",
+      "uuid": "1ad8e721-9297-46c2-a983-7297ca4dfa52",
+      "license": 1,
+      "category": 12,
+      "language": 2,
+      "muscles": [
+        12
+      ],
+      "muscles_secondary": [],
+      "equipment": [],
+      "image": "https://wger.de/media/exercise-images/37/Cable-seated-rows-1.png"
+    },
+    {
+      "id": 108,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "",
+      "name": "Rowing, Seated",
+      "name_original": "Rowing, seated",
+      "creation_date": null,
+      "uuid": "57747eb3-411a-4efd-8842-a45e562320ee",
+      "license": 1,
+      "category": 12,
+      "language": 2,
+      "muscles": [
+        12
+      ],
+      "muscles_secondary": [],
+      "equipment": [],
+      "image": "https://wger.de/media/exercise-images/61/Close-grip-bench-press-2.png"
+    },
+    {
+      "id": 106,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "<p>The execution of this exercise is very similar to the regular bent over rowing, only that the bar is fixed here.</p>\n<p>Grab the barbell with a wide grip (slightly more than shoulder wide) and lean forward. Your upper body is not quite parallel to the floor, but forms a slight angle. The chest's out during the whole exercise. Pull now the barbell with a fast movement towards your belly button, not further up. Go slowly down to the initial position. Don't swing with your body and keep your arms next to your body.</p>",
+      "name": "Rowing, T-bar",
+      "name_original": "Rowing, T-bar",
+      "creation_date": null,
+      "uuid": "3c3f23b5-b523-4a69-8c79-1106a4ce9b6d",
+      "license": 1,
+      "category": 12,
+      "language": 2,
+      "muscles": [
+        12
+      ],
+      "muscles_secondary": [
+        2,
+        1,
+        13
+      ],
+      "equipment": [],
+      "image": "https://wger.de/media/exercise-images/16/Incline-press-2.png"
+    },
+    {
+      "id": 119,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "<p>Sit on a bench, the back rest should be almost vertical. Take a barbell with a shoulder wide grip and bring it up to chest height. Press the weight up, but don't stretch the arms completely. Go slowly down and repeat.</p>",
+      "name": "Shoulder Press, Barbell",
+      "name_original": "Shoulder press, barbell",
+      "creation_date": null,
+      "uuid": "9926e18f-4e2b-4c20-9477-9bfb08d229bc",
+      "license": 1,
+      "category": 13,
+      "language": 2,
+      "muscles": [
+        2
+      ],
+      "muscles_secondary": [],
+      "equipment": [
+        1
+      ],
+      "image": "https://wger.de/media/exercise-images/122/Incline-cable-flyes-1.png"
+    },
+    {
+      "id": 123,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "<p>Sit on a bench, the back rest should be almost vertical. Take two dumbbells and bring them up to shoulder height, the palms and the elbows point during the whole exercise to the front. Press the weights up, at the highest point they come very near but don't touch. Go slowly down and repeat.</p>",
+      "name": "Shoulder Press, Dumbbells",
+      "name_original": "Shoulder press, dumbbells",
+      "creation_date": null,
+      "uuid": "1df6a1b5-7bd2-402f-9d5e-94f9ed6d8b54",
+      "license": 1,
+      "category": 13,
+      "language": 2,
+      "muscles": [
+        2
+      ],
+      "muscles_secondary": [],
+      "equipment": [
+        3
+      ],
+      "image": "https://wger.de/media/exercise-images/113/Walking-lunges-3.png"
+    },
+    {
+      "id": 152,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "",
+      "name": "Shoulder Press, on Machine",
+      "name_original": "Shoulder press, on machine",
+      "creation_date": "2013-05-05",
+      "uuid": "7389be43-215b-4db8-8b69-75dc77004d74",
+      "license": 1,
+      "category": 13,
+      "language": 2,
+      "muscles": [
+        2
+      ],
+      "muscles_secondary": [],
+      "equipment": [],
+      "image": "https://wger.de/media/exercise-images/111/Wide-stance-squat-1.gif"
+    },
+    {
+      "id": 155,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "<p>The exercise is basically the same as with a free barbell:</p>\n<p>Sit on a bench, the back rest should be almost vertical. Take a bar with a shoulder wide grip and bring it down to chest height. Press the weight up, but don't stretch the arms completely. Go slowly down and repeat.</p>",
+      "name": "Shoulder Press, on Multi Press",
+      "name_original": "Shoulder press, on multi press",
+      "creation_date": "2013-05-08",
+      "uuid": "68d505ec-5416-4153-b228-eb1545d5c89f",
+      "license": 1,
+      "category": 13,
+      "language": 2,
+      "muscles": [
+        2
+      ],
+      "muscles_secondary": [],
+      "equipment": [],
+      "image": "https://wger.de/media/exercise-images/5/Walking-lunges-1.png"
+    },
+    {
+      "id": 150,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "<p>Take a barbell and stand with a straight body, the arms are hanging freely in front of you. Lift from this position the shoulders as high as you can, but don't bend the arms during the movement. On the highest point, make a short pause of 1 or 2 seconds before returning slowly to the initial position.</p>\n<p>When training with a higher weight, make sure that you still do the whole movement!</p>",
+      "name": "Shrugs, Barbells",
+      "name_original": "Shrugs, barbells",
+      "creation_date": "2013-05-05",
+      "uuid": "3721be0c-2a59-4bb9-90d3-695faaf028af",
+      "license": 1,
+      "category": 13,
+      "language": 2,
+      "muscles": [
+        2
+      ],
+      "muscles_secondary": [],
+      "equipment": [
+        1
+      ],
+      "image": "https://wger.de/media/exercise-images/191/Front-squat-2-857x1024.png"
+    },
+    {
+      "id": 151,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "<p>Stand with straight body, the hands are hanging freely on the side and hold each a dumbbell. Lift from this position the shoulders as high as you can, but don't bend the arms during the movement. On the highest point, make a short pause of 1 or 2 seconds before returning slowly to the initial position.</p>\n<p>When training with a higher weight, make sure that you still do the whole movement!</p>",
+      "name": "Shrugs, Dumbbells",
+      "name_original": "Shrugs, dumbbells",
+      "creation_date": "2013-05-05",
+      "uuid": "ee61aef0-f0c7-4a7a-882a-3b39312dfffd",
+      "license": 1,
+      "category": 13,
+      "language": 2,
+      "muscles": [
+        2
+      ],
+      "muscles_secondary": [],
+      "equipment": [
+        3
+      ],
+      "image": "https://wger.de/media/exercise-images/111/Wide-stance-squat-2.gif"
+    },
+    {
+      "id": 103,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "<p>Sit on a bench for calf raises and check that the feet are half free and that you can completely stretch the calf muscles down. Pull your calves up, going as far (up) as you can. Make at the highest point a short pause of 1 or 2 seconds and go down.</p>",
+      "name": "Sitting Calf Raises",
+      "name_original": "Sitting calf raises",
+      "creation_date": null,
+      "uuid": "399666e7-30a7-4b86-833d-4422e4c72b61",
+      "license": 1,
+      "category": 14,
+      "language": 2,
+      "muscles": [
+        15
+      ],
+      "muscles_secondary": [
+        7
+      ],
+      "equipment": [],
+      "image": "https://wger.de/media/exercise-images/73/Dumbbell-decline-flys-1.png"
+    },
+    {
+      "id": 95,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "<p>Sit on a mat, your calves are resting on a bench, the knees make a right angle. Hold your hands behind your neck. Go now up with a rolling movement of your back, you should feel how the individual vertebrae lose contact with the mat. At the highest point, contract your abs as much as you can and hold there for 2 sec. Go now down, unrolling your back.</p>\n<p> </p>",
+      "name": "Sit-ups",
+      "name_original": "Sit-ups",
+      "creation_date": null,
+      "uuid": "fb750082-7034-4c51-b1e4-dfa0fe2dac8e",
+      "license": 1,
+      "category": 10,
+      "language": 2,
+      "muscles": [
+        6
+      ],
+      "muscles_secondary": [],
+      "equipment": [],
+      "image": "https://wger.de/media/exercise-images/11/Rear-deltoid-row-2.png"
+    },
+    {
+      "id": 111,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "<p>Make sure you have put the barbell at a height where you can comfortably take it out and put it back in. Take it out and make yourself ready:</p>\n<ul>\n<li>The bar is somewhat lower than your shoulders</li>\n<li>The feet are quite apart and point out</li>\n<li>The head is in your neck and looks up</li>\n<li>The chest is out</li>\n</ul>\n<p>Go now slowly down, till your thighs are parallel with the floor, not lower. The knees point outwards, your butt, out. Make a small pause of 1 second and with as much energy as you can, push the weight up. Make a pause of 2 seconds and repeat.</p>",
+      "name": "Squats",
+      "name_original": "Squats",
+      "creation_date": null,
+      "uuid": "c4856da3-8454-4857-8997-336d06df590f",
+      "license": 1,
+      "category": 9,
+      "language": 2,
+      "muscles": [
+        10
+      ],
+      "muscles_secondary": [
+        8
+      ],
+      "equipment": [
+        1
+      ],
+      "image": "https://wger.de/media/exercise-images/98/Butterfly-machine-2.png"
+    },
+    {
+      "id": 102,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "<p>Get onto the calf raises machine, you should able to completely push your calves down. Stand straight, don't make a hollow back and don't bend your legs. Pull yourself up as high as you can. Make a small pause of 1 - 2 seconds and go slowly down.</p>",
+      "name": "Standing Calf Raises",
+      "name_original": "Standing calf raises",
+      "creation_date": null,
+      "uuid": "abc4c62e-27b2-4c31-8766-40f8dca84cab",
+      "license": 1,
+      "category": 14,
+      "language": 2,
+      "muscles": [
+        7
+      ],
+      "muscles_secondary": [
+        15
+      ],
+      "equipment": [],
+      "image": "https://wger.de/media/exercise-images/18/Dumbbell-flys-2.png"
+    },
+    {
+      "id": 89,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "<p>Grab the cable, stand with your feet shoulder wide, keep your back straight and lean forward a little. Push the bar down, making sure the elbows don't move during the exercise. Rotate your hands outwards at the very end and go back to the initial position without pause.</p>",
+      "name": "Triceps Extensions on Cable",
+      "name_original": "Triceps extensions on cable",
+      "creation_date": null,
+      "uuid": "f1b5e525-6232-4d60-a243-9b2cd6c55298",
+      "license": 1,
+      "category": 8,
+      "language": 2,
+      "muscles": [
+        5
+      ],
+      "muscles_secondary": [],
+      "equipment": [],
+      "image": "https://wger.de/media/exercise-images/70/Reverse-grip-bent-over-rows-2.png"
+    },
+    {
+      "id": 90,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "<p>Grab the bar, stand with your feet shoulder wide, keep your back straight and lean forward a little. Push the bar down, making sure the elbows don't move during the exercise. Without pause go back to the initial position.</p>",
+      "name": "Triceps Extensions on Cable With Bar",
+      "name_original": "Triceps extensions on cable with bar",
+      "creation_date": null,
+      "uuid": "20a76bd0-1e56-4a4e-bd79-0ab118552bde",
+      "license": 1,
+      "category": 8,
+      "language": 2,
+      "muscles": [
+        5
+      ],
+      "muscles_secondary": [],
+      "equipment": [],
+      "image": "https://wger.de/media/exercise-images/109/Barbell-rear-delt-row-2.png"
+    },
+    {
+      "id": 139,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "<p>.</p>",
+      "name": "Triceps Machine",
+      "name_original": "Triceps machine",
+      "creation_date": "2013-05-05",
+      "uuid": "88bbdbde-c9b6-45a1-aee9-efc6f02cfab3",
+      "license": 1,
+      "category": 8,
+      "language": 2,
+      "muscles": [
+        5
+      ],
+      "muscles_secondary": [],
+      "equipment": [],
+      "image": "https://wger.de/media/exercise-images/125/Leg-raises-2.png"
+    },
+    {
+      "id": 147,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "<p>The movements are basically the same as with an SZ-bar, but you use the bar on the multi press:</p>\n<p>Stand straight, your feet are shoulder-width apart. Hold the bar with an overhand grip on your thighs, the arms are stretched. Lift the bar close to the body till your chin. The elbows point out so that at the highest point they form a V. Make here a short pause before going slowly down and repeating the movement.</p>",
+      "name": "Upright Row, on Multi Press",
+      "name_original": "Upright row, on multi press",
+      "creation_date": "2013-05-05",
+      "uuid": "26c72fd7-d5b9-497b-be5e-cdfe9715ddac",
+      "license": 1,
+      "category": 13,
+      "language": 2,
+      "muscles": [
+        2,
+        9
+      ],
+      "muscles_secondary": [
+        1
+      ],
+      "equipment": [],
+      "image": "https://wger.de/media/exercise-images/176/Cross-body-crunch-1.png"
+    },
+    {
+      "id": 127,
+      "license_author": "wger.de",
+      "status": "2",
+      "description": "<p>Stand straight, your feet are shoulder-width apart. Hold the SZ-bar with an overhand grip on your thighs, the arms are stretched. Lift the bar close to the body till your chin. The elbows point out so that at the highest point they form a V. Make here a short pause before going slowly down and repeating the movement.</p>",
+      "name": "Upright Row, SZ-bar",
+      "name_original": "Upright row, SZ-bar",
+      "creation_date": null,
+      "uuid": "61271a8e-6a00-4898-8dc3-ea9ef913f25e",
+      "license": 1,
+      "category": 13,
+      "language": 2,
+      "muscles": [
+        2,
+        9
+      ],
+      "muscles_secondary": [
+        1
+      ],
+      "equipment": [
+        2
+      ],
+      "image": "https://wger.de/media/exercise-images/71/Cable-crossover-2.png"
+    }
   ]
 }
