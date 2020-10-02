@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 export class EquipmentService {
   productURL = '/api/equipment';
   constructor(private http: HttpClient) { }
-  getEquipment(): Observable<IEquipment> {
-    return this.http.get<IEquipment>(this.productURL);
+  getEquipment(): Observable<IEquipment[]> {
+    return this.http.get<IEquipment[]>(this.productURL);
   }
 }

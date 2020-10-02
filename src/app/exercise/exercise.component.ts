@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ExerciseCategoryService } from '@app/services/exercise-category.service';
 import { ExerciseService } from '@app/services/exercise.service';
 import { IExercise } from '../Interfaces/IExercise';
 
@@ -16,12 +17,17 @@ export class ExerciseComponent implements OnInit {
   exercises: any[] = [];
   constructor(
     private exercise: ExerciseService,
+    private category: ExerciseCategoryService,
   ) { }
   ngOnInit(): void {
     this.exercise.getExercises().subscribe({
       next: (data) => {
         this.exercises = data as unknown as IExercise[];
+        this.category.getExerciseCategory().subscribe({
+          next: (data) => {
 
+          }
+        })
         console.log(this.exercise);
       }
     });

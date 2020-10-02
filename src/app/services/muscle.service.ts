@@ -9,8 +9,8 @@ import { Observable } from 'rxjs';
 export class MuscleService {
   productURL = '/api/muscle';
   constructor(private http: HttpClient) { }
-  getMuscles(): Observable<IMuscle> {
-    return this.http.get<IMuscle>(this.productURL);
+  getMuscles(): Observable<IMuscle[]> {
+    return this.http.get<IMuscle[]>(this.productURL);
   }
 }
 

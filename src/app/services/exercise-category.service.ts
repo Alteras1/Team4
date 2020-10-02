@@ -9,7 +9,7 @@ import { IExerciseCategory } from '../Interfaces/IExerciseCategory';
 export class ExerciseCategoryService {
   productURL = '/api/category';
   constructor(private http: HttpClient) { }
-  getExerciseCategory(): Observable<IExerciseCategory> {
-    return this.http.get<IExerciseCategory>(this.productURL);
+  getExerciseCategory(): Observable<IExerciseCategory[]> {
+    return this.http.get<IExerciseCategory[]>(this.productURL);
   }
 }
