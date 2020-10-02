@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ExerciseCompleteService } from '../common/exercise.service';
 import { ExerciseService } from '../exercise.service';
 import { IExercise } from '../Interfaces/IExercise';
 
