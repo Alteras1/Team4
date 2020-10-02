@@ -8,7 +8,6 @@ import { IExercise } from '../Interfaces/IExercise';
   styleUrls: ['./exercise.component.css']
 })
 export class ExerciseComponent implements OnInit {
-
   filterCategory = '0';
   filterMuscle = '0';
   filterExerciseId = '0';
@@ -23,8 +22,6 @@ export class ExerciseComponent implements OnInit {
       next: (data) => {
         this.exercises = data.results as any[] ;
       }
-
     });
-
   }
 }

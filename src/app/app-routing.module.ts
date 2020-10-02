@@ -25,9 +25,8 @@ const routes: Routes = [
   {path: 'sets', component: SetsComponent},
   {path: 'profile', component: ProfileComponent},
   {path: 'contacts', component: ContactsComponent},
-  {path: 'calendar', component: MonthComponent},
-// otherwise redirect to home
-{ path: '**', redirectTo: '' }
+  {path: 'calendar', component: CalendarComponent},
+  {path: '**', component: Error404Component},
 ];
 
 @NgModule({

@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ICalendar } from './Interfaces/ICalendar';
+import { ICalendar } from '../Interfaces/ICalendar';
 
 @Injectable({
   providedIn: 'root'
@@ -11,5 +11,8 @@ export class CalendarService {
   constructor(private http: HttpClient) { }
   getCalendar(): Observable<ICalendar[]> {
     return this.http.get<ICalendar[]>(this.calendarURL);
+  }
+  getCalendarByUser(userID: number): Observable<ICalendar[]> {
+    return this.http.get<ICalendar[]>(this.calendarURL + '?user=' + userID);
   }
 }

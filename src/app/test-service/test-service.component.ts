@@ -1,6 +1,6 @@
 import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
-import { ExerciseService } from '../exercise.service';
-import { ExerciseImageService } from '../services/exercise-image.service';
+import { ExerciseService } from '../services/exercise.service';
+import { IExercise } from '../Interfaces/IExercise';
 
 
 @Component({
@@ -21,11 +21,10 @@ export class TestServiceComponent implements OnInit{
   ngOnInit(): void {
     this.exercise.getExercises().subscribe({
       next: (data) => {
-        this.exercises = data.results as any[] ;
+        this.exercises = data as unknown as IExercise[];
+        console.log(this.exercise)
       }
-
     });
-
   }
 }
 

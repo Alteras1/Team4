@@ -1,6 +1,6 @@
 export interface ICalendar {
   user: number;
-  set: [
+  sets: [
     {
       id: number;
       days: string[];
