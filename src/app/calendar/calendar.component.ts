@@ -68,14 +68,6 @@ export class CalendarComponent implements OnInit {
   }
 
   generateWeek() {
-    // this.setsService.getSets().subscribe({
-    //   next: (data) => {
-    //     data = data.filter()
-    //   }
-    // })
-  }
-
-  generateHTML() {
     let element = document.getElementById('week') as HTMLElement;
     let builder:string = "";
     for (let day in this.week) {
