@@ -7,3 +7,13 @@ export interface ICalendar {
     }
   ]
 }
+
+export interface IWeek {
+  sunday: any[],
+  monday: any[],
+  tuesday: any[],
+  wednesday: any[],
+  thursday: any[],
+  friday: any[],
+  saturday: any[]
+}

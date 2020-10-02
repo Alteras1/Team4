@@ -1,7 +1,8 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { ICalendar } from '../Interfaces/ICalendar';
+import { ICalendar, IWeek } from '../Interfaces/ICalendar';
 import { CalendarService } from '../services/calendar.service';
 import { DOCUMENT } from '@angular/common'
+import { SetsService } from '../services/sets.service';
 
 @Component({
   selector: 'app-calendar',
@@ -14,7 +15,7 @@ export class CalendarComponent implements OnInit {
   month = this._currentDate.getMonth();
   day = this._currentDate.getDay();
   year = this._currentDate.getFullYear();
-  week = {
+  week:IWeek = {
     sunday: [],
     monday: [],
     tuesday: [],
@@ -27,7 +28,7 @@ export class CalendarComponent implements OnInit {
   _userCalendar;
   _user = 1;
 
-  constructor(private calendarService: CalendarService, @Inject(DOCUMENT) document) {
+  constructor(private calendarService: CalendarService, private setsService: SetsService, @Inject(DOCUMENT) document) {
 
   }
 
@@ -67,6 +68,14 @@ export class CalendarComponent implements OnInit {
   }
 
   generateWeek() {
+    // this.setsService.getSets().subscribe({
+    //   next: (data) => {
+    //     data = data.filter()
+    //   }
+    // })
+  }
+
+  generateHTML() {
     let element = document.getElementById('week') as HTMLElement;
     let builder:string = "";
     for (let day in this.week) {
