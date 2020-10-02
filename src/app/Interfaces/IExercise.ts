@@ -1,5 +1,3 @@
-import { Url } from 'url';
-
 export interface IExercise {
   id: number;
   name: string;
