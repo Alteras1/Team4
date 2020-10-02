@@ -3,7 +3,9 @@
         <div>
             <div class="set-card">
                 <h5 class="set-card-title">{{set.name}}</h5>
-                
+                <div *ngFor="let exercise of setExcercises">
+                    <p class="set-card-text">{{exercise}}</p>
+                </div>
                 
             </div>
         </div>
