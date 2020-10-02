@@ -1,15 +1,15 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { IWgerde } from '../Interfaces/IWgerde';
+import { IExerciseCategory } from '../Interfaces/IExerciseCategory';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ExerciseCategoryService {
-  productURL = 'https://wger.de/api/v2/exercisecategory?language=2&license_author=wger.de&limit=66';
+  productURL = '/api/category';
   constructor(private http: HttpClient) { }
-  getExerciseCategory(): Observable<IWgerde> {
-    return this.http.get<IWgerde>(this.productURL);
+  getExerciseCategory(): Observable<IExerciseCategory> {
+    return this.http.get<IExerciseCategory>(this.productURL);
   }
 }

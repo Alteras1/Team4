@@ -13,7 +13,7 @@ export class ExerciseComponent implements OnInit {
   filterExerciseId = '0';
   filterExerciseName = '0';
   filterEquipment = '0';
-   exercises: any[] = [];
+  exercises: any[] = [];
   constructor(
     private exercise: ExerciseService,
   ) { }
@@ -21,6 +21,7 @@ export class ExerciseComponent implements OnInit {
     this.exercise.getExercises().subscribe({
       next: (data) => {
         this.exercises = data as unknown as IExercise[];
+
         console.log(this.exercise);
       }
     });
