@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ExerciseService } from '../services/exercise.service';
+import { ExerciseService } from '../exercise.service';
 import { IExercise } from '../Interfaces/IExercise';
 
 @Component({
@@ -20,8 +20,7 @@ export class ExerciseComponent implements OnInit {
   ngOnInit(): void {
     this.exercise.getExercises().subscribe({
       next: (data) => {
-        this.exercises = data as unknown as IExercise[];
-        console.log(this.exercise);
+        this.exercises = data.results as any[] ;
       }
     });
   }
