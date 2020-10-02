@@ -10,50 +10,22 @@ import { IExercise } from '../Interfaces/IExercise';
 })
 export class ExerciseComponent implements OnInit {
 
-  // tslint:disable-next-line: variable-name
-  _listFilter: string;
-  // tslint:disable-next-line: variable-name
-  _filterOption: string = "Name";
-  exercises: IExercise[] = [];
-  filteredExercises: IExercise[] = this.exercises;
-  searchOptions: string[] = ["Name", "ID"];
-  constructor(private exerciseService: ExerciseService, private exerciseComplete: ExerciseCompleteService) {
-    this.filteredExercises = this.exercises;
-  }
-
-  get listFilter(): string {
-    return this._listFilter;
-  }
-
-  set listFilter(value: string) {
-    this._listFilter = value;
-    // tslint:disable-next-line: max-line-length
-    this.filteredExercises = this._listFilter ? this.performFilter(this._listFilter.toLowerCase(), this._filterOption.toLowerCase()) : this.exercises;
-  }
-
-  get filterOption(): string {
-    return this._filterOption;
-  }
-
-  set filterOption(value: string) {
-    this._filterOption = value;
-    // tslint:disable-next-line: max-line-length
-    this.filteredExercises = this._listFilter ? this.performFilter(this._listFilter.toLowerCase(), this._filterOption.toLowerCase()) : this.exercises;
-  }
-
-  performFilter(filterBy: string, option: string): IExercise[] {
-    return this.exercises.filter((exercise: IExercise) => exercise[option].toString().toLowerCase().includes(filterBy));
-  }
-
+  filterCategory = '0';
+  filterMuscle = '0';
+  filterExerciseId = '0';
+  filterExerciseName = '0';
+  filterEquipment = '0';
+   exercises: any[] = [];
+  constructor(
+    private exercise: ExerciseService,
+  ) { }
   ngOnInit(): void {
-    this.exerciseService.getExercises().subscribe({
+    this.exercise.getExercises().subscribe({
       next: (data) => {
-        this.exercises = data.results as any as IExercise[];
-        this.filteredExercises = data.results;
-        console.log(this.exercises);
+        this.exercises = data.results as any[] ;
       }
 
     });
-    console.log(this.exerciseComplete.getExerciseComplete());
+
   }
 }
