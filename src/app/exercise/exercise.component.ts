@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ExerciseService } from '../services/exercise.service';
+import { ExerciseService } from '@app/services/exercise.service';
 import { IExercise } from '../Interfaces/IExercise';
 
 @Component({
