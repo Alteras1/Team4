@@ -15,6 +15,7 @@ import { MonthComponent } from './calendar/month/month.component';
 import { TestServiceComponent } from './test-service/test-service.component';
 import { AlertComponent } from './_components';
 import { ErrorInterceptor, fakeBackendProvider, JwtInterceptor } from './_helpers';
+import { CalendarComponent } from './calendar/calendar.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { ErrorInterceptor, fakeBackendProvider, JwtInterceptor } from './_helper
     SetsComponent,
     ProfileComponent,
     ContactsComponent,
-    MonthComponent,
+    CalendarComponent,
     TestServiceComponent,
     AlertComponent,
   ],
