@@ -145,10 +145,28 @@ export class CalendarComponent implements OnInit {
     let dayString: String;
     const days = ["sun", "mon", "tue", "wed", "thr", "fri", "sat"];
     dayString = days[day];
-    let setInCalendar = this._userCalendar.sets.find((obj) => (obj.id == set.id));
-    setInCalendar.days.push(dayString);
+    let setInCalendar = this._userCalendar.sets.find((obj) => (obj.id == set.id));    //find the set in the calendar obj
+    if (setInCalendar == undefined) {
+      this._userCalendar.sets.push({                      //If set isn't already in the calendar
+        "id": set.id,
+        "days": [dayString]
+      })
+    } else {
+      setInCalendar.days.push(dayString);                 //Add the day to the set
+    }
     this.week[day].sets.push(set);
     this.calendarService.updateCalendar(this._userCalendar).subscribe();
-    console.log(this._userCalendar);
+  }
+
+  removeSetFromDay(set: ISets, day: number) {
+    let dayString: String;
+    const days = ["sun", "mon", "tue", "wed", "thr", "fri", "sat"];
+    dayString = days[day];
+    let setInCalendar = this._userCalendar.sets.find((obj) => (obj.id == set.id));    //find the set in the calendar obj
+    const index = setInCalendar.days.indexOf(dayString, 0);
+    if (index > -1) {setInCalendar.days.splice(index, 1)}                             //Remove the day from the set
+    const weekIndex = this.week[day].sets.indexOf(set, 0);
+    if (weekIndex > -1) {this.week[day].sets.splice(weekIndex, 1)}
+    this.calendarService.updateCalendar(this._userCalendar).subscribe();
   }
 }

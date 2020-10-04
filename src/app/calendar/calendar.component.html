@@ -13,8 +13,16 @@
 Available Sets:
 <div *ngFor='let set of sets'>
   <h5>{{set.name}}</h5>
-  Add to <button (click)="addSetToDay(set, 0)">Sunday</button>
+  Add to
+  <ng-container *ngFor="let day of week; index as i">
+    <button [disabled]="this.week[i].sets.includes(set)" (click)="addSetToDay(set, i)">{{day.day}}</button>
+  </ng-container>
+  <br>
+  Remove from
+  <ng-container *ngFor="let day of week; index as i">
+    <button [disabled]="!this.week[i].sets.includes(set)" (click)="removeSetFromDay(set, i)">{{day.day}}</button>
+  </ng-container>
   <ng-container *ngFor='let excer of set.exercises'>
-    {{excer.amount}} x {{excer.name}}
+    <br>{{excer.amount}} x {{excer.name}}
   </ng-container>
 </div>
