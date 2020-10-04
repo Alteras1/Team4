@@ -7,3 +7,14 @@
     </ng-container>
   </div>
 </div>
+
+<br>
+<br>
+Available Sets:
+<div *ngFor='let set of sets'>
+  <h5>{{set.name}}</h5>
+  Add to <button (click)="addSetToDay(set, 0)">Sunday</button>
+  <ng-container *ngFor='let excer of set.exercises'>
+    {{excer.amount}} x {{excer.name}}
+  </ng-container>
+</div>

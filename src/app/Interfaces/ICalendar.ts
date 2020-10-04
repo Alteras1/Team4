@@ -1,9 +1,10 @@
 export interface ICalendar {
-  user: number;
+  id: number,
+  user: number,
   sets: [
     {
-      id: number;
-      days: string[];
+      id: number,
+      days: string[]
     }
   ]
 }
