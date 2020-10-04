@@ -9,3 +9,6 @@ table {
   min-height: 1200px;
 }
 */
+.currentDay {
+  color: red;
+}

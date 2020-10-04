@@ -1,4 +1,9 @@
 <div *ngFor='let day of week'>
-  <h1>{{day.day}}</h1>
-  <div>{{day.sets}}</div>
+  <h1 [ngClass]="{'currentDay': day.num == currentday}">{{day.day}}</h1>
+  <div *ngFor='let set of day.sets'>
+    <h5>{{set.name}}</h5>
+    <ng-container *ngFor='let excer of set.exercises'>
+      {{excer.amount}} x {{excer.name}}
+    </ng-container>
+  </div>
 </div>

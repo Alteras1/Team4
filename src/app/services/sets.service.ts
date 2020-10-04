@@ -14,4 +14,7 @@ export class SetsService {
   getSets(): Observable<ISets> {
     return this.http.get<ISets>(this.productURL);
   }
+  getSetsByUserId(id:number): Observable<ISets[]> {
+    return this.http.get<ISets[]>(this.productURL + `?user=${id}`);
+  }
 }
