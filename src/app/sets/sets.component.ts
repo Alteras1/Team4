@@ -14,7 +14,7 @@ export class SetsComponent implements OnInit {
   sets: any[] = [];
   userSet: ISets[] = [];
   allExercises: any[] = [];
-  setExcercises: any[] = [];
+  setExercises: any[] = [];
   setAmount: number[] = [];
 
   constructor(
@@ -31,22 +31,27 @@ export class SetsComponent implements OnInit {
           next: (exerciseData) => {
             this.allExercises = exerciseData as unknown as IExercise[];
             
-            //Implement user login here; going to grab the 1st user for now
-            // console.log(this.account.userValue.id);
-            // console.log(this.account.userValue.username);
+            
             this.userSet = this.sets.filter(x => x.user == this.account.userValue.id);
             console.log(this.userSet);
-            // for (let set of this.userSet) {
-            //   for (let exerc of set.exercises) {
-            //     console.log(exerc.id);
-            //     let value = this.allExercises.find(x => x.id == exerc.id);
-            //     console.log(value);
-            //     this.setExcercises.push(value);
-            //     this.setAmount.push(exerc.amount);
-            //   }
-            // }
+            for (let set of this.userSet) {
+              let exerciseArray = [];
+              for (let exerc of set.exercises) {
+                console.log(exerc.id);
+                let value = this.allExercises.find(x => x.id == exerc.id);
+                console.log(value);
+                exerciseArray.push({
+                  "name": value.name,
+                  "amount": exerc.amount
+                });
+              }
+              this.setExercises.push({
+                "name": set.name,
+                "array": exerciseArray
+              });
+            }
             
-            console.log(this.setExcercises);
+            console.log(this.setExercises);
             console.log(this.setAmount);
           }
         });
