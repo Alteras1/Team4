@@ -125,7 +125,7 @@ server.post('/auth/update', (req, res) => {
     var data = JSON.parse(data.toString());
     //get the user
     const index = userdb.users.findIndex(user => user.username === username && user.password === password);
-    data[index] = {
+    data.users[index] = {
       id: id,
       username: username,
       password: newPassword,
@@ -173,6 +173,6 @@ server.use(/^(?!\/auth).*$/, (req, res, next) => {
 
 server.use('/api', router);   //Run the JSON-Server with the /api/ call
 
-server.listen(4200, () => {
+server.listen(4200, "0.0.0.0", () => {
   console.log('Run Auth API Server');
 })
