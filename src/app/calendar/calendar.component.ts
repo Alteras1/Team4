@@ -1,7 +1,6 @@
 import { Component, Inject, OnInit, NgZone, ChangeDetectorRef } from '@angular/core';
 import { ICalendar, IWeek } from '../Interfaces/ICalendar';
 import { CalendarService } from '../services/calendar.service';
-import { DOCUMENT } from '@angular/common'
 import { SetsService } from '../services/sets.service';
 import { ISets } from '@app/Interfaces/ISets';
 import { ExerciseService } from '@app/services/exercise.service';
@@ -21,32 +20,39 @@ export class CalendarComponent implements OnInit {
   week: any[] = [
     {
       "day": "Sunday",
+      "abbr":"Su",
       "num": 0,
       sets: []
     },
     {
       "day": "Monday",
+      "abbr": "M",
       "num": 1,
       sets: []
     }, {
       "day": "Tuesday",
+      "abbr": "Tu",
       "num": 2,
       sets: []
     }, {
       "day": "Wednesday",
+      "abbr": "W",
       "num": 3,
       sets: []
     }, {
       "day": "Thursday",
+      "abbr": "Th",
       "num": 4,
       sets: []
     }, {
       "day": "Friday",
+      "abbr": "F",
       "num": 5,
       sets: []
     },
     {
       "day": "Saturday",
+      "abbr": "Sa",
       "num": 6,
       sets: []
     },
