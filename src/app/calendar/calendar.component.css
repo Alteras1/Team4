@@ -12,3 +12,22 @@ table {
 .currentDay {
   color: red;
 }
+
+.btn-day {
+  all: unset;
+  width: 30px;
+  height: 30px;
+  margin: 3px;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+  color: white;
+}
+
+.add {
+  background-color: #353a3f;
+}
+
+.remove {
+  background-color: crimson;
+}
