@@ -1,6 +1,6 @@
-<div class="alert alert-primary" role="alert">
-
-  <label for="category">FILTER BY: category </label>
+<div style="background-color: #474e5d;">
+<br>
+  <label style="margin-left:25px;color:white;" for="category">FILTER BY: category </label>
   <select [(ngModel)]="filterCategory" id="category" name="category" size="1" #ctrl="ngModel" required>
     <option value="0">All</option>
     <option value="10">Abs</option>
@@ -12,7 +12,7 @@
     <option value="9">Legs</option>
   </select>
 
-  <label for="muscle">muscle:</label>
+  <label style="color:white;margin-left: 10px;" for="muscle">muscle:</label>
   <select [(ngModel)]="filterMuscle" id="muscle" name="muscle" size="1" #ctrl="ngModel" required>
     <option value="0">All</option>
     <option value="2">Anterior deltoid</option>
@@ -32,7 +32,7 @@
     <option value="5">Triceps brachii</option>
   </select>
 
-  <label for="equipment">equipment:</label>
+  <label style="color:white;margin-left: 10px;" for="equipment">equipment:</label>
   <select [(ngModel)]="filterEquipment" id="equipment" name="equipment" size="1" #ctrl="ngModel" required>
     <option value="0">All</option>
     <option value="1">Barbell</option>
@@ -49,7 +49,7 @@
     <option value="2">SZ-Bar</option>
   </select>
 
-  <label for="name">exercise:</label>
+  <label style="color:white;margin-left:10px;" for="name">exercise:</label>
   <select [(ngModel)]="filterExerciseName" id="name" name="name" size="1" #ctrl="ngModel" required>
     <option value="0">All</option>
     <option *ngFor="let item of exercises" value="{{item.name}}">{{item.name}}</option>
@@ -61,7 +61,7 @@
     <div *ngFor="let item of exercises">
       <ng-container *ngIf='filterCategory=="0"?true:item.category==filterCategory'>
         <ng-container *ngIf='filterMuscle=="0"?true:item.muscles[0].id==filterMuscle'>
-          <ng-container *ngIf='filterEquipment=="0"? true : item.equipment[0].id == filterEquipment'>
+          <ng-container *ngIf='filterEquipment=="0"? true:item.equipment[0].id==filterEquipment'>
             <ng-container *ngIf='filterExerciseName=="0"?true:item.name==filterExerciseName'>
               <div class="card" style="width: 18rem;">
                 <img class="card-img-top" src="{{item.image}}" alt="Card image cap">

@@ -53,14 +53,14 @@ export class FakeBackendInterceptor implements HttpInterceptor {
                 firstName: user.firstName,
                 lastName: user.lastName,
                 token: 'fake-jwt-token'
-            })
+            });
         }
 
         function register() {
-            const user = body
+            const user = body;
 
             if (users.find(x => x.username === user.username)) {
-                return error('Username "' + user.username + '" is already taken')
+                return error('Username "' + user.username + '" is already taken');
             }
 
             user.id = users.length ? Math.max(...users.map(x => x.id)) + 1 : 1;
@@ -110,13 +110,14 @@ export class FakeBackendInterceptor implements HttpInterceptor {
         // helper functions
 
         function ok(body?) {
-            return of(new HttpResponse({ status: 200, body }))
+            return of(new HttpResponse({ status: 200, body }));
         }
 
         function error(message) {
             return throwError({ error: { message } });
         }
 
+        // tslint:disable-next-line: typedef
         function unauthorized() {
             return throwError({ status: 401, error: { message: 'Unauthorised' } });
         }
