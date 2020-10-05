@@ -1,13 +1,11 @@
-<div class="sets-deck">
-    <div *ngFor="let set of sets">
-        <div>
-            <div class="set-card">
-                <h5 class="set-card-title">{{set.name}}</h5>
-                <div *ngFor="let exercise of setExcercises">
-                    <p class="set-card-text">{{exercise}}</p>
-                </div>
-                
-            </div>
+<div class="sets-deck" *ngIf="userSet != undefined">
+    <div class="set-card" *ngFor="let set of setExercises">
+        <h4 class="set-card-title">{{set.name}}</h4>
+        <div *ngFor="let exerc of set.array">
+            <p class="set-card-name">{{exerc.name}} Amount: {{exerc.amount}}</p>
+            
         </div>
+        
+        
     </div>
 </div>
