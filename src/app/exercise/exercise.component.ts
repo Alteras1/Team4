@@ -72,4 +72,23 @@ export class ExerciseComponent implements OnInit {
       }
     })
   }
+
+  filterByEquipment(item, filter:number):boolean {
+    if (item.equipment.length == 0) { return false }
+    let found:boolean = false;
+    for (let eq of item.equipment) {
+      found = eq.id == filter ? true: found;
+    }
+    return found;
+  }
+
+  filterByMuscle(item, filter:number):boolean {
+    console.log(item);
+    if (item.muscles.length == 0) { return false }
+    let found:boolean = false;
+    for (let mu of item.muscles) {
+      found = mu.id == filter ? true: found;
+    }
+    return found;
+  }
 }
