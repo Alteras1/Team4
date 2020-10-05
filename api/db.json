@@ -14,10 +14,22 @@
           "amount": 3
         }
       ]
+    },
+    {
+      "id": 2,
+      "user": 1,
+      "name": "new Set",
+      "exercises": [
+        {
+          "id": 97,
+          "amount": 15
+        }
+      ]
     }
   ],
   "calendar": [
     {
+      "id": 1,
       "user": 1,
       "sets": [
         {
@@ -26,6 +38,10 @@
             "mon",
             "wed"
           ]
+        },
+        {
+          "id": 2,
+          "days": []
         }
       ]
     }
