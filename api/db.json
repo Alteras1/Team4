@@ -1,13 +1,4 @@
 {
-  "user": [
-    {
-      "id": 1,
-      "username": "test",
-      "password": "test",
-      "firstName": "first",
-      "lastName": "last"
-    }
-  ],
   "sets": [
     {
       "id": 1,
@@ -79,6 +70,14 @@
           "days": []
         }
       ]
+    },
+    {
+      "id": 2,
+      "username": "new",
+      "password": "newy",
+      "newPassword": "newp",
+      "firstName": "success",
+      "lastName": "I Hope"
     }
   ],
   "exercise": [
