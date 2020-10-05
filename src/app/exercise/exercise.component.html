@@ -39,13 +39,11 @@
     <option value="8">Bench</option>
     <option value="3">Dumbbells</option>
     <option value="4">Gym mat</option>
-    <option value="7">Incline bench</option>
-    <option value="9">Gluteus maximus</option>
+    <option value="9">Incline bench</option>
     <option value="10">Kettlebell</option>
     <option value="7">none (bodyweight exercise)>
     <option value="6">Pull-up bar</option>
     <option value="5">Swiss Ball</option>
-    <option value="6">Rectus abdominis</option>
     <option value="2">SZ-Bar</option>
   </select>
 
@@ -60,23 +58,21 @@
   <div class="card-deck">
     <div *ngFor="let item of exercises">
       <ng-container *ngIf='filterCategory=="0"?true:item.category==filterCategory'>
-        <ng-container *ngIf='filterMuscle=="0"?true:item.muscles[0].id==filterMuscle'>
-          <ng-container *ngIf='filterEquipment=="0"? true : item.equipment[0].id == filterEquipment'>
+        <ng-container *ngIf='filterMuscle=="0"?true: filterByMuscle(item, filterMuscle)'>
+          <ng-container *ngIf='filterEquipment=="0"? true : filterByEquipment(item, filterEquipment)'>
             <ng-container *ngIf='filterExerciseName=="0"?true:item.name==filterExerciseName'>
               <div class="card" style="width: 18rem;">
                 <img class="card-img-top" src="{{item.image}}" alt="Card image cap">
                 <div class="card-body">
                   <h5 class="card-title">{{item.name}}</h5>
                   <p class="card-text">Category: {{item.categoryName}}</p>
-                  <!-- <p class="card-text">Exercise no: {{item.id}}</p> -->
                   <ng-container *ngFor="let muscle of item.muscles">
                     <p class="card-text">Muscle: {{muscle.name}}</p>
                   </ng-container>
                   <ng-container *ngFor="let equipment of item.equipment">
                     <p class="card-text">Equipment: {{equipment.name}}</p>
                   </ng-container>
-                  <p class="card-text" style="background-color:whitesmoke;" innerHTML={{item.description}}></p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                  <p class="card-text" innerHTML={{item.description}}></p>
                 </div>
               </div>
             </ng-container>

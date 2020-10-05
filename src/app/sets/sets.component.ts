@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { SetsService } from '../services/sets.service';
-import { ISets } from '../Interfaces/ISets';
+import { ISets, ISetExercises } from '../Interfaces/ISets';
 import { ExerciseService } from '../services/exercise.service';
 import { IExercise } from '../Interfaces/IExercise';
+import { AccountService } from '../_services';
 
 @Component({
   selector: 'app-sets',
@@ -10,14 +11,16 @@ import { IExercise } from '../Interfaces/IExercise';
   styleUrls: ['./sets.component.css']
 })
 export class SetsComponent implements OnInit {
-  userId: number = 1;
   sets: any[] = [];
+  userSet: ISets[] = [];
   allExercises: any[] = [];
-  setExcercises: any[] = [];
+  setExercises: any[] = [];
+  setAmount: number[] = [];
 
   constructor(
     private set: SetsService,
     private exercise: ExerciseService,
+    private account: AccountService,
   ) { }
 
   ngOnInit(): void {
@@ -28,15 +31,28 @@ export class SetsComponent implements OnInit {
           next: (exerciseData) => {
             this.allExercises = exerciseData as unknown as IExercise[];
             
-            //Implement user login here; going to grab the 1st user for now
-            console.log(this.allExercises);
-            for (let set of this.sets[0].exercises) {
-              console.log(set.id);
-              let value = this.allExercises.find(x => x.id == set.id);
-              console.log(value);
-              this.setExcercises.push(value);
+            
+            this.userSet = this.sets.filter(x => x.user == this.account.userValue.id);
+            console.log(this.userSet);
+            for (let set of this.userSet) {
+              let exerciseArray = [];
+              for (let exerc of set.exercises) {
+                console.log(exerc.id);
+                let value = this.allExercises.find(x => x.id == exerc.id);
+                console.log(value);
+                exerciseArray.push({
+                  "name": value.name,
+                  "amount": exerc.amount
+                });
+              }
+              this.setExercises.push({
+                "name": set.name,
+                "array": exerciseArray
+              });
             }
-            console.log(this.setExcercises);
+            
+            console.log(this.setExercises);
+            console.log(this.setAmount);
           }
         });
       }
