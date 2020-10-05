@@ -1,4 +1,13 @@
 {
+  "user": [
+    {
+      "id": 1,
+      "username": "test",
+      "password": "test",
+      "firstName": "first",
+      "lastName": "last"
+    }
+  ],
   "sets": [
     {
       "id": 1,
@@ -40,10 +49,22 @@
           "amount": 3
         }
       ]
+    },
+    {
+      "id": 2,
+      "user": 1,
+      "name": "new Set",
+      "exercises": [
+        {
+          "id": 97,
+          "amount": 15
+        }
+      ]
     }
   ],
   "calendar": [
     {
+      "id": 1,
       "user": 1,
       "sets": [
         {
@@ -52,6 +73,10 @@
             "mon",
             "wed"
           ]
+        },
+        {
+          "id": 2,
+          "days": []
         }
       ]
     }
