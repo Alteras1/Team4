@@ -3,7 +3,8 @@
   <label for="category">FILTER BY: category </label>
   <select [(ngModel)]="filterCategory" id="category" name="category" size="1" #ctrl="ngModel" required>
     <option value="0">All</option>
-    <option value="10">Shoulders</option>
+    <option value="10">Abs</option>
+    <option value="13">Shoulders</option>
     <option value="8">Arms</option>
     <option value="12">Back</option>
     <option value="14">Calves</option>
@@ -21,13 +22,13 @@
     <option value="7">Gastrocnemius</option>
     <option value="8">Gluteus maximus</option>
     <option value="12">Latissimus dors</option>
-    <option value="14">bliquus externus abdomini>
+    <option value="14">Obliquus externus abdominis</option>
     <option value="4">Pectoralis major</option>
     <option value="10">Quadriceps femoris</option>
     <option value="6">Rectus abdominis</option>
     <option value="3">Serratus anterior</option>
     <option value="15">Soleus</option>
-    <option value="9">Trapezius</option> abdomini>
+    <option value="9">Trapezius</option>
     <option value="5">Triceps brachii</option>
   </select>
 
@@ -59,18 +60,21 @@
   <div class="card-deck">
     <div *ngFor="let item of exercises">
       <ng-container *ngIf='filterCategory=="0"?true:item.category==filterCategory'>
-        <ng-container *ngIf='filterMuscle=="0"?true:item.muscles[0]==filterMuscle'>
-          <ng-container *ngIf='filterEquipment=="0"? true : item.equipment[0] == filterEquipment'>
+        <ng-container *ngIf='filterMuscle=="0"?true:item.muscles[0].id==filterMuscle'>
+          <ng-container *ngIf='filterEquipment=="0"? true : item.equipment[0].id == filterEquipment'>
             <ng-container *ngIf='filterExerciseName=="0"?true:item.name==filterExerciseName'>
               <div class="card" style="width: 18rem;">
                 <img class="card-img-top" src="{{item.image}}" alt="Card image cap">
                 <div class="card-body">
                   <h5 class="card-title">{{item.name}}</h5>
-                  <p class="card-text">Category: {{item.category}}</p>
-                  <p class="card-text">Exercise no: {{item.id}}</p>
-                  <div *ngFor="let item of item.muscles">
-                    <p class="card-text">Muscle no: {{item}}</p>
-                  </div>
+                  <p class="card-text">Category: {{item.categoryName}}</p>
+                  <!-- <p class="card-text">Exercise no: {{item.id}}</p> -->
+                  <ng-container *ngFor="let muscle of item.muscles">
+                    <p class="card-text">Muscle: {{muscle.name}}</p>
+                  </ng-container>
+                  <ng-container *ngFor="let equipment of item.equipment">
+                    <p class="card-text">Equipment: {{equipment.name}}</p>
+                  </ng-container>
                   <p class="card-text" style="background-color:whitesmoke;" innerHTML={{item.description}}></p>
                   <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
