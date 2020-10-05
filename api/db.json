@@ -1,4 +1,13 @@
 {
+  "user": [
+    {
+      "id": 1,
+      "username": "test",
+      "password": "test",
+      "firstName": "first",
+      "lastName": "last"
+    }
+  ],
   "sets": [
     {
       "id": 1,
