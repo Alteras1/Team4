@@ -2,6 +2,17 @@
 <div class="p-4">
     <div class="container">
         <h1>Hi {{user.firstName}}!</h1>
-        <p>You're logged in with Angular 9!!</p>
+        <h3>Here is your {{today.day}} sets:</h3>
+        <div class="card" *ngFor='let set of today.sets'>
+          <div class="card-header">
+            {{set.name}}
+          </div>
+          <div class="card-body">
+            <div *ngFor='let excer of set.exercises'>
+              {{excer.amount}} x {{excer.name}}
+            </div>
+          </div>
+        </div>
+        <h3>Let's go!</h3>
     </div>
 </div>

@@ -40,17 +40,6 @@
           "amount": 3
         }
       ]
-    },
-    {
-      "id": 2,
-      "user": 1,
-      "name": "new Set",
-      "exercises": [
-        {
-          "id": 97,
-          "amount": 15
-        }
-      ]
     }
   ],
   "calendar": [
@@ -61,23 +50,20 @@
         {
           "id": 1,
           "days": [
-            "mon",
-            "wed"
+            "wed",
+            "tue",
+            "mon"
           ]
         },
         {
           "id": 2,
-          "days": []
+          "days": [
+            "mon",
+            "tue",
+            "sun"
+          ]
         }
       ]
-    },
-    {
-      "id": 2,
-      "username": "new",
-      "password": "newy",
-      "newPassword": "newp",
-      "firstName": "success",
-      "lastName": "I Hope"
     }
   ],
   "exercise": [

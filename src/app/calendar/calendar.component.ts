@@ -5,6 +5,7 @@ import { SetsService } from '../services/sets.service';
 import { ISets } from '@app/Interfaces/ISets';
 import { ExerciseService } from '@app/services/exercise.service';
 import { IExercise } from '@app/Interfaces/IExercise';
+import { AccountService } from '@app/_services';
 
 @Component({
   selector: 'app-calendar',
@@ -60,18 +61,20 @@ export class CalendarComponent implements OnInit {
   sets: any[];
 
   _userCalendar;
-  _user = 1;
+  _user = this.accountService.userValue.id;
 
   constructor(
     private calendarService: CalendarService,
     private setsService: SetsService,
     private exerciseService: ExerciseService,
-    private ref: ChangeDetectorRef
+    private ref: ChangeDetectorRef,
+    private accountService: AccountService
   ) {
     ref.detach();
   }
 
   ngOnInit(): void {
+    console.log(this.week);
     this.getCalendar();
   }
 
@@ -109,7 +112,6 @@ export class CalendarComponent implements OnInit {
         }
         this.ref.detectChanges();
         this.getSets();
-        console.log(this._userCalendar)
       }
     });
   }
@@ -138,10 +140,10 @@ export class CalendarComponent implements OnInit {
     for (let day of this.week) {
       let foundSets = [];
       for (let set of day.sets) {
-        foundSets.push(this.sets.filter((s) => (s.id == set)));
+        foundSets.push(... this.sets.filter((s) => (s.id == set)));
       }
       day.sets.length = 0;
-      day.sets.push.apply(day.sets, ...foundSets);
+      day.sets.push.apply(day.sets,foundSets);
     }
     this.ref.detectChanges();
     this.ref.reattach();

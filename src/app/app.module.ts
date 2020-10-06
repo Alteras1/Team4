@@ -13,7 +13,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { TestServiceComponent } from './test-service/test-service.component';
 import { AlertComponent } from './_components';
-import { ErrorInterceptor, fakeBackendProvider, JwtInterceptor } from './_helpers';
+import { ErrorInterceptor, JwtInterceptor } from './_helpers';
 import { CalendarComponent } from './calendar/calendar.component';
 
 @NgModule({
