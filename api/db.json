@@ -4,9 +4,17 @@
       "id": 1,
       "username": "test",
       "password": "test",
-      "firstName": "first",
-      "lastName": "last"
-    }
+      "firstname": "first",
+      "lastname": "last",
+      "email": "abc@google.com",
+      "address":{
+        "street": "11051 dill st",
+        "city": "Madison Height",
+        "zipcode": "48312",
+        "state": "Michigan"
+      },
+       "phone": "2485678901"
+      }
   ],
   "sets": [
     {
@@ -69,14 +77,16 @@
       "sets": [
         {
           "id": 1,
-          "days": [
-            "mon",
-            "wed"
-          ]
+          "days": []
         },
         {
           "id": 2,
-          "days": []
+          "days": [
+            "wed",
+            "sat",
+            "fri",
+            "sun"
+          ]
         }
       ]
     }

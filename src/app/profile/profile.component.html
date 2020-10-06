@@ -1,1 +1,86 @@
-<p>profile works!</p>
+<div class="container">
+    
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+            <label for="firstname">Firstname:</label>
+            <input class="form-control" name="firstName" [(ngModel)]="auser.firstname">
+        </div>
+      </div>
+    </div>
+
+  
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="form-group">
+          <label for="lastname">Lastname:</label>
+          <input class="form-control" name="alastname" [(ngModel)]="auser.lastname">
+      </div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="form-group">
+          <label for="username">Username:</label>
+          <input class="form-control" [(ngModel)]="auser.username">
+      </div>
+    </div>
+    </div>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="form-group">
+          <label for="password">Password:</label>
+          <input class="form-control" [(ngModel)]="auser.password">
+      </div>
+    </div>
+  </div>
+ 
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="form-group">
+          <label for="username">Email address:</label>
+          <input class="form-control" [(ngModel)]="auser.email">
+      </div>
+    </div>
+  </div>
+  <fieldset>
+   
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="form-group">
+          <label for="username">Street:</label>
+          <input class="form-control" [(ngModel)]="auser.address.street">
+      </div>
+    </div>
+  </div>
+ 
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="form-group">
+          <label for="city">City:</label>
+          <input class="form-control" [(ngModel)]="auser.address.city">
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="form-group">
+          <label for="state">State:</label>
+          <input class="form-control" [(ngModel)]="auser.address.state">
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="form-group">
+          <label for="state">zipcode:</label>
+          <input class="form-control" [(ngModel)]="auser.address.zipcode"><br>
+          <button (click)="UpdateProfile(auser)">Update Profile</button>
+          
+      </div>
+    </div>
+  </div>
