@@ -83,8 +83,6 @@ export class HomeComponent {
   getCalendar() {
     this.calendarService.getCalendarByUser(this.user.id).subscribe({
       next: (data) => {
-
-        console.log(data);
         if (data.length === 0) {
           console.log('test');
           this.createCalendar();
@@ -146,6 +144,7 @@ export class HomeComponent {
     }
     this.today.sets.length = 0;
     this.today.sets.push.apply(this.today.sets,foundSets);
+    console.log(this.today);
     //this.ref.detectChanges();
     //this.ref.reattach();
   }
