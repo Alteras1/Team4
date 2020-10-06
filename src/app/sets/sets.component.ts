@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SetsService } from '../services/sets.service';
-import { ISets, ISetExercises } from '../Interfaces/ISets';
+import { ISets } from '../Interfaces/ISets';
 import { ExerciseService } from '../services/exercise.service';
 import { IExercise } from '../Interfaces/IExercise';
 import { AccountService } from '../_services';
@@ -46,6 +46,7 @@ export class SetsComponent implements OnInit {
                 });
               }
               this.setExercises.push({
+                "id": set.id,
                 "name": set.name,
                 "array": exerciseArray
               });
@@ -57,6 +58,11 @@ export class SetsComponent implements OnInit {
         });
       }
     });
+  }
+
+  deleteSet(selectedSet: ISets) {
+    console.log(selectedSet);
+    this.set.deleteSet(selectedSet.id).subscribe();
   }
 
 }

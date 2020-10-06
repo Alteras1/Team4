@@ -17,4 +17,8 @@ export class SetsService {
   getSetsByUserId(id:number): Observable<ISets[]> {
     return this.http.get<ISets[]>(this.productURL + `?user=${id}`);
   }
+  deleteSet(id:number): Observable<ISets> {
+    console.log("deleting set" + id);
+    return this.http.delete<ISets>(this.productURL + `/${id}`);
+  }
 }
