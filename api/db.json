@@ -1,21 +1,4 @@
 {
-  "user": [
-    {
-      "id": 1,
-      "username": "test",
-      "password": "test",
-      "firstname": "firstsdsd",
-      "lastname": "lastasdasd",
-      "email": "abc@google.com",
-      "address": {
-        "street": "11051 dill stsdsd",
-        "city": "Madison Height",
-        "zipcode": "48312",
-        "state": "Michigan"
-      },
-      "phone": "2485678901"
-    }
-  ],
   "sets": [
     {
       "id": 1,
@@ -57,17 +40,6 @@
           "amount": 3
         }
       ]
-    },
-    {
-      "id": 2,
-      "user": 1,
-      "name": "new Set",
-      "exercises": [
-        {
-          "id": 97,
-          "amount": 15
-        }
-      ]
     }
   ],
   "calendar": [
@@ -77,18 +49,26 @@
       "sets": [
         {
           "id": 1,
-          "days": []
+          "days": [
+            "wed",
+            "mon",
+            "tue"
+          ]
         },
         {
           "id": 2,
           "days": [
-            "wed",
-            "sat",
-            "fri",
+            "mon",
+            "tue",
             "sun"
           ]
         }
       ]
+    },
+    {
+      "user": 2,
+      "sets": [],
+      "id": 2
     }
   ],
   "exercise": [
