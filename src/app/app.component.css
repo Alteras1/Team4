@@ -7,6 +7,6 @@ main {
 .logo {
   display: block;
   width:12rem;
-  height: 10rem;
+  height: 4rem;
   /* object-fit: scale-down; */
 }

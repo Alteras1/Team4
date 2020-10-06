@@ -69,11 +69,7 @@
       "sets": [
         {
           "id": 1,
-          "days": [
-            "wed",
-            "mon",
-            "tue"
-          ]
+          "days": []
         },
         {
           "id": 2,
