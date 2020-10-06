@@ -25,12 +25,9 @@ export class AccountService {
   }
 
   login(username, password) {
-    console.log(username);
-    console.log(password);
     return this.http.post<IUser>(`${environment.authUrl}/login`, { username: username, password: password })
       .pipe(map(user => {
         // store user details and jwt token in local storage to keep user logged in between page refreshes
-        console.log(user);
         localStorage.setItem('user', JSON.stringify(user));
         this.userSubject.next(user);
         return user;
@@ -49,6 +46,12 @@ export class AccountService {
   }
 
   update(params) {
-    return this.http.post(`${environment.apiUrl}/update`, params);
+    return this.http.post<IUser>(`${environment.authUrl}/update`, params).pipe(
+      map(user => {
+        localStorage.setItem('user', JSON.stringify(user));
+        this.userSubject.next(user);
+        return user;
+      })
+    );
   }
 }

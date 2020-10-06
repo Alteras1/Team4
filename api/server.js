@@ -29,7 +29,6 @@ function verifyToken(token) {
 
 // Check if user exists in database
 function isAuthenticated({username, password}) {
-  console.log(userdb());
   return userdb().users.findIndex(user => user.username === username && user.password === password) !== -1;
 }
 
@@ -103,9 +102,9 @@ server.post('/auth/login', (req, res) => {
 server.post('/auth/update', (req, res) => {
   console.log("Update Called; request body: ");
   console.log(req.body);
-  const {id, username, password, newPassword, firstName, lastName} = req.body;
-
+  const {id, username, password, newPassword, firstName, lastName, email, address, phone, token} = req.body;
   if (isAuthenticated({username, password}) !== true) { //Not the User
+    console.log("invalid login");
     const status = 401;
     const message = 'Invalid Username and Password';
     res.status(status).json({status, message});
@@ -126,10 +125,14 @@ server.post('/auth/update', (req, res) => {
     data.users[index] = {
       id: id,
       username: username,
-      password: newPassword,
+      password: (newPassword ? newPassword : password),
       firstName: firstName,
-      lastName: lastName
+      lastName: lastName,
+      email: email,
+      address: address,
+      phone: phone
     };
+    let user = data.users[index];
     var writeData = fs.writeFile(userLocation, JSON.stringify(data), (err, result) => {
       if (err) {
         const status = 401;       //unable to write to user.json
@@ -137,9 +140,10 @@ server.post('/auth/update', (req, res) => {
         res.status(status).json({status, message});
         return;
       }
-    })
+    });
+    user.token = token;
+    res.status(200).json(user);
   })
-  res.status(200).json({success: "success"});
 })
 
 server.use(/^(?!\/auth).*$/, (req, res, next) => {
