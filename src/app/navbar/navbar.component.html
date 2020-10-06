@@ -1,18 +1,20 @@
 <nav>
-  <div class="navFlex">
-    <div class="logo">
+  <div class="navbar navbar-expand navFlex">
+    <div class="logo navbar-brand">
       <img src="/assets/MNFLogo.png" alt="My_Neighborhood_Fitness_Logo">
     </div>
-    <div class="navbar-nav">
-      <a class="nav-item nav-link" routerLink="/" routerLinkActive="active"
+    <div class="navbar-nav mr-auto">
+      <a class="nav-item nav-link" style="color: var(--foreground-quaternary);" routerLink="/" routerLinkActive="active"
         [routerLinkActiveOptions]="{exact: true}">Home</a>
-      <a class="nav-item nav-link" routerLink="/profile" routerLinkActive="active">Profile</a>
-      <a class="nav-item nav-link" routerLink="/sets" routerLinkActive="active">Sets</a>
-      <a class="nav-item nav-link" routerLink="/exercise" routerLinkActive="active">Exercise</a>
-      <a class="nav-item nav-link" routerLink="/calendar" routerLinkActive="active">Calendar</a>
-      <a class="nav-item nav-link" routerLink="/contacts" routerLinkActive="active">About us</a>
-      <a class="nav-item nav-link" (click)="logout()">Logout</a>
+      <a class="nav-item nav-link" style="color: var(--foreground-quaternary);" routerLink="/profile" routerLinkActive="active">Profile</a>
+      <a class="nav-item nav-link" style="color: var(--foreground-quaternary);" routerLink="/sets" routerLinkActive="active">Sets</a>
+      <a class="nav-item nav-link" style="color: var(--foreground-quaternary);" routerLink="/exercise" routerLinkActive="active">Exercise</a>
+      <a class="nav-item nav-link" style="color: var(--foreground-quaternary);" routerLink="/calendar" routerLinkActive="active">Calendar</a>
+      <a class="nav-item nav-link" style="color: var(--foreground-quaternary);" routerLink="/contacts" routerLinkActive="active">About us</a>
+
+
     </div>
-    <fa-icon [icon]="faLightbulb" (click)="toggleTheme()"></fa-icon>
+    <a class="nav-item nav-link pointer" style="color: var(--foreground-quaternary);" (click)="logout()">Logout</a>
+    <fa-icon class="pointer" [icon]="faLightbulb" (click)="toggleTheme()"></fa-icon>
   </div>
 </nav>
