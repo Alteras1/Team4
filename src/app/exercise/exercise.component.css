@@ -5,3 +5,50 @@
 .card-img-top {
   padding: 10px;
 }
+/*new*/
+.description {
+  position: relative;
+  display: inline-block;
+}
+.description .descriptionBox {
+  visibility: hidden;
+  width: 100%;
+  /* background-color: black;
+  color: #fff; */
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+  background-color:whitesmoke;
+  /* bottom: 150%;
+  left: 50%;
+  margin-left: -60px; */
+}
+.description .descriptionBox::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+.description:hover .descriptionBox {
+  visibility: visible;
+}
+
+.card-img-top{
+  width: 18rem;
+  height: 18rem;
+}
+.card description{
+  width: 18rem;
+}
+.alert{
+  background-color: rgb(0, 132, 255);
+}

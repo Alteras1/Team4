@@ -61,18 +61,25 @@
         <ng-container *ngIf='filterMuscle=="0"?true: filterByMuscle(item, filterMuscle)'>
           <ng-container *ngIf='filterEquipment=="0"? true : filterByEquipment(item, filterEquipment)'>
             <ng-container *ngIf='filterExerciseName=="0"?true:item.name==filterExerciseName'>
-              <div class="card" style="width: 18rem;">
+              <div class="card description" style="width: 18rem;">
+                <div class="hover">
                 <img class="card-img-top" src="{{item.image}}" alt="Card image cap">
+                <p class="card-text descriptionBox" innerHTML={{item.description}}></p>
+              </div>
                 <div class="card-body">
                   <h5 class="card-title">{{item.name}}</h5>
-                  <p class="card-text">Category: {{item.categoryName}}</p>
-                  <ng-container *ngFor="let muscle of item.muscles">
+                  <div class="dropdown">
+                    <button class="dropbtn">Info</button>
+                    <div class="dropdown-content">
+                    <p class="card-text">Category: {{item.categoryName}}</p>
+                    <ng-container *ngFor="let muscle of item.muscles">
                     <p class="card-text">Muscle: {{muscle.name}}</p>
-                  </ng-container>
-                  <ng-container *ngFor="let equipment of item.equipment">
+                    </ng-container>
+                    <ng-container *ngFor="let equipment of item.equipment">
                     <p class="card-text">Equipment: {{equipment.name}}</p>
-                  </ng-container>
-                  <p class="card-text" innerHTML={{item.description}}></p>
+                    </ng-container>
+                    </div>
+                  </div>
                 </div>
               </div>
             </ng-container>
