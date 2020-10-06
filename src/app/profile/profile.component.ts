@@ -27,7 +27,7 @@ export class ProfileComponent implements OnInit {
           this.alertService.success("Successfully Changed");
         } else {
           console.log('updated');
-          this.router.navigate(['/profile']);
+          this.router.navigate(['']);
           this.alertService.success("Successfully Changed");
         }
       },
