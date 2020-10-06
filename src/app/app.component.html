@@ -1,5 +1,8 @@
 <!-- nav -->
 <nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="user">
+    <div class="logo"></div>
+        <img src="/assets/MNFLogo.png" alt="My_Neighborhood_Fitness_Logo">
+    </div>
     <div class="navbar-nav">
         <a class="nav-item nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
         <a class="nav-item nav-link" routerLink="/profile" routerLinkActive="active">Profile</a>
