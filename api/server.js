@@ -8,7 +8,7 @@ const userLocation = './api/users.json';
 
 const server = jsonServer.create();
 const router = jsonServer.router(dbLocation);
-const userdb = JSON.parse(fs.readFileSync(userLocation, 'utf-8'));
+const userdb = function() {return JSON.parse(fs.readFileSync(userLocation, 'utf-8'))};
 
 server.use(bodyParser.urlencoded({extended: true}));
 server.use(bodyParser.json());
@@ -29,7 +29,8 @@ function verifyToken(token) {
 
 // Check if user exists in database
 function isAuthenticated({username, password}) {
-  return userdb.users.findIndex(user => user.username === username && user.password === password) !== -1;
+  console.log(userdb());
+  return userdb().users.findIndex(user => user.username === username && user.password === password) !== -1;
 }
 
 //Register
@@ -80,9 +81,6 @@ server.post('/auth/register', (req, res) => {
   return;
 });
 
-
-
-
 //Login
 server.post('/auth/login', (req, res) => {
   console.log("Login Called; request body: ");
@@ -95,8 +93,8 @@ server.post('/auth/login', (req, res) => {
     return
   }
   const access_token = createToken({username, password});
-  const index = userdb.users.findIndex(user => user.username === username && user.password === password);
-  let user = userdb.users[index];
+  const index = userdb().users.findIndex(user => user.username === username && user.password === password);
+  let user = userdb().users[index];
   user["token"] = access_token;
   res.status(200).json(user);
 })
@@ -124,7 +122,7 @@ server.post('/auth/update', (req, res) => {
     //get current user data
     var data = JSON.parse(data.toString());
     //get the user
-    const index = userdb.users.findIndex(user => user.username === username && user.password === password);
+    const index = userdb().users.findIndex(user => user.username === username && user.password === password);
     data.users[index] = {
       id: id,
       username: username,

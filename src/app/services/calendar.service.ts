@@ -17,7 +17,9 @@ export class CalendarService {
     return this.http.get<ICalendar[]>(this.calendarURL + '?user=' + userID);
   }
   updateCalendar(calendar:ICalendar): Observable<ICalendar> {
-    console.log("updating");
     return this.http.put<ICalendar>(this.calendarURL + `/${calendar.id}`, calendar);
+  }
+  newCalendar(userID: number): Observable<ICalendar> {
+    return this.http.post<ICalendar>(this.calendarURL, {user: userID, sets: []});
   }
 }

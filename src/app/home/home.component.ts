@@ -72,9 +72,23 @@ export class HomeComponent {
 
   }
 
+  createCalendar() {
+    this.calendarService.newCalendar(this.user.id).subscribe({
+      next: (data) => {
+        this.getCalendar();
+      }
+    });
+  }
+
   getCalendar() {
     this.calendarService.getCalendarByUser(this.user.id).subscribe({
       next: (data) => {
+
+        console.log(data);
+        if (data.length === 0) {
+          console.log('test');
+          this.createCalendar();
+        }
         this.calendar = data[0];
         for (let set of this.calendar.sets) {
           if (set.days.includes("sun")) {
