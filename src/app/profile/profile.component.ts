@@ -16,7 +16,7 @@ export class ProfileComponent implements OnInit {
   // tslint:disable-next-line: typedef
   UpdateProfile(user: IUser) {
     console.log("updating now" )
-    this.userservice.UpdateUserById(user);
+    this.userservice.UpdateUserById(user).subscribe();
  }
   ngOnInit(): void {
     this.userservice.getUserById(1).subscribe({

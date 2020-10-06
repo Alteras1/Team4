@@ -1,86 +1,57 @@
-<div class="container">
-    
-    <div class="row">
-      <div class="col-sm-6">
-        <div class="form-group">
-            <label for="firstname">Firstname:</label>
-            <input class="form-control" name="firstName" [(ngModel)]="auser.firstname">
+<br><br>
+        <div class="input-container">
+            <label  for="firstname">Firstname:</label>
+            <i  class="fa fa-user icon" ></i>
+            <input   class="input-field" name="firstName" [(ngModel)]="auser.firstname">
         </div>
+      
+        <div class="input-container">
+          <label for="lastname">Lastname:</label><br>
+          <i class="fa fa-user icon"></i>
+          <input class="input-field" name="lastname" [(ngModel)]="auser.lastname">
       </div>
-    </div>
-
-  
-  <div class="row">
-    <div class="col-sm-6">
-      <div class="form-group">
-          <label for="lastname">Lastname:</label>
-          <input class="form-control" name="alastname" [(ngModel)]="auser.lastname">
-      </div>
-    </div>
-  </div>
-  
-  <div class="row">
-    <div class="col-sm-6">
-      <div class="form-group">
+      
+      <div class="input-container">
           <label for="username">Username:</label>
-          <input class="form-control" [(ngModel)]="auser.username">
-      </div>
-    </div>
-    </div>
-
-  <div class="row">
-    <div class="col-sm-6">
-      <div class="form-group">
+          <i class="fa fa-user icon"></i>
+          <input class="input-field"  name="username" [(ngModel)]="auser.username">
+        </div>
+      <div class="input-container">
           <label for="password">Password:</label>
-          <input class="form-control" [(ngModel)]="auser.password">
+          <i class="fa fa-key icon"></i>
+          <input class="input-field" name="password" [(ngModel)]="auser.password">
       </div>
-    </div>
-  </div>
- 
-  <div class="row">
-    <div class="col-sm-6">
-      <div class="form-group">
+      <div class="input-container">
           <label for="username">Email address:</label>
-          <input class="form-control" [(ngModel)]="auser.email">
+          <i class="fa fa-envelope icon"></i>
+          <input class="input-field" [(ngModel)]="auser.email">
       </div>
+      <div class="input-container">
+        <label for="username">Phone:</label>
+        <i class="fa fa-phone icon"></i>
+        <input class="input-field" [(ngModel)]="auser.phone">
     </div>
-  </div>
-  <fieldset>
-   
-  <div class="row">
-    <div class="col-sm-6">
-      <div class="form-group">
+      <div class="input-container">
           <label for="username">Street:</label>
-          <input class="form-control" [(ngModel)]="auser.address.street">
+          <i class="fa fa-home icon"></i>
+          <input class="input-field" [(ngModel)]="auser.address.street">
       </div>
-    </div>
-  </div>
- 
-  <div class="row">
-    <div class="col-sm-6">
-      <div class="form-group">
+      <div class="input-container">
           <label for="city">City:</label>
-          <input class="form-control" [(ngModel)]="auser.address.city">
+          <i class="fa fa-home icon"></i>
+          <input class="input-field" [(ngModel)]="auser.address.city">
       </div>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-sm-6">
-      <div class="form-group">
+      <div class="input-container">
           <label for="state">State:</label>
-          <input class="form-control" [(ngModel)]="auser.address.state">
+          <i class="fa fa-home icon"></i>
+          <input class="input-field" [(ngModel)]="auser.address.state">
       </div>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-sm-6">
-      <div class="form-group">
+      <div class="input-container">
           <label for="state">zipcode:</label>
-          <input class="form-control" [(ngModel)]="auser.address.zipcode"><br>
-          <button (click)="UpdateProfile(auser)">Update Profile</button>
-          
-      </div>
-    </div>
-  </div>
+          <i class="fa fa-home icon"></i>
+          <input class="input-field" [(ngModel)]="auser.address.zipcode"><br>
+         </div> 
+         
+         <div class="input-container">
+          <button class="btn" (click)="UpdateProfile(auser)">Update Profile</button> 
+        </div>

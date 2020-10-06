@@ -4,17 +4,17 @@
       "id": 1,
       "username": "test",
       "password": "test",
-      "firstname": "first",
-      "lastname": "last",
+      "firstname": "firstsdsd",
+      "lastname": "lastasdasd",
       "email": "abc@google.com",
-      "address":{
-        "street": "11051 dill st",
+      "address": {
+        "street": "11051 dill stsdsd",
         "city": "Madison Height",
         "zipcode": "48312",
         "state": "Michigan"
       },
-       "phone": "2485678901"
-      }
+      "phone": "2485678901"
+    }
   ],
   "sets": [
     {
