@@ -12,7 +12,7 @@ const userdb = JSON.parse(fs.readFileSync(userLocation, 'utf-8'));
 
 server.use(bodyParser.urlencoded({extended: true}));
 server.use(bodyParser.json());
-server.use(jsonServer.defaults());
+server.use(jsonServer.defaults({noCors: false}));
 
 const SECRET_KEY = '123456789';
 const expiresIn = '24h';
@@ -173,6 +173,6 @@ server.use(/^(?!\/auth).*$/, (req, res, next) => {
 
 server.use('/api', router);   //Run the JSON-Server with the /api/ call
 
-server.listen(4200, "0.0.0.0", () => {
+server.listen(3000, () => {
   console.log('Run Auth API Server');
 })

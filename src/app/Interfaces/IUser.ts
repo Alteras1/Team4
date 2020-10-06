@@ -1,5 +1,5 @@
 ﻿export class IUser {
-  id: string;
+  id: number;
   username: string;
   password: string;
   firstName: string;
