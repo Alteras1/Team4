@@ -49,6 +49,6 @@ export class AccountService {
   }
 
   update(params) {
-    return this.http.post(`${environment.apiUrl}/update`, params);
+    return this.http.post(`${environment.authUrl}/update`, params);
   }
 }

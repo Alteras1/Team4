@@ -4,13 +4,14 @@
   lastName: string;
   username: string;
   password: string;
-  email: string;
-  address: {
+  newPassword?: string;
+  email?: string;
+  address?: {
     street: string;
     city: string;
     zipcode: string;
     state: string;
   };
-  phone: string;
+  phone?: string;
   token: string;
 }
