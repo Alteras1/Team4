@@ -11,9 +11,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SetsComponent } from './sets/sets.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ContactsComponent } from './contacts/contacts.component';
-import { TestServiceComponent } from './test-service/test-service.component';
 import { AlertComponent } from './_components';
-import { ErrorInterceptor, fakeBackendProvider, JwtInterceptor } from './_helpers';
+import { ErrorInterceptor, JwtInterceptor } from './_helpers';
 import { CalendarComponent } from './calendar/calendar.component';
 
 @NgModule({
@@ -27,7 +26,6 @@ import { CalendarComponent } from './calendar/calendar.component';
     ProfileComponent,
     ContactsComponent,
     CalendarComponent,
-    TestServiceComponent,
     AlertComponent,
   ],
   imports: [
@@ -40,7 +38,7 @@ import { CalendarComponent } from './calendar/calendar.component';
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
-    fakeBackendProvider
+    //fakeBackendProvider
   ],
   bootstrap: [AppComponent]
 })

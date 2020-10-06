@@ -1,13 +1,4 @@
 {
-  "user": [
-    {
-      "id": 1,
-      "username": "test",
-      "password": "test",
-      "firstName": "first",
-      "lastName": "last"
-    }
-  ],
   "sets": [
     {
       "id": 1,
@@ -49,17 +40,6 @@
           "amount": 3
         }
       ]
-    },
-    {
-      "id": 2,
-      "user": 1,
-      "name": "new Set",
-      "exercises": [
-        {
-          "id": 97,
-          "amount": 15
-        }
-      ]
     }
   ],
   "calendar": [
@@ -73,9 +53,18 @@
         },
         {
           "id": 2,
-          "days": []
+          "days": [
+            "mon",
+            "tue",
+            "sun"
+          ]
         }
       ]
+    },
+    {
+      "user": 2,
+      "sets": [],
+      "id": 2
     }
   ],
   "exercise": [

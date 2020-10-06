@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { Error404Component } from './error404/error404.component';
 import { ExerciseComponent } from './exercise/exercise.component';
 import { HomeComponent } from './home/home.component';
-import { TestServiceComponent } from './test-service/test-service.component';
 import { SetsComponent } from './sets/sets.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { ProfileComponent } from './profile/profile.component';
@@ -20,7 +19,6 @@ const routes: Routes = [
   { path: 'account', loadChildren: accountModule },
 
   { path: 'exercise', component: ExerciseComponent },
-  {path: 'test', component: TestServiceComponent },
   {path: 'sets', component: SetsComponent},
   {path: 'profile', component: ProfileComponent},
   {path: 'contacts', component: ContactsComponent},
