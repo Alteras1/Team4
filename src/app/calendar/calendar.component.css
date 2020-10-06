@@ -35,3 +35,18 @@ table {
 .card-body:hover{
   background-color: rgb(0, 132, 255);
 }
+.row{
+  background-color: rgb(155, 155, 155);
+}
+.col-4{
+  background-color: rgb(0, 132, 255);
+}
+h5{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+h1{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.setLabel{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
