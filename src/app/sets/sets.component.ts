@@ -30,8 +30,8 @@ export class SetsComponent implements OnInit {
         this.exercise.getExercises().subscribe({
           next: (exerciseData) => {
             this.allExercises = exerciseData as unknown as IExercise[];
-            
-            
+
+
             this.userSet = this.sets.filter(x => x.user == this.account.userValue.id);
             console.log(this.userSet);
             for (let set of this.userSet) {
@@ -51,7 +51,7 @@ export class SetsComponent implements OnInit {
                 "array": exerciseArray
               });
             }
-            
+
             console.log(this.setExercises);
             console.log(this.setAmount);
           }
@@ -62,7 +62,14 @@ export class SetsComponent implements OnInit {
 
   deleteSet(selectedSet: ISets) {
     console.log(selectedSet);
-    this.set.deleteSet(selectedSet.id).subscribe();
+    this.set.deleteSet(selectedSet.id).subscribe({
+      next: (data) => {
+        const index = this.setExercises.indexOf(selectedSet, 0);
+        if (index > -1) {
+          this.setExercises.splice(index, 1);
+        }
+      }
+    });
   }
 
 }
