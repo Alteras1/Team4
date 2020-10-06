@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from '@environments/environment';
 import { Observable } from 'rxjs';
 import { ISets } from '../Interfaces/ISets';
 
@@ -9,7 +10,7 @@ import { ISets } from '../Interfaces/ISets';
   providedIn: 'root',
 })
 export class SetsService {
-  productURL = '/api/sets';
+  productURL = environment.apiUrl + '/sets';
   constructor(private http: HttpClient) {}
   getSets(): Observable<ISets> {
     return this.http.get<ISets>(this.productURL);

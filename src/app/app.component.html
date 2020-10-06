@@ -1,19 +1,21 @@
 <!-- nav -->
 <nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="user">
+    <div class="logo">
+        <img src="/assets/MNFLogo.png" alt="My_Neighborhood_Fitness_Logo">
+    </div>
     <div class="navbar-nav">
         <a class="nav-item nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
-        <a class="nav-item nav-link" routerLink="/users" routerLinkActive="active">Users</a>
         <a class="nav-item nav-link" routerLink="/profile" routerLinkActive="active">Profile</a>
-        <a class="nav-item nav-link" routerLink="/contacts" routerLinkActive="active">Contacts</a>
         <a class="nav-item nav-link" routerLink="/sets" routerLinkActive="active">Sets</a>
         <a class="nav-item nav-link" routerLink="/exercise" routerLinkActive="active">Exercise</a>
         <a class="nav-item nav-link" routerLink="/calendar" routerLinkActive="active">Calendar</a>
+        <a class="nav-item nav-link" routerLink="/contacts" routerLinkActive="active">About us</a>
         <a class="nav-item nav-link" (click)="logout()">Logout</a>
     </div>
 </nav>
 
 <!-- main app container -->
-<div class="app-container" [ngClass]="{ 'bg-light': user }">
+<div class="app-container">
     <alert></alert>
     <router-outlet></router-outlet>
 </div>

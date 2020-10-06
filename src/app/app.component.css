@@ -2,4 +2,11 @@ main {
   margin: 0 auto;
   max-width: 1600px;
   padding: 20px 10px;
+  background-color: #474e5d;
+}
+.logo {
+  display: block;
+  width:12rem;
+  height: 10rem;
+  /* object-fit: scale-down; */
 }
