@@ -62,8 +62,7 @@ server.post('/auth/register', (req, res) => {
       id: last_item_id + 1,
       username: username,
       password: password,
-      firstName: firstName,
-      lastName: lastName
+      firstName: firstName
     })
     var writeData = fs.writeFile(userLocation, JSON.stringify(data), (err, result) => {
       if (err) {
@@ -103,7 +102,7 @@ server.post('/auth/login', (req, res) => {
 server.post('/auth/update', (req, res) => {
   console.log("Update Called; request body: ");
   console.log(req.body);
-  const {id, username, password, newPassword, firstName, lastName} = req.body;
+  const {id, username, password, newPassword, firstName, lastName, email, address, phone} = req.body;
 
   if (isAuthenticated({username, password}) !== true) { //Not the User
     const status = 401;
@@ -128,7 +127,10 @@ server.post('/auth/update', (req, res) => {
       username: username,
       password: newPassword,
       firstName: firstName,
-      lastName: lastName
+      lastName: lastName,
+      email: email,
+      address: address,
+      phone: phone
     };
     var writeData = fs.writeFile(userLocation, JSON.stringify(data), (err, result) => {
       if (err) {

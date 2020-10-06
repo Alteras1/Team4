@@ -1,8 +1,16 @@
-﻿export class IUser {
+﻿export interface IUser  {
   id: number;
-  username: string;
-  password: string;
   firstName: string;
   lastName: string;
+  username: string;
+  password: string;
+  email: string;
+  address: {
+    street: string;
+    city: string;
+    zipcode: string;
+    state: string;
+  };
+  phone: string;
   token: string;
 }
