@@ -1,11 +1,12 @@
 export interface ISets {
-    id: number;
+    id?: number;
     user: number;
-    name: string;
+    name: String;
     exercises: ISetExercises[]
 }
 
 export interface ISetExercises {
     id: number;
+    name?: string;
     amount: number;
 }
