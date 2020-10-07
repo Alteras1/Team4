@@ -1,0 +1,51 @@
+/*table, th, td {
+  border: 2px solid black;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  height: auto;
+  min-height: 1200px;
+}
+*/
+.currentDay {
+  color: crimson;
+}
+
+.btn-day {
+  all: unset;
+  width: 30px;
+  height: 30px;
+  margin: 3px;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+  color: white;
+}
+
+.card {
+  background-color: var(--background-light);
+}
+
+.add {
+  background-color: #353a3f;
+}
+
+.remove {
+  background-color: crimson;
+}
+/*new*/
+.card-body:hover{
+  background-color: rgb(0, 132, 255);
+}
+
+h5{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+h1{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.setLabel{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}

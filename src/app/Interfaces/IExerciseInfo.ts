@@ -1,4 +1,4 @@
-interface IExerciseInfo{
+export interface IExerciseInfo{
   name: string;
   category: IExerciseCategory[];
   description: string;

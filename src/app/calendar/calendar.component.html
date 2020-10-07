@@ -1,22 +1,44 @@
-<table>
-  <thead>
-    <th>Sun</th>
-    <th>Mon</th>
-    <th>Tue</th>
-    <th>Wed</th>
-    <th>Thr</th>
-    <th>Fri</th>
-    <th>Sat</th>
-  </thead>
-  <tbody>
-    <tr id='week' #week>
-        <td>{{week.sunday}}</td>
-        <td>{{week.monday}}</td>
-        <td>{{week.tuesday}}</td>
-        <td>{{week.wednesday}}</td>
-        <td>{{week.thursday}}</td>
-        <td>{{week.friday}}</td>
-        <td>{{week.saturday}}</td>
-    </tr>
-  </tbody>
-</table>
+<div class="row">
+  <div class="col-8">
+    <div class="card-group" *ngFor='let day of week'>
+      <div class="card m-2">
+        <div class="card-body">
+          <h1 class="card-title" [ngClass]="{'currentDay': day.num == currentday}">{{day.day}}</h1>
+          <div class="card m-1" *ngFor='let set of day.sets'>
+            <div class="card-header">
+              {{set.name}}
+            </div>
+            <div class="card-body">
+              <div *ngFor='let excer of set.exercises'>
+                {{excer.amount}} x {{excer.name}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-4">
+    <div class=setLabel>Available Sets:</div>
+    <div class="card m-2" *ngFor='let set of sets'>
+      <h5 class="card-header">{{set.name}}</h5>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <ng-container *ngFor="let day of week; index as i">
+            <button class="add btn-day" *ngIf="!this.week[i].sets.includes(set)"
+              (click)="addSetToDay(set, i)">{{day.abbr}}</button>
+            <button class="remove btn-day" *ngIf="this.week[i].sets.includes(set)"
+              (click)="removeSetFromDay(set, i)">{{day.abbr}}</button>
+          </ng-container>
+        </li>
+      </ul>
+      <div class="card-body">
+        <p class="card-text">
+          <ng-container *ngFor='let excer of set.exercises'>
+            <br>{{excer.amount}} x {{excer.name}}
+          </ng-container>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

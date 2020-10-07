@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
-import { User } from './_models';
+import { IUser } from './Interfaces/IUser';
 import { AccountService } from './_services';
 
 @Component({
   selector: 'app',
-  templateUrl: 'app.component.html'
+  templateUrl: 'app.component.html',
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'Team4';
-  user: User;
+  user: IUser;
   constructor(private accountService: AccountService) {
     this.accountService.user.subscribe(x => this.user = x);
   }
