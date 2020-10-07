@@ -98,3 +98,9 @@
 .dropdown:hover .dropbtn {
   background-color: black;
 }
+
+.builder {
+  position: fixed;
+  bottom: 0;
+  right: 10px;
+}
