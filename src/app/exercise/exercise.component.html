@@ -122,7 +122,8 @@
         {{exercise.amount}} x {{exercise.name}}
       </li>
     </ul>
-    <button class="btn btn-primary" (click)="createSet()">Create Set</button>
+    <button class="btn btn-primary" (click)="createSet()" *ngIf="setId != null">Edit Set</button>
+    <button class="btn btn-primary" (click)="createSet()" *ngIf="setId == null">Create Set</button>
   </div>
 
 </ng-template>
