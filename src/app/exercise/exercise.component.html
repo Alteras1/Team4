@@ -1,4 +1,4 @@
-<ng-container class="builder" *ngIf="setBuilder.length !== 0 then create"></ng-container>
+<ng-container *ngIf="setBuilder.length !== 0 then create"></ng-container>
 <h1 class="display-4">Exercises</h1>
 <div>
   <div class="input-group mb-3">
@@ -118,11 +118,15 @@
 </div>
 
 <ng-template #create>
-  <div class="card" style="width: 18rem;">
-    <input class="form-control" [(ngModel)]="setName" #ctrl="ngModel">
+  <div class="card builder p-3" style="width: 18rem;">
+    <div class="card-title">Set Editor</div>
+    <div class="input-group">
+      <div class="input-group-prepend input-group-text">Name</div>
+      <input class="form-control" [(ngModel)]="setName" #ctrl="ngModel">
+    </div>
     <ul class="list-group list-group-flush">
       <li class="list-group-item" *ngFor="let exercise of setBuilder; index as i">
-        <button class="btn btn-outline-danger" (click)="removeFromSet(i)"><i class="fa fa-times fa-fw"></i></button>
+        <button class="btn btn-outline-danger p-0" (click)="removeFromSet(i)"><i class="fa fa-times fa-fw"></i></button>
         {{exercise.amount}} x {{exercise.name}}
       </li>
     </ul>
