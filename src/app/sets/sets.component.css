@@ -4,4 +4,20 @@
   
 .set-card {
     padding: 10px;
+    border: 2px;
+    border-style: solid;
+    border-radius: 1rem;
+}
+.set-card-title {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-decoration: underline;
+}
+.btn {
+  background-color: white;
+  padding: 5px 10px;
+  border: solid;
+  border-radius: 1rem;
+  cursor: pointer;
+  width: 15%;
+  opacity: 0.9;
 }
