@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SetsService } from '../services/sets.service';
-import { ISets, ISetExercises } from '../Interfaces/ISets';
+import { ISets } from '../Interfaces/ISets';
 import { ExerciseService } from '../services/exercise.service';
 import { IExercise } from '../Interfaces/IExercise';
 import { AccountService } from '../_services';
@@ -30,8 +30,8 @@ export class SetsComponent implements OnInit {
         this.exercise.getExercises().subscribe({
           next: (exerciseData) => {
             this.allExercises = exerciseData as unknown as IExercise[];
-            
-            
+
+
             this.userSet = this.sets.filter(x => x.user == this.account.userValue.id);
             console.log(this.userSet);
             for (let set of this.userSet) {
@@ -46,15 +46,28 @@ export class SetsComponent implements OnInit {
                 });
               }
               this.setExercises.push({
+                "id": set.id,
                 "name": set.name,
                 "array": exerciseArray
               });
             }
-            
+
             console.log(this.setExercises);
             console.log(this.setAmount);
           }
         });
+      }
+    });
+  }
+
+  deleteSet(selectedSet: ISets) {
+    console.log(selectedSet);
+    this.set.deleteSet(selectedSet.id).subscribe({
+      next: (data) => {
+        const index = this.setExercises.indexOf(selectedSet, 0);
+        if (index > -1) {
+          this.setExercises.splice(index, 1);
+        }
       }
     });
   }
