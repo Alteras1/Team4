@@ -4,8 +4,8 @@
         <div *ngFor="let exerc of set.exercises">
             <p class="set-card-name">{{exerc.name}}<br>Amount: {{exerc.amount}}</p>
         </div>
-        <button type="button" (click)="editSet(set)">Edit Set</button>
-        <button type="button" (click)="deleteSet(set)">Delete Set</button>
+        <button type="button" class="btn" (click)="editSet(set)">Edit Set</button>
+        <button type="button" class="btn" (click)="deleteSet(set)">Delete Set</button>
     </div>
     <br>
 </div>
