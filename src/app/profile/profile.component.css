@@ -1,34 +1,23 @@
-
-
-
 body {
-    font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .input-container {
   display: -ms-flexbox; /* IE10 */
   display: flex;
   width: 100%;
   margin-bottom: -15px;
-  
-}
-
-.icon {
-  padding: 10px;
-  background: dodgerblue;
-  color: white;
-  min-width: 50px;
-  text-align: center;
-  
+  background-color: var(--background-default);
 }
 
 .input-field {
   width: 50%;
   padding: 10px;
   outline: none;
-  
 }
 
 .input-field:focus {
@@ -49,20 +38,10 @@ body {
 .btn:hover {
   opacity: 1;
 }
-/*new*/
-input[type=text], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
 
-input[type=submit] {
+input[type="submit"] {
   width: 75%;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -71,16 +50,11 @@ input[type=submit] {
   cursor: pointer;
 }
 
-input[type=submit]:hover {
+input[type="submit"]:hover {
   background-color: #45a049;
 }
 
-div {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-}
-label{
+label {
   display: inline-block;
   width: 15%;
 }

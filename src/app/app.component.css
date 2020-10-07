@@ -5,11 +5,6 @@ main {
   color: var(--foreground-default);
 }
 
-main .app-container {
-  margin: 0 auto;
-  max-width: 1600px;
-  padding: 20px 10px;
-}
 .logo {
   display: block;
   width:12rem;
