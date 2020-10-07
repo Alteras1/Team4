@@ -102,7 +102,7 @@ server.post('/auth/login', (req, res) => {
 server.post('/auth/update', (req, res) => {
   console.log("Update Called; request body: ");
   console.log(req.body);
-  const {id, username, password, newPassword, firstName, lastName, email, address, phone, token} = req.body;
+  const {id, username, password, newPassword, firstName, lastName, email, street, city, state, zipcode, phone, token} = req.body;
   if (isAuthenticated({username, password}) !== true) { //Not the User
     console.log("invalid login");
     const status = 401;
@@ -129,7 +129,10 @@ server.post('/auth/update', (req, res) => {
       firstName: firstName,
       lastName: lastName,
       email: email,
-      address: address,
+      street: street,
+      city: city,
+      state: state,
+      zipcode: zipcode,
       phone: phone
     };
     let user = data.users[index];
