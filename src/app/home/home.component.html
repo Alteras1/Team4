@@ -1,8 +1,35 @@
-<p>home works!</p>
 <div class="p-4">
-    <div class="container">
-        <h1>Hi {{user.firstName}}!</h1>
-        <p>You're logged in with Angular 9!!</p>
-        <p><a routerLink="/users">Manage Users</a></p>
-    </div>
+  <h1>Hi {{user.firstName}}!</h1>
+  <ng-container [ngPlural]="today.sets.length">
+    <ng-template ngPluralCase="=0">
+      <h3>Looks like you don't have any sets for {{today.day}}</h3>
+    </ng-template>
+    <ng-template ngPluralCase="=1">
+      <h3>Here is {{today.day}}'s set:</h3>
+    </ng-template>
+    <ng-template ngPluralCase="other">
+      <h3>Here are {{today.day}}'s sets:</h3>
+    </ng-template>
+  </ng-container>
+  <ng-container *ngIf='today.sets.length !== 0; then sets; else noSet'>
+  </ng-container>
+
+  <h3>Let's go!</h3>
 </div>
+
+<ng-template #noSet>
+  <h3><a routerLink='/calendar'>Let's assign some!</a></h3>
+</ng-template>
+
+<ng-template #sets>
+  <div class="card mb-2" *ngFor='let set of today.sets'>
+    <div class="card-header">
+      {{set.name}}
+    </div>
+    <div class="card-body">
+      <div *ngFor='let excer of set.exercises'>
+        {{excer.amount}} x {{excer.name}}
+      </div>
+    </div>
+  </div>
+</ng-template>

@@ -9,12 +9,15 @@ import { Error404Component } from './error404/error404.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SetsComponent } from './sets/sets.component';
-import { ProfileComponent } from './profile/profile.component';
+
 import { ContactsComponent } from './contacts/contacts.component';
-import { MonthComponent } from './calendar/month/month.component';
-import { TestServiceComponent } from './test-service/test-service.component';
 import { AlertComponent } from './_components';
-import { ErrorInterceptor, fakeBackendProvider, JwtInterceptor } from './_helpers';
+import { ErrorInterceptor, JwtInterceptor } from './_helpers';
+import { CalendarComponent } from './calendar/calendar.component';
+import { ProfileComponent } from './profile/profile.component';
+import { ThemeModule } from './theme/theme.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 
 @NgModule({
   declarations: [
@@ -26,9 +29,8 @@ import { ErrorInterceptor, fakeBackendProvider, JwtInterceptor } from './_helper
     SetsComponent,
     ProfileComponent,
     ContactsComponent,
-    MonthComponent,
-    TestServiceComponent,
-    AlertComponent,
+    CalendarComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule,
@@ -36,11 +38,13 @@ import { ErrorInterceptor, fakeBackendProvider, JwtInterceptor } from './_helper
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    ThemeModule,
+    FontAwesomeModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
-    fakeBackendProvider
+    //fakeBackendProvider
   ],
   bootstrap: [AppComponent]
 })

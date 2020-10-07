@@ -1,7 +1,11 @@
-import { Component, Inject, OnInit } from '@angular/core';
-import { ICalendar } from '../Interfaces/ICalendar';
+import { Component, Inject, OnInit, NgZone, ChangeDetectorRef } from '@angular/core';
+import { ICalendar, IWeek } from '../Interfaces/ICalendar';
 import { CalendarService } from '../services/calendar.service';
-import { DOCUMENT } from '@angular/common'
+import { SetsService } from '../services/sets.service';
+import { ISets } from '@app/Interfaces/ISets';
+import { ExerciseService } from '@app/services/exercise.service';
+import { IExercise } from '@app/Interfaces/IExercise';
+import { AccountService } from '@app/_services';
 
 @Component({
   selector: 'app-calendar',
@@ -10,70 +14,167 @@ import { DOCUMENT } from '@angular/common'
 })
 export class CalendarComponent implements OnInit {
   _currentDate = new Date();
-  date = this._currentDate.getDate();
-  month = this._currentDate.getMonth();
-  day = this._currentDate.getDay();
-  year = this._currentDate.getFullYear();
-  week = {
-    sunday: [],
-    monday: [],
-    tuesday: [],
-    wednesday: [],
-    thursday: [],
-    friday: [],
-    saturday: []
-  };
+  currentdate = this._currentDate.getDate();
+  currentmonth = this._currentDate.getMonth();
+  currentday = this._currentDate.getDay();
+  currentyear = this._currentDate.getFullYear();
+  week: any[] = [
+    {
+      "day": "Sunday",
+      "abbr":"Su",
+      "num": 0,
+      sets: []
+    },
+    {
+      "day": "Monday",
+      "abbr": "M",
+      "num": 1,
+      sets: []
+    }, {
+      "day": "Tuesday",
+      "abbr": "Tu",
+      "num": 2,
+      sets: []
+    }, {
+      "day": "Wednesday",
+      "abbr": "W",
+      "num": 3,
+      sets: []
+    }, {
+      "day": "Thursday",
+      "abbr": "Th",
+      "num": 4,
+      sets: []
+    }, {
+      "day": "Friday",
+      "abbr": "F",
+      "num": 5,
+      sets: []
+    },
+    {
+      "day": "Saturday",
+      "abbr": "Sa",
+      "num": 6,
+      sets: []
+    },
+  ];
+  sets: any[];
 
   _userCalendar;
-  _user = 1;
+  _user = this.accountService.userValue.id;
 
-  constructor(private calendarService: CalendarService, @Inject(DOCUMENT) document) {
-
+  constructor(
+    private calendarService: CalendarService,
+    private setsService: SetsService,
+    private exerciseService: ExerciseService,
+    private ref: ChangeDetectorRef,
+    private accountService: AccountService
+  ) {
+    ref.detach();
   }
 
   ngOnInit(): void {
+    console.log(this.week);
+    this.getCalendar();
+  }
+
+  get userCalendar() {
+    return this._userCalendar;
+  }
+
+  getCalendar() {
     this.calendarService.getCalendarByUser(this._user).subscribe({
       next: (data) => {
         this._userCalendar = data as ICalendar[];
-        for(let calendar of this._userCalendar) {
-          for (let set of calendar.sets) {
-            if (set.days.includes("sun")) {
-              this.week.sunday.push(set.id);
-            }
-            if (set.days.includes("mon")) {
-              this.week.monday.push(set.id);
-            }
-            if (set.days.includes("tue")) {
-              this.week.tuesday.push(set.id);
-            }
-            if (set.days.includes("wed")) {
-              this.week.wednesday.push(set.id);
-            }
-            if (set.days.includes("thr")) {
-              this.week.thursday.push(set.id);
-            }
-            if (set.days.includes("fri")) {
-              this.week.friday.push(set.id);
-            }
-            if (set.days.includes("sat")) {
-              this.week.saturday.push(set.id);
-            }
+        this._userCalendar = this._userCalendar[0];
+        for (let set of this._userCalendar.sets) {
+          if (set.days.includes("sun")) {
+            this.week[0].sets.push(set.id);
+          }
+          if (set.days.includes("mon")) {
+            this.week[1].sets.push(set.id);
+          }
+          if (set.days.includes("tue")) {
+            this.week[2].sets.push(set.id);
+          }
+          if (set.days.includes("wed")) {
+            this.week[3].sets.push(set.id);
+          }
+          if (set.days.includes("thr")) {
+            this.week[4].sets.push(set.id);
+          }
+          if (set.days.includes("fri")) {
+            this.week[5].sets.push(set.id);
+          }
+          if (set.days.includes("sat")) {
+            this.week[6].sets.push(set.id);
           }
         }
-        console.log(this.week);
-        this.generateWeek();
+        this.ref.detectChanges();
+        this.getSets();
       }
-    })
+    });
   }
 
-  generateWeek() {
-    let element = document.getElementById('week') as HTMLElement;
-    let builder:string = "";
-    for (let day in this.week) {
-      builder += `<td>${this.week[day]}</td>`
+  getSets() { //adds names to set exercises
+    this.setsService.getSetsByUserId(this._user).subscribe({
+      next: (data) => {
+        this.sets = data as unknown as ISets[];
+        this.exerciseService.getExercises().subscribe({
+          next: (exerciseData) => {
+            let allExercises = exerciseData as unknown as IExercise[];
+            for (let set of this.sets) {
+              for (let exercises of set.exercises) {
+                let value = allExercises.find((exer) => (exer.id == exercises.id));
+                exercises.name = value.name;
+              }
+            }
+            this.assignSets();
+          }
+        });
+      }
+    });
+  }
+
+  assignSets() {
+    for (let day of this.week) {
+      let foundSets = [];
+      for (let set of day.sets) {
+        foundSets.push(... this.sets.filter((s) => (s.id == set)));
+      }
+      day.sets.length = 0;
+      day.sets.push.apply(day.sets,foundSets);
     }
-    console.log(builder);
-    element.innerHTML = builder;
+    this.ref.detectChanges();
+    this.ref.reattach();
   }
 
+  addSetToDay(set: ISets, day: number) {
+    let dayString: String;
+    const days = ["sun", "mon", "tue", "wed", "thr", "fri", "sat"];
+    dayString = days[day];
+    let setInCalendar = this._userCalendar.sets.find((obj) => (obj.id == set.id));    //find the set in the calendar obj
+    if (setInCalendar == undefined) {
+      this._userCalendar.sets.push({                      //If set isn't already in the calendar
+        "id": set.id,
+        "days": [dayString]
+      })
+    } else {
+      setInCalendar.days.push(dayString);                 //Add the day to the set
+    }
+    this.week[day].sets.push(set);
+    this.calendarService.updateCalendar(this._userCalendar).subscribe();
+  }
+
+  removeSetFromDay(set: ISets, day: number) {
+    let dayString: String;
+    const days = ["sun", "mon", "tue", "wed", "thr", "fri", "sat"];
+    dayString = days[day];
+    let setInCalendar = this._userCalendar.sets.find((obj) => (obj.id == set.id));    //find the set in the calendar obj
+    const index = setInCalendar.days.indexOf(dayString, 0);
+    if (index > -1) {setInCalendar.days.splice(index, 1)}                             //Remove the day from the set
+    const weekIndex = this.week[day].sets.indexOf(set, 0);
+    if (weekIndex > -1) {this.week[day].sets.splice(weekIndex, 1)}
+    this.calendarService.updateCalendar(this._userCalendar).subscribe();
+  }
 }

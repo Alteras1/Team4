@@ -1,29 +1,96 @@
 {
+  "user": [
+    {
+      "id": 1,
+      "username": "test",
+      "password": "test",
+      "firstName": "first",
+      "lastName": "last"
+    }
+  ],
   "sets": [
     {
       "id": 1,
       "user": 1,
-      "name": "test",
+      "name": "test1",
       "exercises": [
         {
-          "id": 67,
+          "id": 115,
           "amount": 5
         },
         {
-          "id": 68,
+          "id": 130,
           "amount": 3
         }
       ]
+    },
+    {
+      "id": 2,
+      "user": 1,
+      "name": "test2",
+      "exercises": [
+        {
+          "id": 107,
+          "amount": 10
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "user": 2,
+      "name": "test3",
+      "exercises": [
+        {
+          "id": 115,
+          "amount": 5
+        },
+        {
+          "id": 130,
+          "amount": 3
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "user": 1,
+      "name": "new Set",
+      "exercises": [
+        {
+          "id": 97,
+          "amount": 15
+        }
+      ]
+    },
+    {
+      "user": 1,
+      "name": "New Set",
+      "exercises": [
+        {
+          "id": 88,
+          "amount": 6
+        },
+        {
+          "id": 97,
+          "amount": 4
+        }
+      ],
+      "id": 4
     }
   ],
   "calendar": [
     {
+      "id": 1,
       "user": 1,
       "sets": [
         {
           "id": 1,
           "days": [
-            "mon",
+            "wed"
+          ]
+        },
+        {
+          "id": 2,
+          "days": [
             "wed"
           ]
         }
