@@ -59,14 +59,14 @@
         {
           "id": 1,
           "days": [
-            "wed",
-            "mon",
-            "tue"
+            "wed"
           ]
         },
         {
           "id": 2,
-          "days": []
+          "days": [
+            "wed"
+          ]
         }
       ]
     }

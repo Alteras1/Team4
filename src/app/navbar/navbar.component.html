@@ -1,10 +1,20 @@
 <nav>
-  <div class="navFlex">
-    <a routerLink="./home">Home</a>
-    <a routerLink="./calendar">Calendar</a>
-    <a routerLink="./sets">Sets</a>
-    <a routerLink="./exercise">Exercise</a>
-    <a routerLink="./profile">Profile</a>
-    <a routerLink="./contacts">Contact Us</a>
+  <div class="navbar navbar-expand navFlex">
+    <div class="logo navbar-brand">
+      <img src="/assets/MNFLogo.png" alt="My_Neighborhood_Fitness_Logo">
+    </div>
+    <div class="navbar-nav mr-auto">
+      <a class="nav-item nav-link" style="color: var(--foreground-quaternary);" routerLink="/" routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact: true}">Home</a>
+      <a class="nav-item nav-link" style="color: var(--foreground-quaternary);" routerLink="/profile" routerLinkActive="active">Profile</a>
+      <a class="nav-item nav-link" style="color: var(--foreground-quaternary);" routerLink="/sets" routerLinkActive="active">Sets</a>
+      <a class="nav-item nav-link" style="color: var(--foreground-quaternary);" routerLink="/exercise" routerLinkActive="active">Exercise</a>
+      <a class="nav-item nav-link" style="color: var(--foreground-quaternary);" routerLink="/calendar" routerLinkActive="active">Calendar</a>
+      <a class="nav-item nav-link" style="color: var(--foreground-quaternary);" routerLink="/contacts" routerLinkActive="active">About us</a>
+
+
+    </div>
+    <a class="nav-item nav-link pointer" style="color: var(--foreground-quaternary); margin-right: 20px;" (click)="logout()">Logout</a>
+    <fa-icon class="pointer" [icon]="faLightbulb" (click)="toggleTheme()"></fa-icon>
   </div>
 </nav>

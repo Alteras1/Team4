@@ -1,10 +1,10 @@
 <div class="row">
   <div class="col-8">
     <div class="card-group" *ngFor='let day of week'>
-      <div class="card">
+      <div class="card m-2">
         <div class="card-body">
           <h1 class="card-title" [ngClass]="{'currentDay': day.num == currentday}">{{day.day}}</h1>
-          <div class="card" *ngFor='let set of day.sets'>
+          <div class="card m-1" *ngFor='let set of day.sets'>
             <div class="card-header">
               {{set.name}}
             </div>
@@ -20,7 +20,7 @@
   </div>
   <div class="col-4">
     <div class=setLabel>Available Sets:</div>
-    <div class="card" *ngFor='let set of sets'>
+    <div class="card m-2" *ngFor='let set of sets'>
       <h5 class="card-header">{{set.name}}</h5>
       <ul class="list-group list-group-flush">
         <li class="list-group-item">
