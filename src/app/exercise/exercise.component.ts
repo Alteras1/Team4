@@ -1,8 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { EquipmentService } from '@app/services/equipment.service';
 import { ExerciseCategoryService } from '@app/services/exercise-category.service';
 import { ExerciseService } from '@app/services/exercise.service';
 import { MuscleService } from '@app/services/muscle.service';
+import { SetsService } from '@app/services/sets.service';
+import { AccountService, AlertService } from '@app/_services';
 import { IExercise } from '../Interfaces/IExercise';
 
 @Component({
@@ -17,11 +21,18 @@ export class ExerciseComponent implements OnInit {
   filterExerciseName = '0';
   filterEquipment = '0';
   exercises: any[] = [];
+  setBuilder: any[] = [];
+  setName:String = "New Set";
+
   constructor(
     private exercise: ExerciseService,
     private category: ExerciseCategoryService,
     private muscle: MuscleService,
     private equipment: EquipmentService,
+    private accountService: AccountService,
+    private setService: SetsService,
+    private alert:AlertService,
+    private router:Router
   ) { }
   ngOnInit(): void {
     this.exercise.getExercises().subscribe({
@@ -90,5 +101,37 @@ export class ExerciseComponent implements OnInit {
       found = mu.id == filter ? true: found;
     }
     return found;
+  }
+
+  onSubmit(f:NgForm, exercise) {
+    if (typeof f.value.amount === "number" && Number.isInteger(f.value.amount) && f.value.amount > 0) {
+      this.setBuilder.push({id: exercise.id, name: exercise.name, amount: f.value.amount});
+    }
+    console.log(this.setBuilder);
+  }
+
+  removeFromSet(index: number) {
+    this.setBuilder.splice(index, 1);
+  }
+
+  createSet() {
+    let set = {
+      user: this.accountService.userValue.id,
+      name: this.setName,
+      exercises: []
+    }
+    for (let exercise of this.setBuilder) {
+      set.exercises.push({
+        id: exercise.id,
+        amount: exercise.amount
+      })
+    }
+    this.setService.createSet(set).subscribe({
+      next: (data) => {
+        console.log('success');
+        this.router.navigate(['/sets']);
+        this.alert.success(`${this.setName} has been created!`);
+      }
+    })
   }
 }

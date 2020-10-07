@@ -42,7 +42,8 @@ export class SetsComponent implements OnInit {
                 console.log(value);
                 exerciseArray.push({
                   "name": value.name,
-                  "amount": exerc.amount
+                  "amount": exerc.amount,
+                  "id": value.id
                 });
               }
               this.setExercises.push({
