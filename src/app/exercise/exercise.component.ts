@@ -107,6 +107,7 @@ export class ExerciseComponent implements OnInit {
     if (typeof f.value.amount === "number" && Number.isInteger(f.value.amount) && f.value.amount > 0) {
       this.setBuilder.push({id: exercise.id, name: exercise.name, amount: f.value.amount});
     }
+    console.log(this.setBuilder);
   }
 
   removeFromSet(index: number) {

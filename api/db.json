@@ -49,6 +49,32 @@
           "amount": 3
         }
       ]
+    },
+    {
+      "id": 2,
+      "user": 1,
+      "name": "new Set",
+      "exercises": [
+        {
+          "id": 97,
+          "amount": 15
+        }
+      ]
+    },
+    {
+      "user": 1,
+      "name": "New Set",
+      "exercises": [
+        {
+          "id": 88,
+          "amount": 6
+        },
+        {
+          "id": 97,
+          "amount": 4
+        }
+      ],
+      "id": 4
     }
   ],
   "calendar": [
@@ -59,14 +85,14 @@
         {
           "id": 1,
           "days": [
-            "wed",
-            "mon",
-            "tue"
+            "wed"
           ]
         },
         {
           "id": 2,
-          "days": []
+          "days": [
+            "wed"
+          ]
         }
       ]
     }
