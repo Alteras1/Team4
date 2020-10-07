@@ -1,66 +1,85 @@
-<br><br>
-<div class="input-container">
-  <label for="firstname">Firstname:</label>
-  <i class="fa fa-user icon"></i>
-  <input class="input-field" name="firstName" [(ngModel)]="auser.firstName">
-</div>
+<h1 class="display-4">Editing Profile</h1>
+<form>
+  <h3 class="h3">Account</h3>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text"><i class="fa fa-user fa-fw"></i> First Name</span>
+    </div>
+    <input class="form-control" type="text" name="firstName" [(ngModel)]="auser.firstName">
+  </div>
 
-<div class="input-container">
-  <label for="lastname">Lastname:</label><br>
-  <i class="fa fa-user icon"></i>
-  <input class="input-field" name="lastname" [(ngModel)]="auser.lastName">
-</div>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text"><i class="fa fa-user fa-fw"></i> Last Name</span>
+    </div>
+    <input class="form-control" type="text" name="lastName" [(ngModel)]="auser.lastName">
+  </div>
 
-<div class="input-container">
-  <label for="username">Username:</label>
-  <i class="fa fa-user icon"></i>
-  <input class="input-field" name="username" [(ngModel)]="auser.username" required>
-</div>
-<div class="input-container">
-  <label for="password">Password:</label>
-  <i class="fa fa-key icon"></i>
-  <input class="input-field" name="password" [(ngModel)]="auser.password" required>
-</div>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text"><i class="fa fa-user fa-fw"></i> Username</span>
+    </div>
+    <input class="form-control" type="text" name="username" [(ngModel)]="auser.username" required>
+  </div>
 
-<div class="input-container">
-  <label for="password">New Password:</label>
-  <i class="fa fa-key icon"></i>
-  <input class="input-field" name="password" [(ngModel)]="auser.newPassword">
-</div>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text"><i class="fa fa-key fa-fw"></i> Password</span>
+    </div>
+    <input class="form-control" type="password" name="password" [(ngModel)]="auser.password" required>
+  </div>
 
-<div class="input-container">
-  <label for="username">Email address:</label>
-  <i class="fa fa-envelope icon"></i>
-  <input class="input-field" [(ngModel)]="auser.email">
-</div>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text"><i class="fa fa-key fa-fw"></i> New Password</span>
+    </div>
+    <input class="form-control" type="password" name="newPassword" [(ngModel)]="auser.newPassword">
+  </div>
 
-<div class="input-container">
-  <label for="phone">Phone:</label>
-  <i class="fa fa-phone icon"></i>
-  <input class="input-field" [(ngModel)]="auser.phone">
-</div>
+  <h3 class="h3">Personal Info</h3>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text"><i class="fa fa-envelope fa-fw"></i> Email Address</span>
+    </div>
+    <input class="form-control" type="text" name="email" [(ngModel)]="auser.email">
+  </div>
 
-<div class="input-container">
-  <label for="username">Street:</label>
-  <i class="fa fa-home icon"></i>
-  <input class="input-field" [(ngModel)]="auser.address.street">
-</div>
-<div class="input-container">
-  <label for="city">City:</label>
-  <i class="fa fa-home icon"></i>
-  <input class="input-field" [(ngModel)]="auser.address.city">
-</div>
-<div class="input-container">
-  <label for="state">State:</label>
-  <i class="fa fa-home icon"></i>
-  <input class="input-field" [(ngModel)]="auser.address.state">
-</div>
-<div class="input-container">
-  <label for="state">zipcode:</label>
-  <i class="fa fa-home icon"></i>
-  <input class="input-field" [(ngModel)]="auser.address.zipcode"><br>
-</div>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text"><i class="fa fa-phone fa-fw"></i> Phone</span>
+    </div>
+    <input class="form-control" type="tel" name="phone" [(ngModel)]="auser.phone">
+  </div>
 
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text"><i class="fa fa-home fa-fw"></i> Street</span>
+    </div>
+    <input class="form-control" type="street" name="street" [(ngModel)]="auser.address.street">
+  </div>
+
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text"><i class="fa fa-home fa-fw"></i> City</span>
+    </div>
+    <input class="form-control" type="text" name="city" [(ngModel)]="auser.address.city">
+  </div>
+
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text"><i class="fa fa-home fa-fw"></i> State</span>
+    </div>
+    <input class="form-control" type="text" name="state" [(ngModel)]="auser.address.state">
+  </div>
+
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text"><i class="fa fa-home fa-fw"></i> Zipcode</span>
+    </div>
+    <input class="form-control" type="text" name="zipcode" [(ngModel)]="auser.address.zipcode">
+  </div>
+
+</form>
 <div class="input-container">
   <button class="btn" (click)="UpdateProfile(auser)">Update Profile</button>
 </div>

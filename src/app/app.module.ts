@@ -15,6 +15,8 @@ import { AlertComponent } from './_components';
 import { ErrorInterceptor, JwtInterceptor } from './_helpers';
 import { CalendarComponent } from './calendar/calendar.component';
 import { ProfileComponent } from './profile/profile.component';
+import { ThemeModule } from './theme/theme.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -28,7 +30,7 @@ import { ProfileComponent } from './profile/profile.component';
     ProfileComponent,
     ContactsComponent,
     CalendarComponent,
-    AlertComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule,
@@ -36,6 +38,8 @@ import { ProfileComponent } from './profile/profile.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    ThemeModule,
+    FontAwesomeModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
