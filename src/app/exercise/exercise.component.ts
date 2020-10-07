@@ -8,6 +8,7 @@ import { MuscleService } from '@app/services/muscle.service';
 import { SetsService } from '@app/services/sets.service';
 import { AccountService, AlertService } from '@app/_services';
 import { IExercise } from '../Interfaces/IExercise';
+import { ISets, ISetExercises } from '@app/Interfaces/ISets';
 
 @Component({
   selector: 'app-exercise',
@@ -23,6 +24,8 @@ export class ExerciseComponent implements OnInit {
   exercises: any[] = [];
   setBuilder: any[] = [];
   setName:String = "New Set";
+  editingSet:ISets;
+  setId:number;
 
   constructor(
     private exercise: ExerciseService,
@@ -43,6 +46,16 @@ export class ExerciseComponent implements OnInit {
         this.addEquipmentName();
       }
     });
+    this.editingSet = this.setService.editingSet;
+    console.log(this.editingSet);
+    if (this.editingSet != null) {
+      this.editSet();
+    }
+    else {
+      this.setId = null;
+      this.setService.clearCurrentSet();
+    }
+  
   }
 
   addCategoryName() {
@@ -115,7 +128,7 @@ export class ExerciseComponent implements OnInit {
   }
 
   createSet() {
-    let set = {
+    let set:ISets = {
       user: this.accountService.userValue.id,
       name: this.setName,
       exercises: []
@@ -126,12 +139,35 @@ export class ExerciseComponent implements OnInit {
         amount: exercise.amount
       })
     }
-    this.setService.createSet(set).subscribe({
-      next: (data) => {
-        console.log('success');
-        this.router.navigate(['/sets']);
-        this.alert.success(`${this.setName} has been created!`);
-      }
-    })
+    if (this.setId != null) {
+      set.id = this.setId;
+      this.setService.editSet(set).subscribe({
+        next: (data) => {
+          console.log('edit success');
+          this.router.navigate(['/sets']);
+          this.alert.success(`${this.setName} has been edited!`);
+        }
+      })
+    }
+    else {
+      this.setService.createSet(set).subscribe({
+        next: (data) => {
+          console.log('success');
+          this.router.navigate(['/sets']);
+          this.alert.success(`${this.setName} has been created!`);
+        }
+      })
+    }
+    console.log("REACHING HERE!?!");
+    this.setService.clearCurrentSet();
+    this.setBuilder = [];
+  }
+
+  editSet() {
+    console.log("editSet called");
+    this.setName = this.editingSet.name;
+    this.setId = this.editingSet.id;
+    this.setBuilder = this.editingSet.exercises;
+    console.log(this.setBuilder);
   }
 }

@@ -4,6 +4,7 @@ import { environment } from '@environments/environment';
 import { Observable } from 'rxjs';
 import { IExercise } from '../Interfaces/IExercise';
 import { IWgerde } from '../Interfaces/IWgerde';
+import { ISets } from '@app/Interfaces/ISets';
 
 
 
@@ -12,7 +13,9 @@ import { IWgerde } from '../Interfaces/IWgerde';
 })
 export class ExerciseService {
   productURL = environment.apiUrl + '/exercise';
+
   constructor(private http: HttpClient) {}
+
   getExercises(): Observable<IExercise> {
     return this.http.get<IExercise>(this.productURL);
   }

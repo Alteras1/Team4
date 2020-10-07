@@ -4,6 +4,7 @@ import { ISets } from '../Interfaces/ISets';
 import { ExerciseService } from '../services/exercise.service';
 import { IExercise } from '../Interfaces/IExercise';
 import { AccountService } from '../_services';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sets',
@@ -15,13 +16,15 @@ export class SetsComponent implements OnInit {
   userSet: ISets[] = [];
   allExercises: any[] = [];
   setExercises: any[] = [];
-  setAmount: number[] = [];
 
   constructor(
     private set: SetsService,
     private exercise: ExerciseService,
     private account: AccountService,
-  ) { }
+    private router: Router
+  ) {
+    this.set.clearCurrentSet();
+  }
 
   ngOnInit(): void {
     this.set.getSets().subscribe({
@@ -30,16 +33,12 @@ export class SetsComponent implements OnInit {
         this.exercise.getExercises().subscribe({
           next: (exerciseData) => {
             this.allExercises = exerciseData as unknown as IExercise[];
-
-
             this.userSet = this.sets.filter(x => x.user == this.account.userValue.id);
             console.log(this.userSet);
             for (let set of this.userSet) {
               let exerciseArray = [];
               for (let exerc of set.exercises) {
-                console.log(exerc.id);
                 let value = this.allExercises.find(x => x.id == exerc.id);
-                console.log(value);
                 exerciseArray.push({
                   "name": value.name,
                   "amount": exerc.amount,
@@ -49,12 +48,9 @@ export class SetsComponent implements OnInit {
               this.setExercises.push({
                 "id": set.id,
                 "name": set.name,
-                "array": exerciseArray
+                "exercises": exerciseArray
               });
             }
-
-            console.log(this.setExercises);
-            console.log(this.setAmount);
           }
         });
       }
@@ -71,6 +67,13 @@ export class SetsComponent implements OnInit {
         }
       }
     });
+  }
+
+  editSet(selectedSet: ISets) {
+    console.log(selectedSet);
+    this.set.changingSet = selectedSet;
+    console.log(this.set.editingSet);
+    this.router.navigate(['/exercise']);
   }
 
 }
