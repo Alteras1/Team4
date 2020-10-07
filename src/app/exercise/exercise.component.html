@@ -100,8 +100,12 @@
                     </div>
                   </div>
                   <form #f="ngForm" (ngSubmit)="onSubmit(f, item)">
-                    <input type="number" name="amount" required ngModel>
-                    <button type="submit">Add to Set</button>
+                    <div class="input-group mb-1">
+                      <input type="number" class="form-control" placeholder="Amount" name="amount" required ngModel>
+                      <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="submit">Add to Set</button>
+                      </div>
+                    </div>
                   </form>
                 </div>
               </div>
@@ -118,7 +122,7 @@
     <input class="form-control" [(ngModel)]="setName" #ctrl="ngModel">
     <ul class="list-group list-group-flush">
       <li class="list-group-item" *ngFor="let exercise of setBuilder; index as i">
-        <div (click)="removeFromSet(i)">remove</div>
+        <button class="btn btn-outline-danger" (click)="removeFromSet(i)"><i class="fa fa-times fa-fw"></i></button>
         {{exercise.amount}} x {{exercise.name}}
       </li>
     </ul>
