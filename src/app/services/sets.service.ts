@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from '@environments/environment';
-import { Observable } from 'rxjs';
+import { Observable, BehaviorSubject } from 'rxjs';
 import { ISets } from '../Interfaces/ISets';
 
 
@@ -11,7 +11,20 @@ import { ISets } from '../Interfaces/ISets';
 })
 export class SetsService {
   productURL = environment.apiUrl + '/sets';
-  constructor(private http: HttpClient) {}
+  currentSet:BehaviorSubject<ISets>;
+
+  constructor(private http: HttpClient) {
+    this.currentSet = new BehaviorSubject<ISets>(JSON.parse(localStorage.getItem("set")));
+  }
+
+  public get editingSet() {
+    return this.currentSet.value;
+  }
+  public set changingSet(newSet:ISets) {
+    localStorage.setItem("set", JSON.stringify(newSet));
+    this.currentSet.next(newSet);
+  }
+
   getSets(): Observable<ISets> {
     return this.http.get<ISets>(this.productURL);
   }
@@ -25,5 +38,14 @@ export class SetsService {
   createSet(set): Observable<ISets> {
     console.log("creating set");
     return this.http.post<ISets>(this.productURL, set);
+  }
+  editSet(set): Observable<ISets> {
+    console.log("editing set http");
+    this.clearCurrentSet();
+    return this.http.put<ISets>(this.productURL + `/${set.id}`, set);
+  }
+  clearCurrentSet() {
+    localStorage.removeItem("set");
+    this.currentSet.next(null);
   }
 }
