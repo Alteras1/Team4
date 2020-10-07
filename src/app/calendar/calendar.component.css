@@ -10,7 +10,7 @@ table {
 }
 */
 .currentDay {
-  color: red;
+  color: crimson;
 }
 
 .btn-day {
@@ -24,6 +24,10 @@ table {
   color: white;
 }
 
+.card {
+  background-color: var(--background-light);
+}
+
 .add {
   background-color: #353a3f;
 }
@@ -35,12 +39,7 @@ table {
 .card-body:hover{
   background-color: rgb(0, 132, 255);
 }
-.row{
-  background-color: rgb(155, 155, 155);
-}
-.col-4{
-  background-color: rgb(0, 132, 255);
-}
+
 h5{
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
