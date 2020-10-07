@@ -60,6 +60,32 @@
           "amount": 15
         }
       ]
+    },
+    {
+      "user": 1,
+      "name": "brand new",
+      "exercises": [
+        {
+          "id": 97,
+          "amount": 55
+        }
+      ],
+      "id": 4
+    },
+    {
+      "user": 1,
+      "name": "New Set",
+      "exercises": [
+        {
+          "id": 97,
+          "amount": 1
+        },
+        {
+          "id": 109,
+          "amount": 2
+        }
+      ],
+      "id": 5
     }
   ],
   "calendar": [
