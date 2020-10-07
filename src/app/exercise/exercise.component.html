@@ -1,5 +1,5 @@
+<ng-container *ngIf="setBuilder.length !== 0 then create"></ng-container>
 <div>
-<br>
   <label style="margin-left:25px;color:white;" for="category">FILTER BY: category </label>
   <select [(ngModel)]="filterCategory" id="category" name="category" size="1" #ctrl="ngModel" required>
     <option value="0">All</option>
@@ -56,14 +56,14 @@
   <br><br>
 
   <div class="card-deck">
-    <div *ngFor="let item of exercises">
-      <ng-container *ngIf='filterCategory=="0"?true:item.category==filterCategory'>
-        <ng-container *ngIf='filterMuscle=="0"?true: filterByMuscle(item, filterMuscle)'>
-          <ng-container *ngIf='filterEquipment=="0"? true : filterByEquipment(item, filterEquipment)'>
-            <ng-container *ngIf='filterExerciseName=="0"?true:item.name==filterExerciseName'>
+    <div *ngFor="let item of exercises; index as i">
+      <ng-container *ngIf="filterCategory=='0'?true:item.category==filterCategory">
+        <ng-container *ngIf="filterMuscle=='0'?true: filterByMuscle(item, filterMuscle)">
+          <ng-container *ngIf="filterEquipment=='0'? true : filterByEquipment(item, filterEquipment)">
+            <ng-container *ngIf="filterExerciseName=='0'?true:item.name==filterExerciseName">
               <div class="card description" style="width: 18rem;">
                 <div class="hover">
-                <img class="card-img-top" src="{{item.image}}" alt="Card image cap">
+                <img class="card-img-top" src="{{item.image}}" alt="Image Missing!">
                 <p class="card-text descriptionBox" innerHTML={{item.description}}></p>
               </div>
                 <div class="card-body">
@@ -80,6 +80,10 @@
                     </ng-container>
                     </div>
                   </div>
+                  <form #f="ngForm" (ngSubmit)="onSubmit(f, item)">
+                    <input type="number" name="amount" required ngModel>
+                    <button type="submit">Add to Set</button>
+                  </form>
                 </div>
               </div>
             </ng-container>
@@ -89,3 +93,17 @@
     </div>
   </div>
 </div>
+
+<ng-template #create>
+  <div class="card" style="width: 18rem;">
+    <input class="form-control" [(ngModel)]="setName" #ctrl="ngModel">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item" *ngFor="let exercise of setBuilder; index as i">
+        <div (click)="removeFromSet(i)">remove</div>
+        {{exercise.amount}} x {{exercise.name}}
+      </li>
+    </ul>
+    <button class="btn btn-primary" (click)="createSet()">Create Set</button>
+  </div>
+
+</ng-template>

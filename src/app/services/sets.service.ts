@@ -22,4 +22,8 @@ export class SetsService {
     console.log("deleting set" + id);
     return this.http.delete<ISets>(this.productURL + `/${id}`);
   }
+  createSet(set): Observable<ISets> {
+    console.log("creating set");
+    return this.http.post<ISets>(this.productURL, set);
+  }
 }
